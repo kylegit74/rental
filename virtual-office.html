@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Offices - Professional Business Address Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#22d3ee",
+            "primary-dark": "#0891b2",
+          },
+          animation: {
+            float: "float 6s ease-in-out infinite",
+            "pulse-slow": "pulse 3s infinite",
+            "fade-in": "fadeIn 1s ease-out",
+          },
+          keyframes: {
+            float: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-20px)" },
+            },
+            fadeIn: {
+              "0%": { opacity: "0", transform: "translateY(30px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon:ital,wght@0,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet" />
+
+  <style>
+    .tiltwrap {
+      font-family: "Tilt Warp", sans-serif;
+    }
+
+    .tilt-neon {
+      font-family: "Tilt Neon", sans-serif;
+      font-variation-settings: "XROT" 15, "YROT" -10;
+    }
+
+    .raleway {
+      font-family: "Raleway", sans-serif;
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-hover-effect {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover-effect:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #22d3ee, #0891b2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .feature-grid {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .morphism-card {
+      background: linear-gradient(145deg, #ffffff, #f0f4f8);
+      box-shadow: 20px 20px 40px #d1d9e6, -20px -20px 40px #ffffff;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 0.8s ease-out;
+    }
+
+    .slide-in-right {
+      animation: slideInRight 0.8s ease-out;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #0eb2d0 0%, #06afce 100%);
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 15px #06afce;
+      }
+
+      50% {
+        box-shadow: 0 0 15px #06afce, 0 0 25px #06afce, 0 0 35px #06afce;
+      }
+
+      100% {
+        box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 15px #06afce;
+      }
+    }
+
+    /* Apply animation */
+    .animate-glow {
+      animation: glowing 1.8s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+  <!-- Header -->
+  <section class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[60vh] w-full">
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black/80 bg-opacity-50"></div>
+
+    <!-- top bar -->
+    <div class="w-full raleway flex justify-center relative z-10 border-b-[1px] border-gray-300 py-6">
+      <div class="flex justify-between w-[90%]">
+        <!-- Left Info Section -->
+        <div class="flex flex-wrap items-center gap-5">
+          <!-- Phone -->
+          <div class="flex items-center text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-phone text-white"></i>
+            <span class="text-white">012 03456 7890</span>
+          </div>
+          <!-- Location -->
+          <div class="flex items-center text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-location-dot text-white"></i>
+            <span class="text-white">Lorem Ipsum Dolr, 24115</span>
+          </div>
+          <!-- Email -->
+          <div class="flex items-center text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-envelope text-white"></i>
+            <a href="mailto:info@loremipsum.com" class="hover:underline text-white">info@LoremIpsum.com</a>
+          </div>
+        </div>
+
+        <!-- Right Social Section -->
+        <div class="flex items-center gap-3">
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-facebook-f text-white"></i>
+          </a>
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-linkedin-in text-white"></i>
+          </a>
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-instagram text-white"></i>
+          </a>
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-youtube text-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--navbar -->
+    <div class="w-full flex justify-center raleway font-bold relative z-50 py-6 bg-transparent">
+      <div class="flex justify-between items-center w-[90%] relative">
+        <!-- Logo -->
+        <div class="text-cyan-400 font-bold text-5xl">LOGO</div>
+
+        <!-- Menu -->
+        <ul class="flex space-x-8 items-center">
+          <li>
+            <a href="index.html" class="text-white hover:text-cyan-400 transition duration-300">HOME</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-white hover:text-cyan-400 transition duration-300">ABOUT US</a>
+          </li>
+
+          <!-- Services Menu with Hover -->
+          <li class="relative group">
+            <a href="services.html" class="text-white hover:text-cyan-400 transition duration-300">SERVICES</a>
+
+            <!-- Dropdown -->
+            <div class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50">
+              <div class="grid grid-cols-1 gap-2 text-left">
+                <!-- Column 1 -->
+                <div class="group">
+                  <h3
+                    class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer">
+                    Office Space
+
+                    <i class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"></i>
+                  </h3>
+
+                  <ul class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden">
+                    <li>
+                      <a href="independence-house-heywood.html" class="hover:text-cyan-500">&rsaquo; independence house
+                        heywood</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-cyan-500">&rsaquo; certacs house skelsmerdale</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <a href="virtual-office.html" class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">
+                  Virtual Office
+                </a>
+
+                <a href="storage-container.html" class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">
+                  Storage Container
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="contact.html" class="text-white hover:text-cyan-400 transition duration-300">CONTACTS</a>
+          </li>
+          <li>
+            <a href="blog.html" class="text-white hover:text-cyan-400 transition duration-300">BLOG</a>
+          </li>
+        </ul>
+
+        <!-- CTA Button -->
+        <a href="#"
+          class="relative flex items-center text-[14px] font-semibold text-white px-6 py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg">
+          <!-- Button Text -->
+          <span class="relative z-10">GET A FREE QUOTE</span>
+
+          <!-- Arrow Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+
+          <!-- Glowing Background -->
+          <span
+            class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"></span>
+
+          <!-- Inner Animated Shine -->
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center relative">
+      <div class="w-[90vw]">
+        <h2 class="text-5xl text-white tilt-neon mt-10">
+          Home/Virtual Office
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary/5 via-white to-primary-dark/5 py-24 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full">
+      <div class="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-20 right-20 w-96 h-96 bg-primary-dark/10 rounded-full blur-3xl animate-pulse-slow">
+      </div>
+    </div>
+    <div class="w-[90%] mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="slide-in-left">
+          <div
+            class="inline-flex raleway items-center bg-primary/10 text-black px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <i class="fas fa-star mr-2"></i>
+            Trusted by 50,000+ Businesses
+          </div>
+          <h1 class="lg:text-5xl font-bold text-gray-900 mb-8 tilt-neon">
+            Professional
+            <span class="gradient-text block">Virtual Offices</span>
+            <span class="text-gray-600 text-4xl raleway">for Modern Businesses</span>
+          </h1>
+          <p class="text-xl text-gray-600 mb-10 leading-relaxed raleway">
+            Establish your business presence with a prestigious address,
+            professional call handling, and mail management services. Perfect
+            for startups, remote teams, and expanding businesses.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 mb-10">
+            <div class="flex gap-4">
+              <a href=""
+                class="w-[220px] bg-white text-black text-1xl font-bold raleway py-2 px-4 rounded-[50px] flex justify-between items-center mt-5 animate-glow">
+                <i class="fa fa-phone bg-black text-white px-4 py-4 rounded-full"></i>
+                Get A Free Quote
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center space-x-8 text-gray-600">
+            <div class="flex items-center raleway">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>No Setup Fees</span>
+            </div>
+            <div class="flex items-center raleway">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>30-Day Guarantee</span>
+            </div>
+          </div>
+        </div>
+        <div class="slide-in-right">
+          <div class="relative">
+            <div class="morphism-card rounded-3xl p-10 animate-float">
+              <img
+                src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Modern Office Space" class="w-full h-96 object-cover rounded-2xl shadow-2xl" />
+              <div class="mt-8 grid grid-cols-3 gap-6 text-center">
+                <div class="bg-white/50 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                  <div class="text-3xl font-bold gradient-text tilt-neon">
+                    500+
+                  </div>
+                  <div class="text-sm text-gray-600 font-medium">
+                    Projects
+                  </div>
+                </div>
+                <div class="bg-white/50 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                  <div class="text-3xl font-bold gradient-text tilt-neon">
+                    50K+
+                  </div>
+                  <div class="text-sm text-gray-600 font-medium">Clients</div>
+                </div>
+                <div class="bg-white/50 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                  <div class="text-3xl font-bold gradient-text tilt-neon">
+                    24/7
+                  </div>
+                  <div class="text-sm text-gray-600 font-medium">Support</div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating elements -->
+            <div
+              class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-lg animate-pulse-slow shadow-2xl">
+              <i class="fas fa-crown"></i>
+            </div>
+            <div
+              class="absolute -bottom-6 -left-6 w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center text-white animate-float shadow-2xl">
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-24 bg-white relative">
+    <div class="w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <div
+          class="inline-flex items-center bg-primary/10 text-black raleway px-6 py-3 rounded-full text-sm font-bold mb-6">
+          <i class="fas fa-award mr-2"></i>
+          Why Choose Us
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 tilt-neon">
+          Premium
+          <span class="gradient-text raleway">Virtual Office</span> Benefits
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto raleway">
+          Everything you need to establish and maintain a professional
+          business presence worldwide
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 cursor-pointer">
+        <div
+          class="group card-hover-effect bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16"></div>
+          <div class="relative z-10">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors tilt-neon">
+              Prestigious Address
+            </h3>
+            <p class="text-gray-600 leading-relaxed raleway">
+              Get a professional business address in prime locations to
+              enhance your company's credibility and market presence
+              worldwide.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group card-hover-effect bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden text-white">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
+          <div class="relative z-10">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-primary to-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-phone text-2xl text-gray-900"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors tilt-neon">
+              Call Handling
+            </h3>
+            <p class="text-gray-300 leading-relaxed raleway">
+              Professional receptionists answer your calls in your company
+              name, ensuring you never miss important business opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group card-hover-effect bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16"></div>
+          <div class="relative z-10">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-envelope text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors tilt-neon">
+              Mail Management
+            </h3>
+            <p class="text-gray-600 leading-relaxed raleway">
+              Secure mail handling and forwarding services to keep your
+              business correspondence organized and professional.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group card-hover-effect bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16"></div>
+          <div class="relative z-10">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-users text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors tilt-neon">
+              Meeting Rooms
+            </h3>
+            <p class="text-gray-600 leading-relaxed raleway">
+              Access to professional meeting rooms and conference facilities
+              when you need impressive face-to-face meetings.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group card-hover-effect bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden text-white">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
+          <div class="relative z-10">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-primary to-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-clock text-2xl text-gray-900"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors tilt-neon">
+              Flexible Terms
+            </h3>
+            <p class="text-gray-300 leading-relaxed raleway">
+              No long-term commitments required. Choose monthly or annual
+              plans that perfectly fit your business needs and budget.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group card-hover-effect bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16"></div>
+          <div class="relative z-10">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors tilt-neon">
+              Privacy Protection
+            </h3>
+            <p class="text-gray-600 leading-relaxed raleway">
+              Keep your home address completely private while maintaining a
+              professional business presence in key markets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 to-primary/5">
+    <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center bg-primary/10 text-black px-6 py-3 rounded-full text-sm font-bold mb-6">
+          <i class="fas fa-gem mr-2"></i>
+          Pricing Plans
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-black tilt-neon">
+          Choose Your
+          <span class="text-[#22d3ee] raleway">Perfect Package</span>
+        </h2>
+        <p
+          class="text-2xl font-extrabold raleway text-center text-black [text-shadow:0_0_8px_rgba(255,215,0,0.9),0_0_15px_rgba(255,215,0,0.6)] animate-pulse">
+          Get 2 Months FREE on a 10-Month Package!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto pb-16 px-6">
+        <!-- Basic -->
+        <div
+          class="bg-white rounded-3xl shadow-lg p-8 flex flex-col justify-between border border-gray-100 hover:shadow-2xl transition">
+          <div class="text-center mb-2">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-seedling text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900">Basic</h3>
+            <p class="mt-4">
+              <span class="text-4xl font-bold text-primary">£39</span>
+              <span class="text-gray-600 text-lg">/month</span>
+            </p>
+            <p class="text-gray-600 mt-2">
+              Perfect for individuals & startups
+            </p>
+          </div>
+          <ul class="text-gray-700 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Professional
+              business address
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Mail receiving &
+              notifications
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Basic customer
+              support
+            </li>
+          </ul>
+          <button
+            class="w-full bg-gradient-to-r from-primary to-primary-dark text-white py-3 rounded-xl font-bold hover:shadow-xl transition">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Starter -->
+        <div
+          class="bg-white rounded-3xl shadow-lg p-8 flex flex-col justify-between border border-gray-100 hover:shadow-2xl transition">
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-rocket text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900">Starter</h3>
+            <p class="mt-4">
+              <span class="text-4xl font-bold text-primary">£79</span>
+              <span class="text-gray-600 text-lg">/month</span>
+            </p>
+            <p class="text-gray-600 mt-2">
+              Great for small teams & new businesses
+            </p>
+          </div>
+          <ul class="space-y-3 text-gray-700 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Everything in
+              Basic
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Business
+              registration support
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Online account
+              management
+            </li>
+          </ul>
+          <button
+            class="w-full bg-gradient-to-r from-primary to-primary-dark text-white py-3 rounded-xl font-bold hover:shadow-xl transition">
+            Get Starter Plan
+          </button>
+        </div>
+
+        <!-- Professional (Highlighted) -->
+        <div
+          class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-xl p-8 flex flex-col justify-between border-2 border-primary relative transform scale-105">
+          <span
+            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
+            Most Popular
+          </span>
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-briefcase text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Professional</h3>
+            <p class="mt-4">
+              <span class="text-4xl font-bold text-primary">£129</span>
+              <span class="text-gray-300 text-lg">/month</span>
+            </p>
+            <p class="text-gray-300 mt-2">Ideal for growing businesses</p>
+          </div>
+          <ul class="space-y-3 text-gray-200 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Everything in
+              Starter
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Professional call
+              answering
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> Mail forwarding
+              (2x/month)
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-3"></i> 5 hours meeting
+              room access
+            </li>
+          </ul>
+          <button
+            class="w-full bg-gradient-to-r from-primary to-primary-dark text-white py-3 rounded-xl font-bold hover:shadow-xl transition">
+            Start Professional
+          </button>
+        </div>
+
+        <!-- Enterprise -->
+        <div
+          class="bg-white rounded-3xl shadow-lg p-8 flex flex-col justify-between border border-gray-100 hover:shadow-2xl transition">
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-gray-900/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-crown text-gray-900 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900">Enterprise</h3>
+            <p class="mt-4">
+              <span class="text-4xl font-bold text-gray-900">£199</span>
+              <span class="text-gray-600 text-lg">/month</span>
+            </p>
+            <p class="text-gray-600 mt-2">
+              Complete solution for established businesses
+            </p>
+          </div>
+          <ul class="space-y-3 text-gray-700 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-gray-900 mr-3"></i> Everything in
+              Professional
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-gray-900 mr-3"></i> Unlimited call
+              answering
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-gray-900 mr-3"></i> Weekly mail
+              forwarding
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-gray-900 mr-3"></i> 20 hrs meeting
+              room access
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-gray-900 mr-3"></i> Dedicated
+              account manager
+            </li>
+          </ul>
+          <button
+            class="w-full bg-gray-900 text-white py-3 rounded-xl font-bold hover:bg-gray-800 hover:shadow-xl transition">
+            Go Enterprise
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <button
+          class="bg-gray-900 raleway text-white px-12 py-4 rounded-2xl text-lg font-bold hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 shadow-xl">
+          <i class="fas fa-comments mr-3"></i>
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl sm:text-5xl tilt-neon font-bold tilt-neon text-gray-900 mb-6">
+          Everything <span class="gradient-text">Included</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto raleway">
+          Moving your business into our virtual offices is simple. Our
+          services are comprehensive and inclusive
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
+        <div
+          class="feature-card bg-[#1DC6E2] raleway raleway from-primary to-primary-dark text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-calendar-alt text-2xl mb-3"></i>
+          <div>Flexible Rental</div>
+        </div>
+        <div
+          class="feature-card bg-black raleway from-gray-900 to-gray-800 text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-headset text-2xl mb-3"></i>
+          <div>24/7 Support</div>
+        </div>
+        <div
+          class="feature-card bg-[#1DC6E2] raleway from-primary to-primary-dark text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-lock text-2xl mb-3"></i>
+          <div>Gated Access</div>
+        </div>
+        <div
+          class="feature-card bg-[#1DC6E2] raleway from-gray-900 to-gray-800 text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-chart-line text-2xl mb-3"></i>
+          <div>Business Rates</div>
+        </div>
+        <div
+          class="feature-card bg-black raleway from-primary to-primary-dark text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-car text-2xl mb-3"></i>
+          <div>Drive-up Access</div>
+        </div>
+        <div
+          class="feature-card bg-[#1DC6E2] raleway from-gray-900 to-gray-800 text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-video text-2xl mb-3"></i>
+          <div>CCTV Security</div>
+        </div>
+        <div
+          class="feature-card bg-black raleway from-primary to-primary-dark text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-expand-arrows-alt text-2xl mb-3"></i>
+          <div>Flexible Sizes</div>
+        </div>
+        <div
+          class="feature-card bg-black raleway from-gray-900 to-gray-800 text-white p-6 rounded-2xl text-center font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <i class="fas fa-clock text-2xl mb-3"></i>
+          <div>
+            <span class="tilt-neon">24</span> Hour Access
+            <span class="tilt-neon">365</span> Days
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div class="slide-in-left">
+          <h2 class="text-4xl sm:text-4xl font-bold text-gray-900 mb-8 tilt-neon">
+            Helping You Find
+            <span class="gradient-text">Your Perfect Property</span>
+          </h2>
+          <div class="space-y-8">
+            <!-- USP 1 -->
+            <div class="flex items-start group">
+              <div
+                class="w-24 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mt-2 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-home text-white text-xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors tilt-neon">
+                  Local Expertise
+                </h3>
+                <p class="text-gray-600 text-lg leading-relaxed raleway">
+                  With years of experience in the North West property market,
+                  we know the area inside out and match you with homes that
+                  fit your lifestyle and budget.
+                </p>
+              </div>
+            </div>
+            <!-- USP 2 -->
+            <div class="flex items-start group">
+              <div
+                class="w-24 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center mt-2 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-handshake text-white text-xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors tilt-neon">
+                  Personalised Service
+                </h3>
+                <p class="text-gray-600 text-lg leading-relaxed raleway">
+                  Whether buying, selling, or renting, our friendly team works
+                  closely with you every step of the way to make the process
+                  smooth and stress-free.
+                </p>
+              </div>
+            </div>
+            <!-- USP 3 -->
+            <div class="flex items-start group">
+              <div
+                class="w-24 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mt-2 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-key text-white text-xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors tilt-neon">
+                  End-to-End Solutions
+                </h3>
+                <p class="text-gray-600 text-lg leading-relaxed raleway">
+                  From property management to lettings and investments, we
+                  handle everything so you can focus on what matters most.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right side image -->
+        <div class="slide-in-right">
+          <div class="relative">
+            <div class="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-2xl">
+              <img
+                src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="North West Property" class="w-full h-80 object-cover rounded-2xl shadow-xl" />
+              <div class="mt-8 text-center">
+                <button
+                  class="bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  <i class="fas fa-play mr-3"></i>
+                  Explore Properties
+                </button>
+              </div>
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -top-8 -right-8 w-24 h-24 bg-primary/20 rounded-full animate-pulse-slow"></div>
+            <div class="absolute -bottom-8 -left-8 w-20 h-20 bg-gray-900/20 rounded-full animate-float"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 to-primary/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <div
+          class="inline-flex items-center bg-primary/10 text-black raleway px-6 py-3 rounded-full text-sm font-bold mb-6">
+          <i class="fas fa-home mr-2"></i>
+          Simple Process
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 tilt-neon">
+          How It Works
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto raleway">
+          Your property journey made simple in just 3 steps
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Connection line -->
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+          <!-- Step 1 -->
+          <div class="text-center group">
+            <div class="flex justify-center"><img src="assets/images/7.png" class="w-[290px]" /></div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 group-hover:text-primary transition-colors tilt-neon">
+              Get in Touch
+            </h3>
+            <p class="text-gray-600 text-lg leading-relaxed raleway">
+              Contact us to discuss whether you’re buying, selling, letting,
+              or need property management services.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center group">
+            <div class="flex justify-center"><img src="assets/images/8.png" class="w-[290px]" /></div>
+
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 group-hover:text-gray-700 transition-colors tilt-neon">
+              We Handle the Details
+            </h3>
+            <p class="text-gray-600 text-lg leading-relaxed raleway">
+              From valuations and marketing to viewings and paperwork, we take
+              care of everything for you.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center group">
+            <div class="flex justify-center"><img src="assets/images/9.png" class="w-[290px]" /></div>
+
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 group-hover:text-primary transition-colors tilt-neon">
+              Move Forward with Confidence
+            </h3>
+            <p class="text-gray-600 text-lg leading-relaxed raleway">
+              Enjoy peace of mind while we manage the process – whether it’s
+              moving into your new home or managing your property hassle-free.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <!-- Testimonials Section -->
+  <section
+    class="w-full relative min-h-[80vh] bg-[#DDF0F2B8] bg-center bg-cover bg-no-repeat flex justify-center items-center rounded-[30px] py-16 px-6 md:px-12 lg:px-16">
+    <div class="relative z-10 w-full max-w-7xl">
+      <!-- Heading -->
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 tilt-neon">
+          What Our <span class="text-[#06afce] raleway">Clients Say</span>
+        </h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto mt-3">
+          Discover how we've helped property owners achieve seamless
+          management and happy tenants.
+        </p>
+      </div>
+
+      <!-- Review Cards Container -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl h-[290px] p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <!-- Header -->
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">John Milton</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <!-- Stars -->
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <!-- Review -->
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Exceptional property management services! The onboarding process
+            was seamless, and my rental income has grown since partnering with
+            them."
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">Sarah Wilson</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "The team is super professional and responsive. They found us
+            great tenants quickly and handled everything smoothly!"
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">Michael Chen</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Best property management team I've worked with! Monthly reports
+            are transparent, and they handle tenants very professionally."
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">Emily Johnson</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Absolutely love their service! They manage everything
+            proactively, and my tenants are happier than ever."
+          </p>
+        </div>
+
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <!-- Header -->
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">John Milton</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <!-- Stars -->
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <!-- Review -->
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Exceptional property management services! The onboarding process
+            was seamless, and my rental income has grown since partnering with
+            them."
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">Sarah Wilson</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "The team is super professional and responsive. They found us
+            great tenants quickly and handled everything smoothly!"
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">Michael Chen</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Best property management team I've worked with! Monthly reports
+            are transparent, and they handle tenants very professionally."
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-[#06afce] font-bold text-lg">Emily Johnson</h3>
+              <p class="text-sm text-gray-700 font-medium">Our Client</p>
+            </div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+              alt="Google Logo" class="w-8 h-8" />
+          </div>
+          <div class="flex items-center space-x-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Absolutely love their service! They manage everything
+            proactively, and my tenants are happier than ever."
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-4 w-full justify-center mt-10">
+        <a href="#"
+          class="group relative w-[260px] bg-white text-black font-bold raleway py-3 px-6 rounded-full flex justify-center items-center gap-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#06AFCE]/70 overflow-hidden">
+          <!-- Icon -->
+          <i class="fa-solid fa-star text-xl transition-transform duration-300 group-hover:rotate-12"></i>
+
+          <!-- Text -->
+          <span class="text-lg">Leave A Review</span>
+
+          <!-- Glow Overlay -->
+          <span
+            class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition duration-300 blur-lg"></span>
+
+          <!-- Shine Animation -->
+          <span
+            class="absolute top-0 left-[-100%] w-[80px] h-full bg-white/30 transform skew-x-12 transition-all duration-700 group-hover:left-[120%]"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 gradient-bg relative overflow-hidden">
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="reveal">
+        <h2 class="text-5xl md:text-5xl font-black text-black mb-8 leading-tight tilt-neon">
+          Ready to Experience
+          <span class="block text-white"> Excellence? </span>
+        </h2>
+        <p class="text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed raleway">
+          Join thousands of satisfied clients who trust us with their property
+          needs. Let's start your success story today.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="#"
+            class="group bg-white raleway text-black px-10 py-5 rounded-2xl font-black text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl">
+            Start Your Journey
+            <svg class="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a href="#"
+            class="group border-2 border-black text-black raleway px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm">
+            Schedule Consultation
+            <svg class="ml-3 h-6 w-6 group-hover:rotate-12 transition-transform duration-300" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
+      <!-- Top Section: Excellent Customer Support -->
+      <div class=""></div>
+      <div class="text-center mb-10">
+        <h3 class="text-5xl text-[#06AFCE] mb-5">logo</h3>
+        <p class="raleway text-[20px] text-gray-300">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+          provident, iste cum asperiores sapiente odit? Excepturi ullam,
+          facere consequuntur tempore deleniti unde at accusamus reiciendis
+          cum aperiam, et dolore blanditiis.
+        </p>
+      </div>
+
+      <!-- Office Locations -->
+      <div class="text-center mb-10">
+        <h4 class="text-1xl md:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5">
+          OUR OFFICE LOCATIONS
+        </h4>
+        <div class="flex flex-wrap justify-center gap-6 text-gray-300 raleway text-2xl cursor-pointer">
+          <span>London, UK</span>
+          <span>Belfast, Northern Ireland</span>
+          <span>Glasgow, Scotland</span>
+          <span>Toronto, Canada</span>
+          <span>Delaware, USA</span>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <!-- Useful Links -->
+      <div class="text-center mb-10 border-t-[1px] border-gray-300 pt-5">
+        <h4 class="font-semibold mb-3 text-[#06AFCE] text-3xl tilt-neon">
+          USEFUL LINKS
+        </h4>
+        <div class="flex flex-wrap justify-center gap-6 text-gray-300 text-[24px] raleway">
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Home
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            About
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Contact
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Service
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Blog
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Privacy Policy
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Terms & Conditions
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="flex flex-col items-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-8">
+        <!-- Google Reviews -->
+        <div class="flex items-center justify-between w-[70vw]">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/google.webp" alt="Google" class="w-[180px] h-[80px]" />
+            <div></div>
+          </div>
+          <div>
+            <p class="raleway text-[18px]">
+              Our Customer Gave us Excellant Rating
+            </p>
+            <img src="assets/images/reviw-removebg-preview.png" class="w-[280px] h-[50px]" />
+          </div>
+          <div class="flex gap-5 mt-4">
+            <a href="#"
+              class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+              <i class="fab fa-facebook-f text-2xl text-[#06AFCE]"></i>
+            </a>
+            <a href="#"
+              class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+              <i class="fab fa-instagram text-2xl text-[#06AFCE]"></i>
+            </a>
+            <a href="#"
+              class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+              <i class="fab fa-youtube text-2xl text-[#06AFCE]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+
+        <!-- Copyright -->
+      </div>
+      <div class="flex gap-10 items-center border-b-[1px] border-gray-300 justify-center p-6 l shadow-md">
+        <!-- Google Pay -->
+        <img src="https://www.pngplay.com/wp-content/uploads/5/American-Express-Logo-Download-Free-PNG.png"
+          alt="Google Pay" class="h-20 hover:scale-110 transition duration-300" />
+
+        <!-- Razorpay -->
+        <img src="assets/images/Razorpay_logo.svg" alt="Razorpay"
+          class="h-10 hover:scale-110 transition duration-300" />
+
+        <!-- PhonePe -->
+        <img src="assets/images/PhonePe-Logo.wine.png" alt="PhonePe"
+          class="h-20 hover:scale-110 transition duration-300" />
+
+        <!-- Paytm -->
+        <img src="assets/images/Paytm-Logo.webp" alt="Paytm" class="h-16 hover:scale-110 transition duration-300" />
+
+        <!-- PayPal -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"
+          class="h-10 hover:scale-110 transition duration-300" />
+
+        <!-- MasterCard -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard"
+          class="h-10 hover:scale-110 transition duration-300" />
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-black text-white">
+        <p class="text-lg md:text-[20px] font-raleway mb-2 md:mb-0 raleway">
+          © All Rights Reserved 2025
+          <span class="text-[#06AFCE]">Rental Property Maintenance</span>
+        </p>
+        <p class="text-lg md:text-xl raleway">
+          Designed & Developed By
+          <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]">Kyle Infotech</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Enhanced functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Enhanced header scroll effect
+      let lastScroll = 0;
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const currentScroll = window.scrollY;
+
+        if (currentScroll > 100) {
+          header.classList.add("shadow-2xl", "bg-white/98");
+          header.classList.remove("bg-white/95");
+        } else {
+          header.classList.remove("shadow-2xl", "bg-white/98");
+          header.classList.add("bg-white/95");
+        }
+
+        // Hide/show header on scroll
+        if (currentScroll > lastScroll && currentScroll > 500) {
+          header.style.transform = "translateY(-100%)";
+        } else {
+          header.style.transform = "translateY(0)";
+        }
+        lastScroll = currentScroll;
+      });
+
+      // Enhanced FAQ Toggle Functionality
+      window.toggleFAQ = function (button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector("i");
+        const card = button.closest(".morphism-card");
+
+        // Close other FAQs
+        document.querySelectorAll(".faq-content").forEach((otherContent) => {
+          if (
+            otherContent !== content &&
+            !otherContent.classList.contains("hidden")
+          ) {
+            otherContent.classList.add("hidden");
+            const otherIcon =
+              otherContent.previousElementSibling.querySelector("i");
+            otherIcon.style.transform = "rotate(0deg)";
+          }
+        });
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          icon.style.transform = "rotate(180deg)";
+          card.classList.add("ring-2", "ring-primary/20");
+        } else {
+          content.classList.add("hidden");
+          icon.style.transform = "rotate(0deg)";
+          card.classList.remove("ring-2", "ring-primary/20");
+        }
+      };
+
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in");
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document
+        .querySelectorAll(".card-hover-effect, .feature-card")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+
+      // Add floating animation to cards on hover
+      document.querySelectorAll(".card-hover-effect").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-12px) scale(1.03)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) scale(1)";
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

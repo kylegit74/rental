@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Property Rental Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon:ital,wght@0,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .raleway {
+        font-family: "Raleway", sans-serif;
+      }
+
+      @keyframes pulseShadow {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.6);
+        }
+
+        50% {
+          box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.3);
+        }
+      }
+
+      .tiltwrap {
+        font-family: "Tilt Warp", sans-serif;
+      }
+
+      .tilt-neon {
+        font-family: "Tilt Neon", sans-serif;
+        font-variation-settings: "XROT" 15, "YROT" -10;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #06b6d4, #0891b2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .pulse-glow {
+        animation: pulseGlow 3s ease-in-out infinite;
+      }
+
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+
+        50% {
+          box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+        }
+      }
+
+      .parallax-bg {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .counter {
+        font-variant-numeric: tabular-nums;
+      }
+
+      .team-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .team-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .team-card:hover::before {
+        left: 100%;
+      }
+
+      .morphing-blob {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        animation: morph 8s ease-in-out infinite;
+      }
+
+      @keyframes morph {
+        0% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        50% {
+          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+
+        100% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+      }
+
+      .nav-blur {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      @media (max-width: 768px) {
+        .parallax-bg {
+          background-attachment: scroll;
+        }
+      }
+
+      /* Glowing animation */
+      @keyframes glowing {
+        0% {
+          box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 15px #06afce;
+        }
+
+        50% {
+          box-shadow: 0 0 15px #06afce, 0 0 25px #06afce, 0 0 35px #06afce;
+        }
+
+        100% {
+          box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 15px #06afce;
+        }
+      }
+
+      /* Apply animation */
+      .animate-glow {
+        animation: glowing 1.8s infinite ease-in-out;
+      }
+
+      /* Pulse Shadow for Button Icon */
+      @keyframes shadowPulse {
+        0% {
+          box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 20px #06afce;
+        }
+
+        50% {
+          box-shadow: 0 0 15px #06afce, 0 0 30px #06afce, 0 0 40px #06afce;
+        }
+
+        100% {
+          box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 20px #06afce;
+        }
+      }
+
+      .shadow-pulse {
+        animation: shadowPulse 1.8s infinite ease-in-out;
+      }
+
+      /* Fade-in Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 1.2s ease-in-out forwards;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+      }
+
+      .timeline-container {
+        position: relative;
+      }
+
+      .timeline-container::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #06afce;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+
+      .timeline-step {
+        position: relative;
+        margin-bottom: 6rem;
+      }
+
+      .step-number {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #14b8a6, #06b6d4);
+        border: 6px solid white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        box-shadow: 0 10px 30px rgba(20, 184, 166, 0.3);
+      }
+
+      .service-card {
+        transition: all 0.4s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(20, 184, 166, 0.15);
+      }
+
+      .floating-animation {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .pulse-glow {
+        animation: pulseGlow 2s infinite;
+      }
+
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+        }
+
+        50% {
+          box-shadow: 0 0 40px rgba(20, 184, 166, 0.6);
+        }
+      }
+
+      @media (max-width: 1023px) {
+        .timeline-container::before {
+          display: none;
+        }
+
+        .step-number {
+          position: relative;
+          left: auto;
+          top: auto;
+          transform: none;
+          margin: 0 auto 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <section
+      class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[60vh] w-full"
+    >
+      <!-- Black Overlay -->
+      <div class="absolute inset-0 bg-black/80 bg-opacity-50"></div>
+
+      <!-- top bar -->
+      <div
+        class="w-full raleway flex justify-center relative z-10 border-b-[1px] border-gray-300 py-6"
+      >
+        <div class="flex justify-between w-[90%]">
+          <!-- Left Info Section -->
+          <div class="flex flex-wrap items-center gap-5">
+            <!-- Phone -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-phone text-white"></i>
+              <span class="text-white">012 03456 7890</span>
+            </div>
+            <!-- Location -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-location-dot text-white"></i>
+              <span class="text-white">Lorem Ipsum Dolr, 24115</span>
+            </div>
+            <!-- Email -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-envelope text-white"></i>
+              <a
+                href="mailto:info@loremipsum.com"
+                class="hover:underline text-white"
+                >info@LoremIpsum.com</a
+              >
+            </div>
+          </div>
+
+          <!-- Right Social Section -->
+          <div class="flex items-center gap-3">
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-youtube text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--navbar -->
+      <div
+        class="w-full flex justify-center raleway font-bold relative z-50 py-6 bg-transparent"
+      >
+        <div class="flex justify-between items-center w-[90%] relative">
+          <!-- Logo -->
+          <div class="text-cyan-400 font-bold text-5xl">LOGO</div>
+
+          <!-- Menu -->
+          <ul class="flex space-x-8 items-center">
+            <li>
+              <a
+                href="index.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >ABOUT US</a
+              >
+            </li>
+
+            <!-- Services Menu with Hover -->
+            <li class="relative group">
+              <a
+                href="services.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >SERVICES</a
+              >
+
+              <!-- Dropdown -->
+              <div
+                class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50"
+              >
+                <div class="grid grid-cols-1 gap-2 text-left">
+                  <!-- Column 1 -->
+                  <div class="group">
+                    <h3
+                      class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer"
+                    >
+                      Office Space
+
+                      <i
+                        class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"
+                      ></i>
+                    </h3>
+
+                    <ul
+                      class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden"
+                    >
+                      <li>
+                        <a
+                          href="independence-house-heywood.html"
+                          class="hover:text-cyan-500"
+                          >&rsaquo; independence house heywood</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-cyan-500"
+                          >&rsaquo; certacs house skelsmerdale</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <a
+                    href="virtual-office.html"
+                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
+                  >
+                    Virtual Office
+                  </a>
+
+                  <a
+                    href="storage-container.html"
+                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
+                  >
+                    Storage Container
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="contact.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >CONTACTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >BLOG</a
+              >
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <a
+            href="#"
+            class="relative flex items-center text-[14px] font-semibold text-white px-6 py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg"
+          >
+            <!-- Button Text -->
+            <span class="relative z-10">GET A FREE QUOTE</span>
+
+            <!-- Arrow Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+
+            <!-- Glowing Background -->
+            <span
+              class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"
+            ></span>
+
+            <!-- Inner Animated Shine -->
+            <span
+              class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"
+            ></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center relative">
+        <div class="w-[90vw]">
+          <h2 class="text-5xl text-white tilt-neon mt-10">Home/Our Service</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="py-24 bg-white relative">
+      <div
+        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-blue-500"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <!-- Image Section -->
+          <div class="relative reveal stagger-2 h-[80vh]">
+            <div
+              class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl opacity-20 blur-xl"
+            ></div>
+            <div
+              class="relative bg-white rounded-2xl p-4 shadow-2xl h-full flex items-center justify-center"
+            >
+              <img
+                src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+                alt="Our Service"
+                class="rounded-3xl h-[90%] w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Content Section -->
+          <div class="reveal">
+            <div
+              class="inline-flex items-center bg-cyan-50 rounded-full px-4 py-2 mb-6"
+            >
+              <svg
+                class="w-4 h-4 text-cyan-500 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+              <span class="text-cyan-700 font-semibold text-sm raleway"
+                >Our Service</span
+              >
+            </div>
+
+            <h2
+              class="text-5xl font-black text-gray-900 mb-8 leading-tight tilt-neon"
+            >
+              Exceptional
+              <span class="text-gradient raleway">Property Services</span>
+              <br />Tailored for You
+            </h2>
+
+            <div
+              class="space-y-6 text-lg text-gray-600 leading-relaxed tilt-neon"
+            >
+              <p>
+                We provide comprehensive property services designed to make your
+                experience smooth and hassle-free. From rentals to management,
+                we deliver solutions that exceed expectations.
+              </p>
+              <p>
+                Our team combines modern technology with expert knowledge to
+                ensure efficiency, transparency, and trust in every service we
+                offer.
+              </p>
+              <p>
+                With over
+                <span class="font-semibold text-cyan-600"
+                  >20 years of combined expertise</span
+                >, we are dedicated to creating value and satisfaction for our
+                clients.
+              </p>
+            </div>
+
+            <div class="flex gap-4">
+              <a
+                href=""
+                class="w-[250px] bg-white text-black font-bold raleway py-2 px-4 rounded-[50px] flex justify-between items-center mt-5 animate-glow"
+              >
+                <i
+                  class="fa fa-phone bg-black text-white px-4 py-4 rounded-full"
+                ></i>
+                Book An Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Journey Timeline -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tilt-neon"
+          >
+            Your Property
+            <span class="raleway font-bold text-[#06afce]"
+              >Management Journey</span
+            >
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto raleway">
+            Experience our comprehensive approach through four carefully
+            designed service phases
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Step 1 -->
+          <div class="timeline-step">
+            <div class="step-number">
+              <span class="text-2xl font-bold text-white">01</span>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="lg:pr-16">
+                <div
+                  class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl border border-primary/20"
+                >
+                  <div
+                    class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-6"
+                  >
+                    <span class="font-semibold raleway px-4 py-1 rounded-[50px]"
+                      >Premium Office Space</span
+                    >
+                  </div>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 raleway tilt-neon"
+                  >
+                    Independence House
+                    <span class="raleway font-bold text-[#06afce]"
+                      >Heywood</span
+                    >
+                  </h3>
+                  <p class="text-lg text-gray-600 mb-6 leading-relaxed raleway">
+                    Independence House offers a modern and fully serviced
+                    workspace designed to support professionals and businesses.
+                    Perfect for startups, SMEs, and corporate teams seeking
+                    flexibility and comfort.
+                  </p>
+                  <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                      <i class="fas fa-building text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Fully serviced private and shared offices</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-wifi text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >High-speed internet and IT support</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-parking text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Ample parking and easy accessibility</span
+                      >
+                    </div>
+                  </div>
+                  <a
+                    href="independence-house-heywood.html"
+                    class="flex items-center text-[#06afce] font-semibold raleway"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
+              <div class="lg:pl-16">
+                <div class="relative">
+                  <img
+                    src="https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg"
+                    alt="Independence House Heywood"
+                    class="rounded-2xl shadow-2xl w-full h-96 object-cover pulse-glow"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step">
+            <div class="step-number">
+              <span class="text-2xl font-bold text-white">02</span>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="lg:pr-16">
+                <div class="relative">
+                  <img
+                    src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg"
+                    alt="Certacs House Skelmersdale"
+                    class="rounded-2xl shadow-2xl w-full h-96 object-cover pulse-glow"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#06afce]/20 to-transparent rounded-2xl"
+                  ></div>
+                </div>
+              </div>
+              <div class="lg:pl-16">
+                <div
+                  class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl border border-primary/20"
+                >
+                  <div
+                    class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-6"
+                  >
+                    <span class="font-semibold raleway px-4 py-1 rounded-[50px]"
+                      >Business Hub</span
+                    >
+                  </div>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 raleway tilt-neon"
+                  >
+                    Certacs House
+                    <span class="raleway font-bold text-[#06afce]"
+                      >Skelmersdale</span
+                    >
+                  </h3>
+                  <p class="text-lg text-gray-600 mb-6 leading-relaxed raleway">
+                    A professional business centre offering flexible office
+                    solutions, collaborative workspaces, and top-notch
+                    facilities for companies of all sizes in the heart of
+                    Skelmersdale.
+                  </p>
+                  <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                      <i class="fas fa-briefcase text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Flexible co-working and private offices</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-users text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Conference and meeting room facilities</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-cogs text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Modern amenities with full business support</span
+                      >
+                    </div>
+                  </div>
+                  <a
+                    href=""
+                    class="flex items-center text-[#06afce] font-semibold raleway"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step">
+            <div class="step-number">
+              <span class="text-2xl font-bold text-white">03</span>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="lg:pr-16">
+                <div
+                  class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl border border-primary/20"
+                >
+                  <div
+                    class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-6"
+                  >
+                    <span class="font-semibold raleway px-4 py-1 rounded-[50px]"
+                      >Virtual Solutions</span
+                    >
+                  </div>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 raleway tilt-neon"
+                  >
+                    Virtual
+                    <span class="raleway font-bold text-[#06afce]">Office</span>
+                  </h3>
+                  <p class="text-lg text-gray-600 mb-6 leading-relaxed raleway">
+                    Build a professional business presence without the overhead.
+                    Our virtual office solutions provide mailing addresses, call
+                    handling, and business support to keep you connected
+                    anywhere.
+                  </p>
+                  <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                      <i class="fas fa-envelope text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Professional business mailing address</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-phone-alt text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Dedicated phone number & call forwarding</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-laptop-house text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Remote admin and business support</span
+                      >
+                    </div>
+                  </div>
+                  <a
+                    href="virtual-office.html"
+                    class="flex items-center text-[#06afce] font-semibold raleway"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
+              <div class="lg:pl-16">
+                <div class="relative">
+                  <img
+                    src="https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg"
+                    alt="Virtual Office"
+                    class="rounded-2xl shadow-2xl w-full h-96 object-cover pulse-glow"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#06afce]/20 to-transparent rounded-2xl"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step">
+            <div class="step-number">
+              <span class="text-2xl font-bold text-white">04</span>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="lg:pr-16">
+                <div class="relative">
+                  <img
+                    src="https://images.pexels.com/photos/209217/pexels-photo-209217.jpeg"
+                    alt="Storage Container"
+                    class="rounded-2xl shadow-2xl w-full h-96 object-cover pulse-glow"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#06afce]/20 to-transparent rounded-2xl"
+                  ></div>
+                </div>
+              </div>
+              <div class="lg:pl-16">
+                <div
+                  class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl border border-primary/20"
+                >
+                  <div
+                    class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-6"
+                  >
+                    <span class="font-semibold raleway px-4 py-1 rounded-[50px]"
+                      >Secure Storage</span
+                    >
+                  </div>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 raleway tilt-neon"
+                  >
+                    Storage
+                    <span class="raleway font-bold text-[#06afce]"
+                      >Containers</span
+                    >
+                  </h3>
+                  <p class="text-lg text-gray-600 mb-6 leading-relaxed raleway">
+                    Our storage container solutions offer secure, weatherproof,
+                    and flexible options for both personal and business storage.
+                    Perfect for keeping your belongings safe and accessible.
+                  </p>
+                  <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                      <i class="fas fa-lock text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >24/7 secure monitored storage units</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-shipping-fast text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Easy loading, unloading & access</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-boxes text-[#06afce] mr-3"></i>
+                      <span class="text-gray-700 raleway"
+                        >Flexible rental options for businesses</span
+                      >
+                    </div>
+                  </div>
+                  <a
+                    href="storage-container.html"
+                    class="flex items-center text-[#06afce] font-semibold raleway"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---review -->
+
+    <section
+      class="w-full relative min-h-[80vh] bg-[#DDF0F2B8] bg-center bg-cover bg-no-repeat flex justify-center items-center rounded-[30px] py-16 px-6 md:px-12 lg:px-16"
+    >
+      <div class="relative z-10 w-full max-w-7xl">
+        <!-- Heading -->
+        <div class="text-center mb-14">
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 tilt-neon">
+            What Our <span class="text-[#06afce] raleway">Clients Say</span>
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto mt-3">
+            Discover how we've helped property owners achieve seamless
+            management and happy tenants.
+          </p>
+        </div>
+
+        <!-- Review Cards Container -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <!-- Card 1 -->
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl h-[290px] p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <!-- Header -->
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">John Milton</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <!-- Stars -->
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <!-- Review -->
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "Exceptional property management services! The onboarding process
+              was seamless, and my rental income has grown since partnering with
+              them."
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">Sarah Wilson</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "The team is super professional and responsive. They found us
+              great tenants quickly and handled everything smoothly!"
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">Michael Chen</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "Best property management team I've worked with! Monthly reports
+              are transparent, and they handle tenants very professionally."
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">Emily Johnson</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "Absolutely love their service! They manage everything
+              proactively, and my tenants are happier than ever."
+            </p>
+          </div>
+
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <!-- Header -->
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">John Milton</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <!-- Stars -->
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <!-- Review -->
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "Exceptional property management services! The onboarding process
+              was seamless, and my rental income has grown since partnering with
+              them."
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">Sarah Wilson</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "The team is super professional and responsive. They found us
+              great tenants quickly and handled everything smoothly!"
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">Michael Chen</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "Best property management team I've worked with! Monthly reports
+              are transparent, and they handle tenants very professionally."
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-[#06afce] font-bold text-lg">Emily Johnson</h3>
+                <p class="text-sm text-gray-700 font-medium">Our Client</p>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                alt="Google Logo"
+                class="w-8 h-8"
+              />
+            </div>
+            <div class="flex items-center space-x-1 mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              "Absolutely love their service! They manage everything
+              proactively, and my tenants are happier than ever."
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4 w-full justify-center mt-10">
+          <a
+            href="#"
+            class="group relative w-[260px] bg-[#06afce] text-white font-bold raleway py-3 px-6 rounded-full flex justify-center items-center gap-3 shadow-lg shadow-[#06AFCE]/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#06AFCE]/70 overflow-hidden"
+          >
+            <!-- Icon -->
+            <i
+              class="fa-solid fa-star text-xl transition-transform duration-300 group-hover:rotate-12"
+            ></i>
+
+            <!-- Text -->
+            <span class="text-lg">Leave A Review</span>
+
+            <!-- Glow Overlay -->
+            <span
+              class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition duration-300 blur-lg"
+            ></span>
+
+            <!-- Shine Animation -->
+            <span
+              class="absolute top-0 left-[-100%] w-[80px] h-full bg-white/30 transform skew-x-12 transition-all duration-700 group-hover:left-[120%]"
+            ></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 gradient-bg relative overflow-hidden">
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+
+      <div
+        class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+      >
+        <div class="reveal">
+          <h2
+            class="text-5xl md:text-5xl font-black text-black mb-8 leading-tight tilt-neon"
+          >
+            Ready to Experience
+            <span class="block text-white"> Excellence? </span>
+          </h2>
+          <p
+            class="text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed raleway"
+          >
+            Join thousands of satisfied clients who trust us with their property
+            needs. Let's start your success story today.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="#"
+              class="group bg-white raleway text-black px-10 py-5 rounded-2xl font-black text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl"
+            >
+              Start Your Journey
+              <svg
+                class="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="group border-2 border-black text-black raleway px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
+            >
+              Schedule Consultation
+              <svg
+                class="ml-3 h-6 w-6 group-hover:rotate-12 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
+        <!-- Top Section: Excellent Customer Support -->
+        <div class=""></div>
+        <div class="text-center mb-10">
+          <h3 class="text-5xl text-[#06AFCE] mb-5">logo</h3>
+          <p class="raleway text-[20px] text-gray-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            provident, iste cum asperiores sapiente odit? Excepturi ullam,
+            facere consequuntur tempore deleniti unde at accusamus reiciendis
+            cum aperiam, et dolore blanditiis.
+          </p>
+        </div>
+
+        <!-- Office Locations -->
+        <div class="text-center mb-10">
+          <h4
+            class="text-1xl md:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5"
+          >
+            OUR OFFICE LOCATIONS
+          </h4>
+          <div
+            class="flex flex-wrap justify-center gap-6 text-gray-300 raleway text-2xl cursor-pointer"
+          >
+            <span>London, UK</span>
+            <span>Belfast, Northern Ireland</span>
+            <span>Glasgow, Scotland</span>
+            <span>Toronto, Canada</span>
+            <span>Delaware, USA</span>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <!-- Useful Links -->
+        <div class="text-center mb-10 border-t-[1px] border-gray-300 pt-5">
+          <h4 class="font-semibold mb-3 text-[#06AFCE] text-3xl tilt-neon">
+            USEFUL LINKS
+          </h4>
+          <div
+            class="flex flex-wrap justify-center gap-6 text-gray-300 text-[24px] raleway"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Home
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              About
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Contact
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Service
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Blog
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col items-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-8"
+        >
+          <!-- Google Reviews -->
+          <div class="flex items-center justify-between w-[70vw]">
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/google.webp"
+                alt="Google"
+                class="w-[180px] h-[80px]"
+              />
+              <div></div>
+            </div>
+            <div>
+              <p class="raleway text-[18px]">
+                Our Customer Gave us Excellant Rating
+              </p>
+              <img
+                src="assets/images/reviw-removebg-preview.png"
+                class="w-[280px] h-[50px]"
+              />
+            </div>
+            <div class="flex gap-5 mt-4">
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-facebook-f text-2xl text-[#06AFCE]"></i>
+              </a>
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-instagram text-2xl text-[#06AFCE]"></i>
+              </a>
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-youtube text-2xl text-[#06AFCE]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+
+          <!-- Copyright -->
+        </div>
+        <div
+          class="flex gap-10 items-center border-b-[1px] border-gray-300 justify-center p-6 l shadow-md"
+        >
+          <!-- Google Pay -->
+          <img
+            src="https://www.pngplay.com/wp-content/uploads/5/American-Express-Logo-Download-Free-PNG.png"
+            alt="Google Pay"
+            class="h-20 hover:scale-110 transition duration-300"
+          />
+
+          <!-- Razorpay -->
+          <img
+            src="assets/images/Razorpay_logo.svg"
+            alt="Razorpay"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+
+          <!-- PhonePe -->
+          <img
+            src="assets/images/PhonePe-Logo.wine.png"
+            alt="PhonePe"
+            class="h-20 hover:scale-110 transition duration-300"
+          />
+
+          <!-- Paytm -->
+          <img
+            src="assets/images/Paytm-Logo.webp"
+            alt="Paytm"
+            class="h-16 hover:scale-110 transition duration-300"
+          />
+
+          <!-- PayPal -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+            alt="PayPal"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+
+          <!-- MasterCard -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+            alt="MasterCard"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-black text-white"
+        >
+          <p class="text-lg md:text-[20px] font-raleway mb-2 md:mb-0 raleway">
+            © All Rights Reserved 2025
+            <span class="text-[#06AFCE]">Rental Property Maintenance</span>
+          </p>
+          <p class="text-lg md:text-xl raleway">
+            Designed & Developed By
+            <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]"
+              >Kyle Infotech</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Counter animation
+      function animateCounters() {
+        const counters = document.querySelectorAll(".counter");
+        counters.forEach((counter) => {
+          const target = parseInt(counter.getAttribute("data-target"));
+          let current = 0;
+          const increment = target / 60;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+          }, 25);
+        });
+      }
+
+      // Journey timeline animation on scroll
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in-up");
+
+            // Add special effects for timeline steps
+            if (entry.target.classList.contains("timeline-step")) {
+              const stepNumber = entry.target.querySelector(".step-number");
+              if (stepNumber) {
+                stepNumber.style.animation = "pulseGlow 1s ease-out";
+              }
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe timeline steps and service cards
+      document
+        .querySelectorAll(".timeline-step, .service-card")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+
+      // Trigger counter animation when hero section is visible
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(animateCounters, 500);
+            heroObserver.unobserve(entry.target);
+          }
+        });
+      });
+
+      const heroSection = document.querySelector(".gradient-bg");
+      if (heroSection) {
+        heroObserver.observe(heroSection);
+      }
+
+      // Form submission handling
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const button = this.querySelector('button[type="submit"]');
+          const originalText = button.innerHTML;
+
+          button.innerHTML =
+            '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+          button.disabled = true;
+
+          // Simulate form submission
+          setTimeout(() => {
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+            button.style.backgroundColor = "#10B981";
+
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.disabled = false;
+              button.style.backgroundColor = "";
+              this.reset();
+            }, 2000);
+          }, 1500);
+        });
+
+      // Add scroll-triggered animations
+      window.addEventListener("scroll", function () {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelectorAll(".floating-animation");
+
+        parallax.forEach((element) => {
+          const speed = 0.5;
+          element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage Container Solutions - Property Maintenance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon:ital,wght@0,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .raleway {
+        font-family: "Raleway", sans-serif;
+      }
+
+      @keyframes pulseShadow {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.6);
+        }
+
+        50% {
+          box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.3);
+        }
+      }
+
+      .tiltwrap {
+        font-family: "Tilt Warp", sans-serif;
+      }
+
+      .tilt-neon {
+        font-family: "Tilt Neon", sans-serif;
+        font-variation-settings: "XROT" 15, "YROT" -10;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #0eb2d0 0%, #06afce 100%);
+      }
+    </style>
+  </head>
+
+  <body class="bg-white">
+    <section
+      class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[60vh] w-full"
+    >
+      <!-- Black Overlay -->
+      <div class="absolute inset-0 bg-black/80 bg-opacity-50"></div>
+
+      <!-- top bar -->
+      <div
+        class="w-full raleway flex justify-center relative z-10 border-b-[1px] border-gray-300 py-6"
+      >
+        <div class="flex justify-between w-[90%]">
+          <!-- Left Info Section -->
+          <div class="flex flex-wrap items-center gap-5">
+            <!-- Phone -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-phone text-white"></i>
+              <span class="text-white">012 03456 7890</span>
+            </div>
+            <!-- Location -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-location-dot text-white"></i>
+              <span class="text-white">Lorem Ipsum Dolr, 24115</span>
+            </div>
+            <!-- Email -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-envelope text-white"></i>
+              <a
+                href="mailto:info@loremipsum.com"
+                class="hover:underline text-white"
+                >info@LoremIpsum.com</a
+              >
+            </div>
+          </div>
+
+          <!-- Right Social Section -->
+          <div class="flex items-center gap-3">
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-youtube text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--navbar -->
+      <div
+        class="w-full flex justify-center raleway font-bold relative z-50 py-6 bg-transparent"
+      >
+        <div class="flex justify-between items-center w-[90%] relative">
+          <!-- Logo -->
+          <div class="text-cyan-400 font-bold text-5xl">LOGO</div>
+
+          <!-- Menu -->
+          <ul class="flex space-x-8 items-center">
+            <li>
+              <a
+                href="index.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >ABOUT US</a
+              >
+            </li>
+
+            <!-- Services Menu with Hover -->
+            <li class="relative group">
+              <a
+                href="services.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >SERVICES</a
+              >
+
+              <!-- Dropdown -->
+              <div
+                class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50"
+              >
+                <div class="grid grid-cols-1 gap-2 text-left">
+                  <!-- Column 1 -->
+                  <div class="group">
+                    <h3
+                      class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer"
+                    >
+                      Office Space
+
+                      <i
+                        class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"
+                      ></i>
+                    </h3>
+
+                    <ul
+                      class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden"
+                    >
+                      <li>
+                        <a
+                          href="independence-house-heywood.html"
+                          class="hover:text-cyan-500"
+                          >&rsaquo; independence house heywood</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-cyan-500"
+                          >&rsaquo; certacs house skelsmerdale</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <a
+                    href="virtual-office.html"
+                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
+                  >
+                    Virtual Office
+                  </a>
+
+                  <a
+                    href="storage-container.html"
+                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
+                  >
+                    Storage Container
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="contact.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >CONTACTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >BLOG</a
+              >
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <a
+            href="#"
+            class="relative flex items-center text-[14px] font-semibold text-white px-6 py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg"
+          >
+            <!-- Button Text -->
+            <span class="relative z-10">GET A FREE QUOTE</span>
+
+            <!-- Arrow Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+
+            <!-- Glowing Background -->
+            <span
+              class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"
+            ></span>
+
+            <!-- Inner Animated Shine -->
+            <span
+              class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"
+            ></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center relative">
+        <div class="w-[90vw]">
+          <h2 class="text-5xl text-white tilt-neon mt-10">Home/About Us</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Left Image, Right Content -->
+    <section class="py-20 bg-white w-full flex justify-center items-center">
+      <div class="container w-[90vw] px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <img
+              src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Storage Container"
+              class="rounded-lg shadow-2xl w-full h-96 object-cover"
+            />
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl font-bold text-black mb-6 tilt-neon">
+              <span class="text-[#22D3EE]">Weatherproof</span> Protection
+            </h2>
+            <p class="text-gray-600 text-[22px] mb-6 raleway leading-relaxed">
+              Our storage containers are built to withstand the harshest weather
+              conditions. With reinforced steel construction and advanced
+              sealing technology, your valuable maintenance equipment stays dry
+              and secure year-round.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700">100% waterproof guarantee</span>
+              </li>
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700">Rust-resistant coating</span>
+              </li>
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700"
+                  >Temperature controlled options</span
+                >
+              </li>
+            </ul>
+            <a
+              href=""
+              class="w-[240px] bg-[#aae9e9] text-black font-semibold tilt-neon py-1 text-2xl px-4 rounded-[50px] flex justify-start items-center mt-5 animate-glow"
+            >
+              <i
+                class="fa fa-phone bg-black text-1xl text-white ml-[-20px] px-4 py-4 rounded-full mr-3"
+              ></i>
+              +1234567890
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Right Image, Left Content -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+          <div class="lg:w-1/2">
+            <img
+              src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Organized Storage"
+              class="rounded-lg shadow-2xl w-full h-96 object-cover"
+            />
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl font-bold text-black mb-6 tilt-neon">
+              <span class="text-[#22D3EE]">Weatherproof</span> Protection
+            </h2>
+            <p class="text-gray-600 text-[22px] mb-6 raleway leading-relaxed">
+              Our storage containers are built to withstand the harshest weather
+              conditions. With reinforced steel construction and advanced
+              sealing technology, your valuable maintenance equipment stays dry
+              and secure year-round.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700">100% waterproof guarantee</span>
+              </li>
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700">Rust-resistant coating</span>
+              </li>
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700"
+                  >Temperature controlled options</span
+                >
+              </li>
+            </ul>
+            <a
+              href=""
+              class="w-[240px] bg-[#aae9e9] text-black font-semibold tilt-neon py-1 text-2xl px-4 rounded-[50px] flex justify-start items-center mt-5 animate-glow"
+            >
+              <i
+                class="fa fa-phone bg-black text-1xl text-white ml-[-20px] px-4 py-4 rounded-full mr-3"
+              ></i>
+              Contact Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Left Image, Right Content -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <img
+              src="https://images.pexels.com/photos/1267324/pexels-photo-1267324.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Security Features"
+              class="rounded-lg shadow-2xl w-full h-96 object-cover"
+            />
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl font-bold text-black mb-6 tilt-neon">
+              <span class="text-[#22D3EE]">Weatherproof</span> Protection
+            </h2>
+            <p class="text-gray-600 text-[22px] mb-6 raleway leading-relaxed">
+              Our storage containers are built to withstand the harshest weather
+              conditions. With reinforced steel construction and advanced
+              sealing technology, your valuable maintenance equipment stays dry
+              and secure year-round.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700">100% waterproof guarantee</span>
+              </li>
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700">Rust-resistant coating</span>
+              </li>
+              <li class="flex items-center text-[20px] raleway">
+                <span class="w-2 h-2 bg-[#22D3EE] rounded-full mr-3"></span>
+                <span class="text-gray-700"
+                  >Temperature controlled options</span
+                >
+              </li>
+            </ul>
+            <a
+              href=""
+              class="w-[280px] bg-[#aae9e9] text-black font-semibold tilt-neon py-1 text-2xl px-4 rounded-[50px] flex justify-start items-center mt-5 animate-glow"
+            >
+              <i
+                class="fa fa-phone bg-black text-1xl text-white ml-[-20px] px-4 py-4 rounded-full mr-3"
+              ></i>
+              Get A Free Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white text-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl text-black tilt-neon font-bold mb-4">
+            Why Choose Our
+            <span class="text-[#22D3EE]">Storage Containers</span>?
+          </h2>
+          <p class="text-xl text-black raleway max-w-2xl mx-auto">
+            Designed specifically for property maintenance professionals who
+            demand reliability and efficiency.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 cursor-pointer"
+        >
+          <!-- Feature 1 -->
+          <div
+            class="group card-hover-effect bg-black rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden transition-transform duration-300 hover:scale-105"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-20 h-20 bg-white from-accent to-yellow-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-[#22D3EE]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors tilt-neon"
+              >
+                Multiple Sizes Available
+              </h3>
+              <p class="text-gray-300 leading-relaxed">
+                From compact 10ft units to spacious 40ft containers, we have the
+                perfect size for your storage needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="group card-hover-effect bg-black rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden transition-transform duration-300 hover:scale-105"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-20 h-20 bg-white from-accent to-yellow-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-[#22D3EE]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors tilt-neon"
+              >
+                Quick Delivery
+              </h3>
+              <p class="text-gray-300 leading-relaxed">
+                Same-day or next-day delivery available. Get your storage
+                solution when you need it most.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="group card-hover-effect bg-black rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden transition-transform duration-300 hover:scale-105"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-20 h-20 bg-white from-accent to-yellow-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-[#22D3EE]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors tilt-neon"
+              >
+                Enhanced Security
+              </h3>
+              <p class="text-gray-300 leading-relaxed">
+                Advanced locking systems and optional surveillance integration
+                for complete peace of mind.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="group card-hover-effect bg-black rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden transition-transform duration-300 hover:scale-105"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-20 h-20 bg-white from-accent to-yellow-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-[#22D3EE]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors tilt-neon"
+              >
+                Flexible Rental Terms
+              </h3>
+              <p class="text-gray-300 leading-relaxed">
+                Short-term or long-term rentals available. Scale your storage
+                needs as your business grows.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="group card-hover-effect bg-black rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden transition-transform duration-300 hover:scale-105"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-20 h-20 bg-white from-accent to-yellow-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-[#22D3EE]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors tilt-neon"
+              >
+                Climate Control
+              </h3>
+              <p class="text-gray-300 leading-relaxed">
+                Optional climate control systems to protect sensitive equipment
+                and materials from extreme temperatures.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="group card-hover-effect bg-black rounded-3xl p-8 shadow-lg hover:shadow-2xl relative overflow-hidden transition-transform duration-300 hover:scale-105"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-20 h-20 bg-white from-accent to-yellow-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-[#22D3EE]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors tilt-neon"
+              >
+                Professional Support
+              </h3>
+              <p class="text-gray-300 leading-relaxed">
+                24/7 customer support and maintenance services to ensure your
+                storage solution always meets your needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-[#E6F4F6] py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-black tilt-neon">
+            Frequently Asked <span class="text-[#37E1ED]">Questions</span>
+          </h2>
+          <p class="text-black raleway mt-4 text-lg">
+            Got questions about our property rental services? We’ve got you
+            covered!
+          </p>
+        </div>
+
+        <!-- FAQ Container -->
+        <div class="space-y-5">
+          <!-- FAQ 1 -->
+          <div
+            class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300"
+          >
+            <button
+              class="flex items-center justify-between w-full px-6 py-5 focus:outline-none faq-toggle"
+            >
+              <h3 class="text-xl font-semibold text-bl;ack raleway">
+                How do I book a rental property?
+              </h3>
+              <svg
+                class="w-6 h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-6 pb-5 hidden faq-content">
+              <p class="text-black raleway leading-relaxed">
+                Simply browse our verified property listings, choose the one you
+                like, and fill out the booking form. Our team will confirm your
+                reservation within 24 hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div
+            class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300"
+          >
+            <button
+              class="flex items-center justify-between w-full px-6 py-5 focus:outline-none faq-toggle"
+            >
+              <h3 class="text-xl font-semibold text-black raleway">
+                Are there any hidden charges?
+              </h3>
+              <svg
+                class="w-6 h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-6 pb-5 hidden faq-content">
+              <p class="text-black raleway leading-relaxed">
+                No, we maintain 100% transparency. All pricing and charges are
+                clearly mentioned upfront, so there are no surprises later.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div
+            class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300"
+          >
+            <button
+              class="flex items-center justify-between w-full px-6 py-5 focus:outline-none faq-toggle"
+            >
+              <h3 class="text-xl font-semibold text-black raleway">
+                Can I schedule a property visit before booking?
+              </h3>
+              <svg
+                class="w-6 h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-6 pb-5 hidden faq-content">
+              <p class="text-black raleway leading-relaxed">
+                Absolutely! We allow scheduled visits so you can personally
+                inspect the property before making a decision. Just contact our
+                support team to book a slot.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div
+            class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300"
+          >
+            <button
+              class="flex items-center justify-between w-full px-6 py-5 focus:outline-none faq-toggle"
+            >
+              <h3 class="text-xl font-semibold text-black raleway">
+                Do you offer furnished rental options?
+              </h3>
+              <svg
+                class="w-6 h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-6 pb-5 hidden faq-content">
+              <p class="text-black raleway leading-relaxed">
+                Yes, we provide both furnished and unfurnished rental options so
+                you can choose based on your comfort and requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 gradient-bg relative overflow-hidden">
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+
+      <div
+        class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+      >
+        <div class="reveal">
+          <h2
+            class="text-5xl md:text-5xl font-black text-black mb-8 leading-tight tilt-neon"
+          >
+            Ready to Experience
+            <span class="block text-white"> Excellence? </span>
+          </h2>
+          <p
+            class="text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed raleway"
+          >
+            Join thousands of satisfied clients who trust us with their property
+            needs. Let's start your success story today.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="#"
+              class="group bg-white raleway text-black px-10 py-5 rounded-2xl font-black text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl"
+            >
+              Start Your Journey
+              <svg
+                class="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="group border-2 border-black text-black raleway px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
+            >
+              Schedule Consultation
+              <svg
+                class="ml-3 h-6 w-6 group-hover:rotate-12 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
+        <!-- Top Section: Excellent Customer Support -->
+        <div class=""></div>
+        <div class="text-center mb-10">
+          <h3 class="text-5xl text-[#06AFCE] mb-5">logo</h3>
+          <p class="raleway text-[20px] text-gray-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            provident, iste cum asperiores sapiente odit? Excepturi ullam,
+            facere consequuntur tempore deleniti unde at accusamus reiciendis
+            cum aperiam, et dolore blanditiis.
+          </p>
+        </div>
+
+        <!-- Office Locations -->
+        <div class="text-center mb-10">
+          <h4
+            class="text-1xl md:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5"
+          >
+            OUR OFFICE LOCATIONS
+          </h4>
+          <div
+            class="flex flex-wrap justify-center gap-6 text-gray-300 raleway text-2xl cursor-pointer"
+          >
+            <span>London, UK</span>
+            <span>Belfast, Northern Ireland</span>
+            <span>Glasgow, Scotland</span>
+            <span>Toronto, Canada</span>
+            <span>Delaware, USA</span>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <!-- Useful Links -->
+        <div class="text-center mb-10 border-t-[1px] border-gray-300 pt-5">
+          <h4 class="font-semibold mb-3 text-[#06AFCE] text-3xl tilt-neon">
+            USEFUL LINKS
+          </h4>
+          <div
+            class="flex flex-wrap justify-center gap-6 text-gray-300 text-[24px] raleway"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Home
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              About
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Contact
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Service
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Blog
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col items-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-8"
+        >
+          <!-- Google Reviews -->
+          <div class="flex items-center justify-between w-[70vw]">
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/google.webp"
+                alt="Google"
+                class="w-[180px] h-[80px]"
+              />
+              <div></div>
+            </div>
+            <div>
+              <p class="raleway text-[18px]">
+                Our Customer Gave us Excellant Rating
+              </p>
+              <img
+                src="assets/images/reviw-removebg-preview.png"
+                class="w-[280px] h-[50px]"
+              />
+            </div>
+            <div class="flex gap-5 mt-4">
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-facebook-f text-2xl text-[#06AFCE]"></i>
+              </a>
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-instagram text-2xl text-[#06AFCE]"></i>
+              </a>
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-youtube text-2xl text-[#06AFCE]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+
+          <!-- Copyright -->
+        </div>
+        <div
+          class="flex gap-10 items-center border-b-[1px] border-gray-300 justify-center p-6 l shadow-md"
+        >
+          <!-- Google Pay -->
+          <img
+            src="https://www.pngplay.com/wp-content/uploads/5/American-Express-Logo-Download-Free-PNG.png"
+            alt="Google Pay"
+            class="h-20 hover:scale-110 transition duration-300"
+          />
+
+          <!-- Razorpay -->
+          <img
+            src="assets/images/Razorpay_logo.svg"
+            alt="Razorpay"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+
+          <!-- PhonePe -->
+          <img
+            src="assets/images/PhonePe-Logo.wine.png"
+            alt="PhonePe"
+            class="h-20 hover:scale-110 transition duration-300"
+          />
+
+          <!-- Paytm -->
+          <img
+            src="assets/images/Paytm-Logo.webp"
+            alt="Paytm"
+            class="h-16 hover:scale-110 transition duration-300"
+          />
+
+          <!-- PayPal -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+            alt="PayPal"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+
+          <!-- MasterCard -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+            alt="MasterCard"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-black text-white"
+        >
+          <p class="text-lg md:text-[20px] font-raleway mb-2 md:mb-0 raleway">
+            © All Rights Reserved 2025
+            <span class="text-[#06AFCE]">Rental Property Maintenance</span>
+          </p>
+          <p class="text-lg md:text-xl raleway">
+            Designed & Developed By
+            <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]"
+              >Kyle Infotech</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

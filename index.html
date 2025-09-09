@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon:ital,wght@0,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      .raleway {
+        font-family: "Raleway", sans-serif;
+      }
+
+      @keyframes pulseShadow {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.6);
+        }
+
+        50% {
+          box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.3);
+        }
+      }
+
+      .tilt-neon {
+        font-family: "Tilt Warp", sans-serif;
+      }
+
+      .tilt-neon {
+        font-family: "Tilt Neon", sans-serif;
+        font-variation-settings: "XROT" 15, "YROT" -10;
+      }
+
+      .shadow-pulse {
+        animation: pulseShadow 2s infinite;
+      }
+
+      /*** slideable text ***/
+
+      .image-card {
+        width: 250px;
+        height: 250px;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.6);
+        /* Inner glow */
+      }
+
+      /* Smooth Animation */
+      @keyframes slideUp {
+        0%,
+        10% {
+          transform: translateY(0%);
+        }
+
+        20%,
+        30% {
+          transform: translateY(-20%);
+        }
+
+        40%,
+        50% {
+          transform: translateY(-40%);
+        }
+
+        60%,
+        70% {
+          transform: translateY(-60%);
+        }
+
+        80%,
+        90% {
+          transform: translateY(-80%);
+        }
+
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+
+      @keyframes slideDown {
+        0%,
+        10% {
+          transform: translateY(-100%);
+        }
+
+        20%,
+        30% {
+          transform: translateY(-80%);
+        }
+
+        40%,
+        50% {
+          transform: translateY(-60%);
+        }
+
+        60%,
+        70% {
+          transform: translateY(-40%);
+        }
+
+        80%,
+        90% {
+          transform: translateY(-20%);
+        }
+
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      .animate-slide-up {
+        animation: slideUp 19s ease-in-out infinite;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 19s ease-in-out infinite;
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        display: none;
+        /* Hide Swiper's default icons */
+      }
+
+      .marquee {
+        display: flex;
+        gap: 10px;
+        animation: marquee 15s linear infinite;
+      }
+
+      .marquee:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Glow button container */
+      .glow-button {
+        position: relative;
+        background: transparent;
+        color: #06b6d4;
+        font-size: 20px;
+        /* Cyan */
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 0 0 rgba(6, 182, 212, 0.6);
+        transition: all 0.4s ease-in-out;
+        background: #06b6d4;
+        color: white;
+        box-shadow: 0 0 15px rgba(6, 182, 212, 0.8),
+          0 0 30px rgba(6, 182, 212, 0.6), 0 0 45px rgba(6, 182, 212, 0.4);
+        transform: translateY(-3px);
+      }
+
+      /* Hover glowing effect */
+
+      /* Image inside icon changes color on hover */
+      .glow-button:hover .icon-box img {
+        color: black;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Ripple animation */
+      .glow-button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        transition: width 0.4s ease, height 0.4s ease;
+        z-index: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section
+      class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[130vh] w-full"
+    >
+      <!-- Black Overlay -->
+      <div class="absolute inset-0 bg-black/50 bg-opacity-50"></div>
+
+      <section
+        class="w-full h-[40px] bg-white cursor-pointer flex items-center overflow-hidden relative"
+      >
+        <div class="marquee whitespace-nowrap flex gap-10">
+          <!-- Original list -->
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway text-[#1dc6e2]"
+              >BUSINESS TELECOMMUNICATIONS</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway">VIRTUAL OFFICE</span>
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] text-[#1dc6e2] raleway"
+              >COMPANY INCORPORATION</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway">SHARED OFFICES</span>
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[18px] text-[#1dc6e2] raleway"
+              >PRIVATE OFFICE</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway"
+              >MAIL HANDLING & FORWARDING SERVICES</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] text-[#1dc6e2] raleway"
+              >VIRTUAL NUMBERS</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway"
+              >REGISTERED AGENT SERVICES</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] text-[#1dc6e2] raleway"
+              >BUSINESS BANK ACCOUNTS</span
+            >
+          </div>
+
+          <!-- Duplicate for seamless loop -->
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway"
+              >BUSINESS TELECOMMUNICATIONS</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway">VIRTUAL OFFICE</span>
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway"
+              >COMPANY INCORPORATION</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway">SHARED OFFICES</span>
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway">PRIVATE OFFICE</span>
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway"
+              >MAIL HANDLING & FORWARDING SERVICES</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway">VIRTUAL NUMBERS</span>
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway"
+              >REGISTERED AGENT SERVICES</span
+            >
+          </div>
+          <div class="flex gap-2 items-center marquee-item">
+            <img src="assets/images/pattern 7.png" class="w-6 h-6" />
+            <span class="font-bold text-[14px] raleway"
+              >BUSINESS BANK ACCOUNTS</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- top bar -->
+      <div
+        class="w-full raleway flex justify-center relative z-10 bg-black py-6"
+      >
+        <div class="flex justify-between w-[90%]">
+          <!-- Left Info Section -->
+          <div class="flex flex-wrap items-center gap-5">
+            <!-- Phone -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-phone text-white"></i>
+              <span class="text-white">012 03456 7890</span>
+            </div>
+            <!-- Location -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-location-dot text-white"></i>
+              <span class="text-white">Lorem Ipsum Dolr, 24115</span>
+            </div>
+            <!-- Email -->
+            <div class="flex items-center text-[18px] font-bold gap-2">
+              <i class="fa-solid fa-envelope text-white"></i>
+              <a
+                href="mailto:info@loremipsum.com"
+                class="hover:underline text-white"
+                >info@LoremIpsum.com</a
+              >
+            </div>
+          </div>
+
+          <!-- Right Social Section -->
+          <div class="flex items-center gap-3">
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
+            >
+              <i class="fab fa-youtube text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--navbar -->
+      <!-- Navbar -->
+      <div
+        class="w-full flex justify-center raleway font-bold relative z-50 py-6 bg-transparent mt-[-50px]"
+      >
+        <div class="flex justify-between items-center w-[90%] relative">
+          <!-- Logo -->
+          <div class="text-cyan-400 font-bold text-5xl "><img src="assets/images/headerlogopn.png" class="w-[190px]"/></div>
+
+          <!-- Menu -->
+          <ul class="flex space-x-8 items-center">
+            <li>
+              <a
+                href="index.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >ABOUT US</a
+              >
+            </li>
+
+            <!-- Services Menu with Hover -->
+            <li class="relative group">
+              <a
+                href="services.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >SERVICES</a
+              >
+
+              <!-- Dropdown -->
+              <div
+                class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50"
+              >
+                <div class="grid grid-cols-1 gap-2 text-left">
+                  <!-- Column 1 -->
+                  <div class="group">
+                    <h3
+                      class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer"
+                    >
+                      Office Space
+
+                      <i
+                        class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"
+                      ></i>
+                    </h3>
+
+                    <ul
+                      class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden"
+                    >
+                      <li>
+                        <a
+                          href="independence-house-heywood.html"
+                          class="hover:text-cyan-500"
+                          >&rsaquo; Independence House Heywood</a
+                        >
+                      </li>
+                      <li>
+                        <a href="skelmersdale.html" class="hover:text-cyan-500"
+                          >&rsaquo; Certacs House Skelsmerdale</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <a
+                    href="virtual-office.html"
+                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
+                  >
+                    Virtual Office
+                  </a>
+
+                  <a
+                    href="storage-container.html"
+                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
+                  >
+                    Storage Container
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="contact.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >CONTACTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="text-white hover:text-cyan-400 transition duration-300"
+                >BLOG</a
+              >
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <a
+            href="#"
+            class="relative flex items-center text-[14px] font-semibold text-white px-6 py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg"
+          >
+            <!-- Button Text -->
+            <span class="relative z-10">GET A FREE QUOTE</span>
+
+            <!-- Arrow Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+
+            <!-- Glowing Background -->
+            <span
+              class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"
+            ></span>
+
+            <!-- Inner Animated Shine -->
+            <span
+              class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"
+            ></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Banner Content -->
+      <div class="w-full flex justify-center relative z-10 pt-14">
+        <div class="flex justify-center w-[90%]">
+          <!-- Left Content -->
+          <div class="w-[100%] text-center space-y-6">
+            <h2 class="text-3xl md:text-5xl font-light tilt-neon text-white">
+              Our
+              <span class="text-cyan-400 font-bold raleway"
+                >Property<br />Rental Services</span
+              ><br />
+              Will Give Your Thought To Choose The Right
+            </h2>
+
+            <div class="flex flex-col items-center justify-center w-[100%]">
+              <div>
+                <a
+                  href="#"
+                  class="glow-button inline-flex items-center gap-2 text-white font-medium rounded-full px-4 py-2 relative overflow-hidden transition-all duration-300"
+                >
+                  <span
+                    class="icon-box bg-white border border-white rounded-full p-2 h-[40px] w-[40px] flex justify-center items-center transition-transform duration-300"
+                  >
+                    <img src="assets/images/blackicon.png" class="h-5 w-5" />
+                  </span>
+                  Call Now
+                </a>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-end justify-end w-[90%]">
+              <button
+                class="bg-cyan-400 rounded-full border-[2px] border-white h-[75px] w-[75px] flex justify-center items-center shadow-pulse"
+              >
+                <img
+                  src="assets/images/Polygon 1.png"
+                  alt=""
+                  class="w-[30px] h-[30px]"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="w-[100%] flex justify-center items-center mt-[-100px]">
+      <!-- Right Form -->
+      <form
+        class="w-[80vw] bg-white text-black rounded-3xl shadow-lg p-6 h-[350px] border-[2px] border-[#06B6D4] tilt-neon relative z-[1000]"
+      >
+        <h3
+          class="text-cyan-500 font-bold text-2xl text-center mb-4 tilt-neon text-[40px]"
+        >
+          <span class="text-black">Fill The</span> Form & Book
+        </h3>
+
+        <!-- Tabs -->
+        <div class="flex justify-center gap-3 mb-6">
+          <button class="px-4 py-2 bg-gray-200 rounded-full text-[19px]">
+            Private Offices
+          </button>
+          <button class="px-4 py-2 bg-gray-200 rounded-full text-[19px]">
+            Meeting Rooms
+          </button>
+          <button class="px-4 py-2 bg-gray-200 rounded-full text-[19px]">
+            Coworking Desks
+          </button>
+          <button class="px-4 py-2 bg-gray-200 rounded-full text-[19px]">
+            Day Offices
+          </button>
+        </div>
+
+        <!-- Radio Options -->
+        <div class="flex justify-center gap-6 mb-6 h-[80px]">
+          <label
+            class="flex items-center gap-2 border rounded-lg px-4 py-3 cursor-pointer w-1/2"
+          >
+            <input
+              type="radio"
+              name="time"
+              class="accent-cyan-500 w-[30px] h-[30px]"
+            />
+            <span class="text-[18px] font-medium">Full time 7 days / week</span>
+          </label>
+
+          <label
+            class="flex items-center gap-2 border rounded-lg px-4 py-3 cursor-pointer w-1/2"
+          >
+            <input
+              type="radio"
+              name="time"
+              class="accent-cyan-500 w-[30px] h-[30px]"
+            />
+            <span class="text-[18px] font-medium"
+              >Part time 1-3 days / week</span
+            >
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-black w-[200px] text-white px-8 py-2 rounded-full hover:bg-gray-800"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!---about us section -->
+    <section class="w-full py-16 bg-white relative">
+      <div class="w-[90%] px-6 grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left Image -->
+        <div class="relative flex justify-center items-center">
+          <!-- Foreground Image -->
+          <img
+            src="assets/images/bannerimage.jpg"
+            alt="Quality Properties NW"
+            class="relative rounded-3xl w-full max-w-md shadow-lg object-cover z-10"
+          />
+
+          <!-- Custom Shape with CSS -->
+          <div
+            class="absolute top-6 left-[-60px] w-[90%] h-[90%] bg-cyan-200 -z-10 rounded-[40%] rotate-[-5deg]"
+          ></div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="space-y-6">
+          <!-- Tag -->
+          <span
+            class="inline-block border border-[#1EEDFA] rounded-full raleway text-[20px] px-4 py-1 font-bold"
+          >
+            ✤ ABOUT US
+          </span>
+
+          <!-- Heading -->
+          <h2 class="text-3xl md:text-4xl font-bold leading-snug Tilt Neon">
+            Trusted
+            <span class="text-cyan-500 raleway font-bold">
+              Property Rental & Management
+            </span>
+            <br />
+            Across the North West
+          </h2>
+
+          <!-- Description -->
+          <p class="text-black font-semibold leading-relaxed raleway">
+            At Quality Properties NW, we specialise in delivering reliable
+            property rental and management services tailored to both landlords
+            and tenants. With years of experience, our mission is to make
+            renting and managing homes simple, transparent, and stress-free.
+            Whether you’re looking for your next home or need expert management
+            for your property, we are here to help every step of the way.
+          </p>
+
+          <!-- Sub-heading -->
+          <h3 class="font-bold text-[20px] raleway">
+            Why Choose Quality Properties NW:
+          </h3>
+
+          <!-- Points -->
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <img src="assets/images/Check circle (1).png" />
+              <p class="text-black text-[16px] font-semibold">
+                Wide range of quality rental properties across the North West.
+              </p>
+            </li>
+            <li class="flex items-start gap-2">
+              <img src="assets/images/Check circle (1).png" />
+              <p class="text-black text-[16px] font-semibold">
+                Professional property management services for landlords.
+              </p>
+            </li>
+            <li class="flex items-start gap-2">
+              <img src="assets/images/Check circle (1).png" />
+              <p class="text-black text-[16px] font-semibold">
+                Friendly support team ensuring smooth rental experiences.
+              </p>
+            </li>
+          </ul>
+
+          <!-- Button -->
+          <div>
+            <a
+              href="/contact"
+              class="glow-button inline-flex items-center gap-2 text-white font-medium border-2 border-black rounded-full px-4 py-2 relative overflow-hidden transition-all duration-300"
+            >
+              <span
+                class="bg-white px-2 border border-cyan-500 rounded-full p-2 h-[40px] w-[40px] flex justify-center items-center transition-transform duration-300 text-white"
+              >
+                <img src="assets/images/blackicon.png" class="h-5 w-5" />
+              </span>
+              BOOK NOW
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--our services -->
+    <section class="w-full min-h-[100vh] pb-10">
+      <div
+        class="bg-[url('assets/images/curveshape.png')] bg-cover bg-no-repeat h-[500px] w-[100%] flex justify-center"
+      >
+        <div class="w-[90%] mt-24">
+          <a
+            href="services.html"
+            class="ml-10 rounded-full raleway border border-black text-2xl font-bold px-8 py-3 font-semibold text-black hover:bg-black hover:text-white transition"
+          >
+            Our Services
+          </a>
+          <h2 class="mt-10 text-4xl font-bold ml-10 tilt-neon">
+            Our
+            <span class="text-5xl font-bold text-[#37E1ED] raleway">
+              Property Rental Services
+            </span>
+            <br />
+            Will Guide You to Make the Right Choice
+          </h2>
+
+          <section class="max-w-7xl mx-auto px-6 py-16">
+            <div class="flex gap-1 h-80 mb-1">
+              <!-- Card 1 (default wide) -->
+              <div
+                class="relative flex-[3] h-[400px] overflow-hidden rounded-bl-2xl rounded-tl-2xl transition-all duration-500 hover:flex-[6] cursor-pointer"
+              >
+                <img
+                  src="assets/images/servicimage1.jpg"
+                  alt="Cozy Lounge Areas"
+                  class="w-full h-[600px] object-cover"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="absolute bottom-20 left-6 text-white">
+                  <h3 class="text-xl tilt-neon">Meeting Room</h3>
+                </div>
+
+                <div class="absolute bottom-3 left-6">
+                  <a
+                    href="#"
+                    class="inline-flex border-[2px] border-white px-4 py-2 rounded-[50px] items-center gap-2 text-cyan-300 font-medium"
+                  >
+                    <span
+                      class="border border-white bg-white raleway rounded-full p-2 h-[40px] w-[40px] flex justify-center items-center"
+                    >
+                      <img src="assets/images/blackicon.png" />
+                    </span>
+                    BOOK NOW
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="relative flex-[2] h-[400px] overflow-hidden transition-all duration-500 hover:flex-[6] cursor-pointer"
+              >
+                <img
+                  src="assets/images/serviceimage4.jpg"
+                  alt="Creative Spaces"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="absolute bottom-20 left-6 tilt-neon text-white">
+                  <h3 class="text-xl">Private Room</h3>
+                </div>
+                <div class="absolute bottom-3 left-6">
+                  <a
+                    href="#"
+                    class="inline-flex border-[2px] border-white px-4 py-2 rounded-[50px] items-center gap-2 text-cyan-300 font-medium"
+                  >
+                    <span
+                      class="border border-white bg-white raleway rounded-full p-2 h-[40px] w-[40px] flex justify-center items-center"
+                    >
+                      <img src="assets/images/blackicon.png" />
+                    </span>
+                    BOOK NOW
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="relative flex-[2] h-[400px] overflow-hidden transition-all duration-500 hover:flex-[6] cursor-pointer"
+              >
+                <img
+                  src="assets/images/serviceimage4.jpg"
+                  alt="Creative Spaces"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="absolute bottom-20 left-6 tilt-neon text-white">
+                  <h3 class="text-xl">Coworking Space</h3>
+                </div>
+                <div class="absolute bottom-3 left-6">
+                  <a
+                    href="#"
+                    class="inline-flex border-[2px] border-white px-4 py-2 rounded-[50px] items-center gap-2 text-cyan-300 font-medium"
+                  >
+                    <span
+                      class="border border-white bg-white raleway rounded-full p-2 h-[40px] w-[40px] flex justify-center items-center"
+                    >
+                      <img src="assets/images/blackicon.png" />
+                    </span>
+                    BOOK NOW
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+
+              <!-- Card 5 -->
+              <div
+                class="relative flex-[2] h-[400px] overflow-hidden rounded-tr-2xl rounded-br-2xl transition-all duration-500 hover:flex-[6] cursor-pointer"
+              >
+                <img
+                  src="assets/images/serviceimage4.jpg"
+                  alt="Creative Spaces"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="absolute bottom-20 left-6 text-white">
+                  <h3 class="text-xl tilt-neon">Internal  Carridor</h3>
+                </div>
+                <div class="absolute bottom-3 left-6">
+                  <a
+                    href="#"
+                    class="inline-flex border-[2px] border-white px-4 py-2 rounded-[50px] items-center gap-2 text-cyan-300 font-medium"
+                  >
+                    <span
+                      class="border border-white bg-white raleway rounded-full p-2 h-[40px] w-[40px] flex justify-center items-center"
+                    >
+                      <img src="assets/images/blackicon.png" />
+                    </span>
+                    BOOK NOW
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full min-h-[100vh] mt-16 flex flex-col items-center">
+      <div class="text-center pt-20 relative">
+        <!-- Small Button -->
+        <div class="mb-6">
+          <span
+            class="inline-block rounded-full text-[20px] border border-black px-6 py-2 raleway font-semibold"
+          >
+            WHY CHOOSE US ?
+          </span>
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="text-2xl md:text-5xl font-semibold tilt-neon leading-snug">
+          Discover
+          <span class="text-cyan-400 font-bold raleway">
+            The Benefits of Our Quality Properties
+          </span>
+          <br class="hidden md:block" />
+          Tailored Solutions Just for You
+        </h2>
+      </div>
+
+      <div
+        class="w-[90%] mx-auto px-6 py-16 flex justify-center gap-10 items-center"
+      >
+        <!-- Left Features -->
+        <div class="space-y-12">
+          <!-- Feature 1 -->
+          <div
+            class="flex items-start gap-4 p-4 rounded-xl h-[130px] border border-cyan-200 bg-[#E6F4F5C9] shadow-sm"
+          >
+            <!-- Icon -->
+            <div
+              class="flex-shrink-0 w-[100px] h-[100px] ml-[-50px] mt-[-50px] rounded-full bg-black flex items-center justify-center text-cyan-400"
+            >
+              <i class="fa-solid fa-house-circle-check text-[40px]"></i>
+            </div>
+            <!-- Content -->
+            <div>
+              <h3 class="text-[20px] text-cyan-500 raleway font-bold">
+                Verified Properties
+              </h3>
+              <p class="text-black text-[14px] font-semibold raleway">
+                Every property we list is fully verified to ensure safety and
+                reliability.
+              </p>
+              <p class="text-black text-[14px] font-semibold raleway">
+                No fake listings or hidden risks — only genuine rental options.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="flex items-start gap-4 p-4 rounded-xl h-[130px] border border-cyan-200 bg-[#E6F4F5C9] shadow-sm"
+          >
+            <!-- Icon -->
+            <div
+              class="flex-shrink-0 w-[100px] h-[100px] ml-[-50px] mt-[-50px] rounded-full bg-black flex items-center justify-center text-cyan-400"
+            >
+              <i class="fa-solid fa-hand-holding-dollar text-[40px]"></i>
+            </div>
+            <!-- Content -->
+            <div>
+              <h3 class="text-[20px] text-cyan-500 raleway font-bold">
+                Affordable Pricing
+              </h3>
+              <p class="text-black text-[14px] font-semibold raleway">
+                Transparent rental plans designed to fit every budget.
+              </p>
+              <p class="text-black text-[14px] font-semibold raleway">
+                No hidden charges, just fair and flexible options.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="flex items-start gap-4 p-4 rounded-xl h-[130px] border border-cyan-200 bg-[#E6F4F5C9] shadow-sm"
+          >
+            <!-- Icon -->
+            <div
+              class="flex-shrink-0 w-[100px] h-[100px] ml-[-50px] mt-[-50px] rounded-full bg-black flex items-center justify-center text-cyan-400"
+            >
+              <i class="fa-solid fa-headset text-[40px]"></i>
+            </div>
+            <!-- Content -->
+            <div>
+              <h3 class="text-[20px] text-cyan-500 raleway font-bold">
+                24/7 Customer Support
+              </h3>
+              <p class="text-black text-[14px] font-semibold raleway">
+                Our support team is always here to answer your questions.
+              </p>
+              <p class="text-black text-[14px] font-semibold raleway">
+                From viewing to moving in — we make the process stress-free.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="relative flex justify-center items-center">
+          <div
+            class="relative flex justify-center items-center w-full max-w-md mx-auto"
+          >
+            <div
+              class="swiper mySwiper1 w-full h-[500px] overflow-hidden shadow-2xl"
+            >
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/bannerimage.jpg"
+                    class="w-full rounded-lg h-full object-cover"
+                  />
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/bannerimage2.jpg"
+                    class="w-full rounded-lg h-full object-cover"
+                  />
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/bannerimage.jpg"
+                    class="w-full rounded-lg h-full object-cover"
+                  />
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/bannerimage2.jpg"
+                    class="w-full rounded-lg h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---our property rental-->
+    <section
+      class="w-full relative min-h-[80vh] bg-[url('assets/images/ourrentalimage.jpg')] bg-center bg-cover bg-no-repeat flex justify-center items-center rounded-tl-[30px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[30px]"
+    >
+      <!-- Dark Overlay -->
+      <div
+        class="absolute inset-0 bg-black/70 rounded-tl-[30px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[30px]"
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 w-[90%] px-6 md:px-12 lg:px-16 pt-12 flex flex-col md:flex-row justify-between items-start md:items-center"
+      >
+        <!-- Left Section -->
+        <div class="text-white max-w-xl">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-semibold tilt-neon mb-4"
+          >
+            Quality Properties NW
+            <br />Trusted Property Rental Services
+          </h2>
+          <p class="text-gray-300 mb-6 raleway">
+            At Quality Properties NW, we make renting simple, safe, and
+            affordable. Whether you’re looking for your next home or a reliable
+            tenant, our team is here to guide you every step of the way.
+          </p>
+
+          <!-- Contact -->
+          <a
+            href="tel:1234567890"
+            class="flex items-center gap-3 text-xl font-semibold"
+          >
+            <span
+              class="flex items-center shadow-pulse justify-center w-12 h-12 rounded-full bg-teal-600 text-white"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </span>
+            <span class="text-white tilt-neon">1234567890</span>
+          </a>
+        </div>
+
+        <!-- Right Section: Image Grid with Glow -->
+        <div class="flex gap-10 mr-10">
+          <!-- Column 1: Bottom to Top -->
+          <div class="relative overflow-hidden h-[500px] w-[250px]">
+            <div class="absolute animate-slide-up flex flex-col gap-6">
+              <div class="image-card">
+                <img src="assets/images/slidingimage1.jpg" alt="Office Space" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage2.jpg" alt="Meeting Room" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage2.jpg" alt="Meeting Room" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage1.jpg" alt="Office Space" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage2.jpg" alt="Meeting Room" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage1.jpg" alt="Office Space" />
+              </div>
+
+              <div class="image-card">
+                <img src="assets/images/slidingimage1.jpg" alt="Office Space" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage2.jpg" alt="Meeting Room" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage2.jpg" alt="Meeting Room" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage1.jpg" alt="Office Space" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage2.jpg" alt="Meeting Room" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage1.jpg" alt="Office Space" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Top to Bottom -->
+          <div class="relative overflow-hidden h-[500px] w-[250px]">
+            <div class="absolute animate-slide-down flex flex-col gap-6">
+              <div class="image-card">
+                <img src="assets/images/slidingimage3.jpg" alt="Workspace" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidlingimage4.jpg" alt="Open Office" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage3.jpg" alt="Workspace" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidlingimage4.jpg" alt="Open Office" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage3.jpg" alt="Workspace" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidlingimage4.jpg" alt="Open Office" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidingimage3.jpg" alt="Workspace" />
+              </div>
+              <div class="image-card">
+                <img src="assets/images/slidlingimage4.jpg" alt="Open Office" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---our gallery-->
+
+    <section class="py-12 px-4 max-w-6xl mx-auto text-center">
+      <!-- Heading -->
+      <div class="mb-8 text-center">
+        <!-- Small Button -->
+        <button
+          class="px-6 raleway py-2 border rounded-full text-2xl font-semibold tracking-wide"
+        >
+          OUR GALLERY
+        </button>
+
+        <!-- Heading -->
+        <h2 class="text-2xl md:text-5xl font-bold mt-4 tilt-neon leading-snug">
+          Explore Our
+          <span class="text-cyan-500 raleway">Property Collection</span>
+        </h2>
+
+        <!-- Sub Text -->
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto raleway">
+          <span class="font-semibold text-cyan-500"
+            >At Quality Properties NW</span
+          >, we take pride in showcasing our wide range of trusted rental homes
+          and properties. Browse through our gallery to see modern spaces, prime
+          locations, and the quality we promise.
+        </p>
+      </div>
+
+      <!-- Slider -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="w-[350px] h-[400px] rounded-2xl overflow-hidden shadow-lg relative"
+            >
+              <img
+                src="assets/images/slidlingimage4.jpg"
+                alt="London"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="w-[350px] h-[400px] rounded-2xl overflow-hidden shadow-lg relative"
+            >
+              <img
+                src="assets/images/slidingimage3.jpg"
+                alt="Workspace"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="w-[350px] h-[400px] rounded-2xl overflow-hidden shadow-lg relative"
+            >
+              <img
+                src="assets/images/slidingimage1.jpg"
+                alt="Lobby"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="w-[350px] h-[400px] rounded-2xl overflow-hidden shadow-lg relative"
+            >
+              <img
+                src="assets/images/slidingimage2.jpg"
+                alt="Lobby"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="w-[350px] h-[400px] rounded-2xl overflow-hidden shadow-lg relative"
+            >
+              <img
+                src="assets/images/slidingimage2.jpg"
+                alt="Lobby"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <!-- Navigation Buttons -->
+        <div class="flex justify-center gap-4 mt-10">
+          <button
+            class="swiper-button-prev !static !w-12 !h-12 !rounded-full !bg-black text-white flex items-center justify-center"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button
+            class="swiper-button-next !static !w-12 !h-12 !rounded-full !bg-black text-white flex items-center justify-center"
+          >
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!---review  -->
+
+    <section
+      class="w-full relative min-h-[80vh] bg-[#DDF0F2B8] bg-center bg-cover bg-no-repeat flex justify-center items-center rounded-tl-[30px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[30px]"
+    >
+      <!-- Dark Overlay -->
+
+      <!-- Content -->
+      <div
+        class="relative z-10 w-[100%] px-6 md:px-12 lg:px-16 pt-12 flex flex-col md:flex-row justify-between items-start md:items-center"
+      >
+        <!-- Right Section: Image Grid with Glow -->
+        <div class="flex gap-10">
+          <!-- Column 1 -->
+          <div class="relative overflow-hidden h-[500px] w-[250px]">
+            <div class="absolute flex flex-col gap-6">
+              <!-- Repeatable Card Component -->
+              <div
+                class="bg-white border border-cyan-300 rounded-xl p-5 h-[250px] w-[250px] shadow-lg shadow-cyan-400/50 hover:shadow-cyan-400 transition-all duration-300 space-y-3"
+              >
+                <!-- Header -->
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-cyan-500 font-semibold text-lg">
+                      John Milton
+                    </h3>
+                    <p class="text-sm text-gray-800 font-medium">Our Client</p>
+                  </div>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                    alt="Google Logo"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <!-- Stars -->
+                <div class="flex space-x-1 text-yellow-400">
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <!-- Review Text -->
+                <p class="text-gray-600 text-sm">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </div>
+
+              <!-- Duplicate this card for all other components -->
+              <div
+                class="bg-white border border-cyan-300 rounded-xl p-5 w-[250px] shadow-lg shadow-cyan-400/50 hover:shadow-cyan-400 transition-all duration-300 space-y-3"
+              >
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-cyan-500 font-semibold text-lg">
+                      Sarah Wilson
+                    </h3>
+                    <p class="text-sm text-gray-800 font-medium">Our Client</p>
+                  </div>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                    alt="Google Logo"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <div class="flex space-x-1 text-yellow-400">
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-hidden h-[500px] w-[250px]">
+            <div class="absolute flex flex-col gap-6">
+              <!-- Repeatable Card Component -->
+              <div
+                class="bg-white border border-cyan-300 rounded-xl p-5 w-[250px] shadow-lg shadow-cyan-400/50 hover:shadow-cyan-400 transition-all duration-300 space-y-3"
+              >
+                <!-- Header -->
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-cyan-500 font-semibold text-lg">
+                      John Milton
+                    </h3>
+                    <p class="text-sm text-gray-800 font-medium">Our Client</p>
+                  </div>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                    alt="Google Logo"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <!-- Stars -->
+                <div class="flex space-x-1 text-yellow-400">
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <!-- Review Text -->
+                <p class="text-gray-600 text-sm">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </div>
+
+              <!-- Duplicate this card for all other components -->
+              <div
+                class="bg-white border border-cyan-300 rounded-xl p-5 h-[240px] w-[250px] shadow-lg shadow-cyan-400/50 hover:shadow-cyan-400 transition-all duration-300 space-y-3"
+              >
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-cyan-500 font-semibold text-lg">
+                      Sarah Wilson
+                    </h3>
+                    <p class="text-sm text-gray-800 font-medium">Our Client</p>
+                  </div>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                    alt="Google Logo"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <div class="flex space-x-1 text-yellow-400">
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left Section -->
+        <div class="text-black max-w-xl">
+          <!-- Button -->
+          <button
+            class="px-6 raleway py-2 mb-10 border rounded-full border-black text-2xl font-semibold tracking-wide"
+          >
+            OUR REVIEWS
+          </button>
+
+          <!-- Heading -->
+          <h2 class="text-3xl md:text-4xl lg:text-6xl font-bold tilt-neon mb-4">
+            Hear From Our Happy Clients
+          </h2>
+
+          <!-- Sub Text -->
+          <p class="text-black mb-6 raleway">
+            At <span class="font-semibold">Quality Properties NW</span>, we
+            value the trust our clients place in us. Here’s what tenants and
+            landlords have to say about their experience with our property
+            rental services.
+          </p>
+
+          <!-- Contact / CTA -->
+          <div class="mb-10">
+            <a
+              href="#"
+              class="glow-button inline-flex items-center gap-2 text-white font-medium border-2 border-black rounded-full px-4 py-2 relative overflow-hidden transition-all duration-300"
+            >
+              <span
+                class="icon-box border border-cyan-500 bg-white rounded-full p-2 h-[40px] w-[40px] flex justify-center items-center transition-transform duration-300"
+              >
+                <img src="assets/images/blackicon.png" class="h-5 w-5" />
+              </span>
+              Leave A Review
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---map -->
+
+    <section
+      class="w-full relative min-h-[100vh] bg-[url('assets/images/locationbg.jpg')] bg-center bg-cover bg-no-repeat flex justify-center items-center"
+    >
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/80"></div>
+
+      <!-- Content -->
+      <div
+        class="relative w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 z-10"
+      >
+        <!-- Left Side: Locations List -->
+        <div class="text-white">
+          <h2
+            class="text-3xl md:text-5xl tilt-neon font-bold mb-6 relative inline-block"
+          >
+            Our <span class="text-cyan-400">Locations</span>
+          </h2>
+
+          <!-- Locations Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-lg">
+            <!-- Column 1 -->
+            <ul class="space-y-3 raleway text-1xl">
+              <li
+                class="flex items-center group text-cyan-400 font-bold hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Heywood
+              </li>
+              <li
+                class="flex items-center group text-cyan-400 font-bold hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Skelmersdale
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Brentwood
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Camden
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Castle Point
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Brentwood
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Camden
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Castle Point
+              </li>
+            </ul>
+
+            <!-- Column 2 -->
+            <ul class="space-y-3 raleway text-1xl">
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Enfield
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Greenwich
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Hackney
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Islington
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Lambeth
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Hackney
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Islington
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Lambeth
+              </li>
+            </ul>
+
+            <!-- Column 3 -->
+            <ul class="space-y-3 raleway text-1xl">
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Lewisham
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Newham
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Redbridge
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Southwark
+              </li>
+              <li
+                class="flex items-center group hover:text-cyan-400 transition"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-cyan-400 mr-2 group-hover:scale-125 transition-transform duration-300"
+                ></i
+                >Westminster
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side: Map Image -->
+        <div
+          class="flex justify-center items-center min-h-[500px] bg-[url('assets/images/locationimage.png')] bg-cover bg-center bg-no-repeat relative rounded-2xl shadow-[0_0_20px_#22d3ee] p-4 border border-cyan-400"
+        >
+          <!-- First Point -->
+          <div class="relative group mt-[120px]">
+            <img
+              src="assets/images/point.png"
+              class="h-[60px] ml-[30px] mb-[-230px] w-[60px] cursor-pointer transition-transform duration-300 group-hover:scale-125 drop-shadow-[0_0_12px_#22d3ee]"
+            />
+            <!-- Tooltip -->
+            <div
+              class="absolute bottom-[20px] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-cyan-500 text-black text-sm raleway font-semibold rounded-lg px-4 py-2 shadow-lg transition-all duration-300 scale-0 group-hover:scale-100"
+            >
+              Heywood
+            </div>
+          </div>
+
+          <!-- Second Point -->
+          <div class="relative group mt-[120px]">
+            <img
+              src="assets/images/point.png"
+              class="h-[60px] ml-[50px] mb-[-200px] w-[60px] cursor-pointer transition-transform duration-300 group-hover:scale-125 drop-shadow-[0_0_12px_#22d3ee]"
+            />
+            <!-- Tooltip -->
+            <div
+              class="absolute bottom-[20px] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-cyan-500 text-black text-sm raleway font-semibold rounded-lg px-4 py-2 shadow-lg transition-all duration-300 scale-0 group-hover:scale-100"
+            >
+              Skelmersdale
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
+        <!-- Top Section: Excellent Customer Support -->
+        <div class="text-center mt-[-50px]">
+          <div class="text-5xl text-[#06AFCE] mb-5 w-full flex justify-center items-start"><img src="assets/images/footerlogo.png" class="w-[240px]"/></div>
+          <p class="raleway text-[20px] text-gray-300 mt-[-50px]">
+           Quality Properties NW offers trusted property solutions across the North West, specialising in sales, lettings, and property management. With expert local knowledge, we help clients find their ideal home or investment
+          </p>
+        </div>
+
+        <!-- Office Locations -->
+        <div class="text-center mb-10">
+          <h4
+            class="text-1xl md:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5"
+          >
+            OUR OFFICE LOCATIONS
+          </h4>
+          <div
+            class="flex flex-wrap justify-center gap-20 text-gray-300 raleway text-2xl cursor-pointer"
+          >
+            <a href="independence-house-heywood.html"
+              >Independence House Heywood</a
+            >
+            <a href="skelmersdale.html">Certacs House Skelsmerdale</a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <!-- Useful Links -->
+        <div class="text-center mb-10 border-t-[1px] border-gray-300 pt-5">
+          <h4 class="font-semibold mb-3 text-[#06AFCE] text-3xl tilt-neon">
+            USEFUL LINKS
+          </h4>
+          <div
+            class="flex flex-wrap justify-center gap-6 text-gray-300 text-[24px] raleway"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Home
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              About
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Contact
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Service
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Blog
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
+            >
+              <span
+                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
+              ></span>
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col items-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-8"
+        >
+          <!-- Google Reviews -->
+          <div class="flex items-center justify-between w-[70vw]">
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/google.webp"
+                alt="Google"
+                class="w-[180px] h-[80px]"
+              />
+              <div></div>
+            </div>
+            <div>
+              <p class="raleway text-[18px]">
+                Our Customer Gave us Excellant Rating
+              </p>
+              <img
+                src="assets/images/reviw-removebg-preview.png"
+                class="w-[280px] h-[50px]"
+              />
+            </div>
+            <div class="flex gap-5 mt-4">
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-facebook-f text-2xl text-[#06AFCE]"></i>
+              </a>
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-instagram text-2xl text-[#06AFCE]"></i>
+              </a>
+              <a
+                href="#"
+                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
+              >
+                <i class="fab fa-youtube text-2xl text-[#06AFCE]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+
+          <!-- Copyright -->
+        </div>
+        <div
+          class="flex gap-10 items-center border-b-[1px] border-gray-300 justify-center p-6 l shadow-md"
+        >
+          <!-- Google Pay -->
+          <img
+            src="https://www.pngplay.com/wp-content/uploads/5/American-Express-Logo-Download-Free-PNG.png"
+            alt="Google Pay"
+            class="h-20 hover:scale-110 transition duration-300"
+          />
+
+          <!-- Razorpay -->
+          <img
+            src="assets/images/Razorpay_logo.svg"
+            alt="Razorpay"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+
+          <!-- PhonePe -->
+          <img
+            src="assets/images/PhonePe-Logo.wine.png"
+            alt="PhonePe"
+            class="h-20 hover:scale-110 transition duration-300"
+          />
+
+          <!-- Paytm -->
+          <img
+            src="assets/images/Paytm-Logo.webp"
+            alt="Paytm"
+            class="h-16 hover:scale-110 transition duration-300"
+          />
+
+          <!-- PayPal -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+            alt="PayPal"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+
+          <!-- MasterCard -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+            alt="MasterCard"
+            class="h-10 hover:scale-110 transition duration-300"
+          />
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-black text-white"
+        >
+          <p class="text-lg md:text-[20px] font-raleway mb-2 md:mb-0 raleway">
+            © All Rights Reserved 2025
+            <span class="text-[#06AFCE]">Quality Properties Nw</span>
+          </p>
+          <p class="text-lg md:text-xl raleway">
+            Designed & Developed By
+            <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]"
+              >Kyle Infotech</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const office = document.getElementsByClassName("office")[0];
+      const listtodisplay = document.getElementsByClassName("listtodisplay")[0];
+
+      office.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Toggle the submenu
+        listtodisplay.classList.toggle("hidden");
+
+        // Optional: rotate the dropdown icon
+        const icon = office.querySelector("i");
+        icon.classList.toggle("rotate-180"); // Tailwind rotate class
+      });
+
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+
+      const swiper1 = new Swiper(".mySwiper1", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          // <-- Add this
+          delay: 3000, // Slide every 3 seconds
+          disableOnInteraction: false, // Keep autoplay even after user interacts
+        },
+        speed: 1000, // Slide transition speed (optional)
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 1 },
+        },
+      });
+    </script>
+  </body>
+</html>
