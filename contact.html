@@ -1,839 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Property Rental Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tilt+Neon:ital,wght@0,400&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Property Rental Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon:ital,wght@0,400&display=swap" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      .raleway {
-        font-family: "Raleway", sans-serif;
-      }
-      @keyframes pulseShadow {
-        0%,
-        100% {
-          box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.6);
-        }
-        50% {
-          box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.3);
-        }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet" />
+  <style>
+    .raleway {
+      font-family: "Raleway", sans-serif;
+    }
+
+    @keyframes pulseShadow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.6);
       }
 
-      .tiltwrap {
-        font-family: "Tilt Warp", sans-serif;
+      50% {
+        box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.3);
       }
-      .tilt-neon {
-        font-family: "Tilt Neon", sans-serif;
-        font-variation-settings: "XROT" 15, "YROT" -10;
-      }
+    }
 
-      .shadow-pulse {
-        animation: pulseShadow 2s infinite;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50">
-    <!-- Contact Us Section -->
-    <section
-      class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[60vh] w-full"
-    >
-      <!-- Black Overlay -->
-      <div class="absolute inset-0 bg-black/80 bg-opacity-50"></div>
+    .tiltwrap {
+      font-family: "Tilt Warp", sans-serif;
+    }
 
-      <!-- Top Bar -->
-      <div
-        class="w-full raleway flex justify-center relative z-10 border-b border-gray-300 py-6"
-      >
-        <div class="flex justify-between w-[90%]">
-          <!-- Left Info -->
-          <div class="flex flex-wrap items-center gap-5">
-            <div class="flex items-center text-[18px] font-bold gap-2">
-              <i class="fa-solid fa-phone text-white"></i>
-              <span class="text-white">012 03456 7890</span>
+    .tilt-neon {
+      font-family: "Tilt Neon", sans-serif;
+      font-variation-settings: "XROT" 15, "YROT" -10;
+    }
+
+    .shadow-pulse {
+      animation: pulseShadow 2s infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <!-- Contact Us Section -->
+  <section class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[60vh] w-full">
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black/80 bg-opacity-50"></div>
+
+    <!-- Top Bar -->
+    <div class="w-full raleway flex justify-center relative z-10 border-b border-gray-300 py-6">
+      <div class="flex justify-between w-[90%]">
+        <!-- Left Info -->
+        <div class="flex flex-wrap items-center gap-5">
+          <div class="flex items-center text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-phone text-white"></i>
+            <span class="text-white">012 03456 7890</span>
+          </div>
+          <div class="flex items-center text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-location-dot text-white"></i>
+            <span class="text-white">Lorem Ipsum Dolr, 24115</span>
+          </div>
+          <div class="flex items-center text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-envelope text-white"></i>
+            <a href="mailto:info@loremipsum.com" class="hover:underline text-white">info@LoremIpsum.com</a>
+          </div>
+        </div>
+
+        <!-- Right Social -->
+        <div class="flex items-center gap-3">
+          <a href="#"
+            class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition">
+            <i class="fab fa-facebook-f text-white"></i>
+          </a>
+          <a href="#"
+            class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition">
+            <i class="fab fa-linkedin-in text-white"></i>
+          </a>
+          <a href="#"
+            class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition">
+            <i class="fab fa-instagram text-white"></i>
+          </a>
+          <a href="#"
+            class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition">
+            <i class="fab fa-youtube text-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="w-full flex justify-center raleway font-bold relative z-50 py-6 bg-transparent">
+      <div class="flex justify-between items-center w-[90%] relative">
+        <!-- Logo -->
+        <div class="text-cyan-400 font-bold text-5xl">LOGO</div>
+
+        <!-- Menu -->
+        <ul class="flex space-x-8 items-center">
+          <li>
+            <a href="index.html" class="text-white hover:text-cyan-400 transition duration-300">HOME</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-white hover:text-cyan-400 transition duration-300">ABOUT US</a>
+          </li>
+
+          <!-- Services Menu with Hover -->
+          <li class="relative group">
+            <a href="services.html" class="text-white hover:text-cyan-400 transition duration-300">SERVICES</a>
+
+            <!-- Dropdown -->
+            <div class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50">
+              <div class="grid grid-cols-1 gap-2 text-left">
+                <!-- Column 1 -->
+                <div class="group">
+                  <h3
+                    class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer">
+                    Office Space
+
+                    <i class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"></i>
+                  </h3>
+
+                  <ul class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden">
+                    <li>
+                      <a href="independence-house-heywood.html" class="hover:text-cyan-500">&rsaquo; independence house
+                        heywood</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-cyan-500">&rsaquo; certacs house skelsmerdale</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <a href="virtual-office.html" class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">
+                  Virtual Office
+                </a>
+
+                <a href="storage-container.html" class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">
+                  Storage Container
+                </a>
+              </div>
             </div>
-            <div class="flex items-center text-[18px] font-bold gap-2">
-              <i class="fa-solid fa-location-dot text-white"></i>
-              <span class="text-white">Lorem Ipsum Dolr, 24115</span>
+          </li>
+
+          <li>
+            <a href="contact.html" class="text-white hover:text-cyan-400 transition duration-300">CONTACTS</a>
+          </li>
+          <li>
+            <a href="blog.html" class="text-white hover:text-cyan-400 transition duration-300">BLOG</a>
+          </li>
+        </ul>
+
+        <!-- CTA Button -->
+        <a href="#"
+          class="relative flex items-center text-[14px] font-semibold text-white px-6 py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg">
+          <!-- Button Text -->
+          <span class="relative z-10">GET A FREE QUOTE</span>
+
+          <!-- Arrow Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+
+          <!-- Glowing Background -->
+          <span
+            class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"></span>
+
+          <!-- Inner Animated Shine -->
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center relative">
+      <div class="w-[90vw]">
+        <h2 class="text-5xl text-white tilt-neon mt-10">Home / Contact Us</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-bold text-black tilt-neon mb-6">
+            Send Us <span class="text-[#0EB2D0]">A Message</span>
+          </h2>
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[#0EB2D0] font-semibold mb-2">First Name</label>
+                <input type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
+                  placeholder="Enter your first name" />
+              </div>
+              <div>
+                <label class="block text-[#0EB2D0] font-semibold mb-2">Last Name</label>
+                <input type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
+                  placeholder="Enter your last name" />
+              </div>
             </div>
-            <div class="flex items-center text-[18px] font-bold gap-2">
-              <i class="fa-solid fa-envelope text-white"></i>
-              <a
-                href="mailto:info@loremipsum.com"
-                class="hover:underline text-white"
-                >info@LoremIpsum.com</a
-              >
+            <div>
+              <label class="block text-[#0EB2D0] font-semibold mb-2">Email Address</label>
+              <input type="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
+                placeholder="Enter your email" />
+            </div>
+            <div>
+              <label class="block text-[#0EB2D0] font-semibold mb-2">Phone Number</label>
+              <input type="tel"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
+                placeholder="Enter your phone number" />
+            </div>
+            <div>
+              <label class="block text-[#0EB2D0] font-semibold mb-2">Subject</label>
+              <select
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]">
+                <option>Property Inquiry</option>
+                <option>Rental Services</option>
+                <option>Property Management</option>
+                <option>General Question</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[#0EB2D0] font-semibold mb-2">Message</label>
+              <textarea rows="5"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
+                placeholder="Tell us about your requirements..."></textarea>
+            </div>
+            <button type="submit"
+              class="w-[200px] bg-[#0EB2D0] text-[20px] flex justify-center items-center text-black font-bold py-2 px-4 rounded-[50px] mt-5">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-primary mb-6 tilt-neon">
+              Get in <span class="text-[#0EB2D0]">Touch</span>
+            </h2>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
+                  <i class="fas fa-map-marker-alt text-[#0EB2D0]"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
+                    Office Address
+                  </h3>
+                  <p class="text-gray-600">
+                    Independence House, Adelaide Street, Heywood, Greater Manchester, OL10 4HF
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
+                  <i class="fas fa-phone text-[#0EB2D0]"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
+                    Phone Numbers
+                  </h3>
+                 
+                    <a href="tel:+441706622111" class="tilt-neon">01706622111</a><br>
+                    <a href="tel:+447989991150" class="tilt-neon">07989991150</a>
+
+                
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
+                  <i class="fas fa-envelope text-[#0EB2D0]"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
+                    Email Addresses
+                  </h3>
+                   <a href="mailto:info@qualitypropertiesnw.co.uk" class="raleway">info@qualitypropertiesnw.co.uk</a>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
+                  <i class="fas fa-clock text-[#0EB2D0]"></i>
+                </div>
+               <div>
+  <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
+    Working Hours
+  </h3>
+  <p class="text-gray-600">
+    Open 24 Hours – 7 Days a Week
+  </p>
+</div>
+
+              </div>
             </div>
           </div>
 
-          <!-- Right Social -->
-          <div class="flex items-center gap-3">
-            <a
-              href="#"
-              class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition"
-            >
-              <i class="fab fa-facebook-f text-white"></i>
-            </a>
-            <a
-              href="#"
-              class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition"
-            >
-              <i class="fab fa-linkedin-in text-white"></i>
-            </a>
-            <a
-              href="#"
-              class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition"
-            >
-              <i class="fab fa-instagram text-white"></i>
-            </a>
-            <a
-              href="#"
-              class="border border-[#0EB2D0] rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#0EB2D0] hover:text-black transition"
-            >
-              <i class="fab fa-youtube text-white"></i>
-            </a>
+          <!-- Quick Links -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 tilt-neon">
+              Quick <span class="text-[#0EB2D0]">Actions</span>
+            </h2>
+            <div class="space-y-4">
+              <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition">
+                <i class="fas fa-calendar-alt text-[#0EB2D0]"></i><span>Schedule a Property Viewing</span>
+              </a>
+              <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition">
+                <i class="fas fa-calculator text-[#0EB2D0]"></i><span>Get Rental Price Estimate</span>
+              </a>
+              <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition">
+                <i class="fas fa-file-alt text-[#0EB2D0]"></i><span>Download Property Brochure</span>
+              </a>
+              <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition">
+                <i class="fas fa-comments text-[#0EB2D0]"></i><span>Live Chat Support</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+ <section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold tilt-neon">
+        Find <span class="text-[#0EB2D0]">Our Location</span>
+      </h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        Visit our offices for personalized consultation.
+      </p>
+    </div>
+
+    <!-- Location Grid -->
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Canada Office -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Map -->
+        <div class="relative h-72">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2367.9827232512566!2d-2.2142785000000003!3d53.5937699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bbbaece772c61%3A0xae66b740095ceb7!2sIndependence%20House!5e0!3m2!1sen!2sin!4v1757595831205!5m2!1sen!2sin" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Content -->
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6 tilt-neon">Independence House Heywood</h3>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt text-[#0EB2D0] mt-1"></i>
+              <div>
+                <p class="text-gray-700 font-medium  tilt-neon">Adelaide St, Heywood OL10 4HD</p>
+                <p class="text-gray-700 font-medium tilt-neon"> United Kingdom</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3 ">
+              <i class="fas fa-envelope text-[#0EB2D0]"></i>
+              <a  href="mailto:info@qualitypropertiesnw.co.uk"class="text-gray-700 tilt-neon" >info@qualitypropertiesnw.co.uk</a>
+            </div>
+            <div class="flex items-center space-x-3 ">
+              <i class="fas fa-phone text-[#0EB2D0]"></i>
+              <a href="tel:+447989991150"class="text-gray-700 tilt-neon ">07989991150</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Navbar -->
-      <div
-        class="w-full flex justify-center raleway font-bold relative z-50 py-6 bg-transparent"
-      >
-        <div class="flex justify-between items-center w-[90%] relative">
-          <!-- Logo -->
-          <div class="text-cyan-400 font-bold text-5xl">LOGO</div>
-
-          <!-- Menu -->
-          <ul class="flex space-x-8 items-center">
-            <li>
-              <a
-                href="index.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >HOME</a
-              >
-            </li>
-            <li>
-              <a
-                href="about.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >ABOUT US</a
-              >
-            </li>
-
-            <!-- Services Menu with Hover -->
-            <li class="relative group">
-              <a
-                href="services.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >SERVICES</a
-              >
-
-              <!-- Dropdown -->
-              <div
-                class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50"
-              >
-                <div class="grid grid-cols-1 gap-2 text-left">
-                  <!-- Column 1 -->
-                  <div class="group">
-                    <h3
-                      class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer"
-                    >
-                      Office Space
-
-                      <i
-                        class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"
-                      ></i>
-                    </h3>
-
-                    <ul
-                      class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden"
-                    >
-                      <li>
-                        <a
-                          href="independence-house-heywood.html"
-                          class="hover:text-cyan-500"
-                          >&rsaquo; independence house heywood</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="hover:text-cyan-500"
-                          >&rsaquo; certacs house skelsmerdale</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-
-                  <!-- Column 2 -->
-                  <a
-                    href="virtual-office.html"
-                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
-                  >
-                    Virtual Office
-                  </a>
-
-                  <a
-                    href="storage-container.html"
-                    class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon"
-                  >
-                    Storage Container
-                  </a>
-                </div>
+      <!-- USA Office -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Map -->
+        <div class="relative h-72">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.648007341232!2d-2.80413!3d53.5461989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b174c6fb3e92d%3A0x576015903998fb53!2sCertacs%20House!5e0!3m2!1sen!2sin!4v1757595569547!5m2!1sen!2sin" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Content -->
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6 tilt-neon">Certacs House Skelsmerdale</h3>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt text-[#0EB2D0] mt-1"></i>
+              <div>
+                <p class="text-gray-700 font-medium tilt-neon">Westgate, Skelmersdale WN8 8AZ, </p>
+                <p class="text-gray-700 font-medium tilt-neon">United Kingdom</p>
+               
               </div>
-            </li>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-[#0EB2D0]"></i>
+              <a href="mailto:info@qualitypropertiesnw.co.uk" class="text-gray-700 tilt-neon">info@qualitypropertiesnw.co.uk</a>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-phone text-[#0EB2D0]"></i>
+              <a href="tel:+447989991150" class="text-gray-700 tilt-neon">0123456789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <li>
-              <a
-                href="contact.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >CONTACTS</a
-              >
-            </li>
-            <li>
-              <a
-                href="blog.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >BLOG</a
-              >
-            </li>
-          </ul>
 
-          <!-- CTA Button -->
-          <a
-            href="#"
-            class="relative flex items-center text-[14px] font-semibold text-white px-6 py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg"
-          >
-            <!-- Button Text -->
-            <span class="relative z-10">GET A FREE QUOTE</span>
+  <!-- Footer -->
+  <footer class="bg-black text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
+      <!-- Top Section: Excellent Customer Support -->
+      <div class=""></div>
+      <div class="text-center mb-10">
+        <h3 class="text-5xl text-[#06AFCE] mb-5">logo</h3>
+        <p class="raleway text-[20px] text-gray-300">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+          provident, iste cum asperiores sapiente odit? Excepturi ullam,
+          facere consequuntur tempore deleniti unde at accusamus reiciendis
+          cum aperiam, et dolore blanditiis.
+        </p>
+      </div>
 
-            <!-- Arrow Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+      <!-- Office Locations -->
+      <div class="text-center mb-10">
+        <h4 class="text-1xl md:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5">
+          OUR OFFICE LOCATIONS
+        </h4>
+        <div class="flex flex-wrap justify-center gap-6 text-gray-300 raleway text-2xl cursor-pointer">
+          <span>London, UK</span>
+          <span>Belfast, Northern Ireland</span>
+          <span>Glasgow, Scotland</span>
+          <span>Toronto, Canada</span>
+          <span>Delaware, USA</span>
+        </div>
+      </div>
 
-            <!-- Glowing Background -->
-            <span
-              class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"
-            ></span>
-
-            <!-- Inner Animated Shine -->
-            <span
-              class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"
-            ></span>
+      <!-- Useful Links -->
+      <!-- Useful Links -->
+      <div class="text-center mb-10 border-t-[1px] border-gray-300 pt-5">
+        <h4 class="font-semibold mb-3 text-[#06AFCE] text-3xl tilt-neon">
+          USEFUL LINKS
+        </h4>
+        <div class="flex flex-wrap justify-center gap-6 text-gray-300 text-[24px] raleway">
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Home
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            About
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Contact
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Service
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Blog
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Privacy Policy
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Terms & Conditions
           </a>
         </div>
       </div>
 
-      <div class="w-full flex justify-center relative">
-        <div class="w-[90vw]">
-          <h2 class="text-5xl text-white tilt-neon mt-10">Home / Contact Us</h2>
+      <!-- Bottom Section -->
+      <div class="flex flex-col items-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-8">
+        <!-- Google Reviews -->
+        <div class="flex items-center justify-between w-[70vw]">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/google.webp" alt="Google" class="w-[180px] h-[80px]" />
+            <div></div>
+          </div>
+          <div>
+            <p class="raleway text-[18px]">
+              Our Customer Gave us Excellant Rating
+            </p>
+            <img src="assets/images/reviw-removebg-preview.png" class="w-[280px] h-[50px]" />
+          </div>
+          <div class="flex gap-5 mt-4">
+            <a href="#"
+              class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+              <i class="fab fa-facebook-f text-2xl text-[#06AFCE]"></i>
+            </a>
+            <a href="#"
+              class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+              <i class="fab fa-instagram text-2xl text-[#06AFCE]"></i>
+            </a>
+            <a href="#"
+              class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+              <i class="fab fa-youtube text-2xl text-[#06AFCE]"></i>
+            </a>
+          </div>
         </div>
+
+        <!-- Social Media Icons -->
+
+        <!-- Copyright -->
       </div>
-    </section>
+      <div class="flex gap-10 items-center border-b-[1px] border-gray-300 justify-center p-6 l shadow-md">
+        <!-- Google Pay -->
+        <img src="https://www.pngplay.com/wp-content/uploads/5/American-Express-Logo-Download-Free-PNG.png"
+          alt="Google Pay" class="h-20 hover:scale-110 transition duration-300" />
 
-    <!-- Contact Section -->
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12">
-          <!-- Contact Form -->
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-black tilt-neon mb-6">
-              Send Us <span class="text-[#0EB2D0]">A Message</span>
-            </h2>
-            <form class="space-y-6">
-              <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-[#0EB2D0] font-semibold mb-2"
-                    >First Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div>
-                  <label class="block text-[#0EB2D0] font-semibold mb-2"
-                    >Last Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-              <div>
-                <label class="block text-[#0EB2D0] font-semibold mb-2"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div>
-                <label class="block text-[#0EB2D0] font-semibold mb-2"
-                  >Phone Number</label
-                >
-                <input
-                  type="tel"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              <div>
-                <label class="block text-[#0EB2D0] font-semibold mb-2"
-                  >Subject</label
-                >
-                <select
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
-                >
-                  <option>Property Inquiry</option>
-                  <option>Rental Services</option>
-                  <option>Property Management</option>
-                  <option>General Question</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-[#0EB2D0] font-semibold mb-2"
-                  >Message</label
-                >
-                <textarea
-                  rows="5"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0EB2D0]"
-                  placeholder="Tell us about your requirements..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-[200px] bg-[#0EB2D0] text-[20px] flex justify-center items-center text-black font-bold py-2 px-4 rounded-[50px] mt-5"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+        <!-- Razorpay -->
+        <img src="assets/images/Razorpay_logo.svg" alt="Razorpay"
+          class="h-10 hover:scale-110 transition duration-300" />
 
-          <!-- Contact Info -->
-          <div class="space-y-8">
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-              <h2 class="text-3xl font-bold text-primary mb-6 tilt-neon">
-                Get in <span class="text-[#0EB2D0]">Touch</span>
-              </h2>
-              <div class="space-y-6">
-                <div class="flex items-start space-x-4">
-                  <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
-                    <i class="fas fa-map-marker-alt text-[#0EB2D0]"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
-                      Office Address
-                    </h3>
-                    <p class="text-gray-600">
-                      123 Business District, Suite 456<br />Downtown City, State
-                      12345<br />United States
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                  <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
-                    <i class="fas fa-phone text-[#0EB2D0]"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
-                      Phone Numbers
-                    </h3>
-                    <p class="text-gray-600">
-                      Main: +91 6543-7890<br />Sales: +91 6543-7891<br />Support:
-                      +91 6543-7892
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                  <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
-                    <i class="fas fa-envelope text-[#0EB2D0]"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
-                      Email Addresses
-                    </h3>
-                    <p class="text-gray-600">
-                      info@propertycompany.com<br />sales@propertycompany.com<br />support@propertycompany.com
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                  <div class="bg-[#0EB2D0]/10 p-3 rounded-full">
-                    <i class="fas fa-clock text-[#0EB2D0]"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-gray-800 mb-1 text-2xl">
-                      Working Hours
-                    </h3>
-                    <p class="text-gray-600">
-                      Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00
-                      PM<br />Sunday: Closed
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- PhonePe -->
+        <img src="assets/images/PhonePe-Logo.wine.png" alt="PhonePe"
+          class="h-20 hover:scale-110 transition duration-300" />
 
-            <!-- Quick Links -->
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-              <h2 class="text-2xl font-bold mb-6 tilt-neon">
-                Quick <span class="text-[#0EB2D0]">Actions</span>
-              </h2>
-              <div class="space-y-4">
-                <a
-                  href="#"
-                  class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition"
-                >
-                  <i class="fas fa-calendar-alt text-[#0EB2D0]"></i
-                  ><span>Schedule a Property Viewing</span>
-                </a>
-                <a
-                  href="#"
-                  class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition"
-                >
-                  <i class="fas fa-calculator text-[#0EB2D0]"></i
-                  ><span>Get Rental Price Estimate</span>
-                </a>
-                <a
-                  href="#"
-                  class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition"
-                >
-                  <i class="fas fa-file-alt text-[#0EB2D0]"></i
-                  ><span>Download Property Brochure</span>
-                </a>
-                <a
-                  href="#"
-                  class="flex items-center space-x-3 text-gray-600 hover:text-[#0EB2D0] transition"
-                >
-                  <i class="fas fa-comments text-[#0EB2D0]"></i
-                  ><span>Live Chat Support</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Paytm -->
+        <img src="assets/images/Paytm-Logo.webp" alt="Paytm" class="h-16 hover:scale-110 transition duration-300" />
+
+        <!-- PayPal -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"
+          class="h-10 hover:scale-110 transition duration-300" />
+
+        <!-- MasterCard -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard"
+          class="h-10 hover:scale-110 transition duration-300" />
       </div>
-    </section>
 
-    <!-- Google Map -->
-    <section class="py-16 bg-gray-100">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold tilt-neon">
-            Find <span class="text-[#0EB2D0]">Our Location</span>
-          </h2>
-          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-            Visit our office for personalized consultation.
-          </p>
-        </div>
-        <div class="bg-white p-2 rounded-lg shadow-lg">
-          <div class="relative h-96 rounded-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!...your-map..."
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              class="rounded-lg"
-            ></iframe>
-            <div
-              class="absolute top-4 left-4 bg-white p-4 rounded-lg shadow-md"
-            >
-              <div class="flex items-center space-x-3">
-                <div class="bg-[#0EB2D0]/10 p-2 rounded-full">
-                  <i class="fas fa-map-marker-alt text-[#0EB2D0]"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Our Office</h3>
-                  <p class="text-sm text-gray-600">123 Business District</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Location Cards -->
-        <div class="grid md:grid-cols-2 gap-8 mt-12">
-          <!-- Canada Office -->
-          <div
-            class="bg-gray-50 border-l-4 border-[#0EB2D0] p-8 rounded-lg shadow-lg"
-          >
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 tilt-neon">
-              Canada
-            </h3>
-            <div class="space-y-4">
-              <div class="mb-6">
-                <h4 class="font-bold text-gray-800 text-lg mb-2 raleway">
-                  Toronto Business Center
-                </h4>
-              </div>
-              <div class="flex items-start space-x-3">
-                <i class="fas fa-map-marker-alt text-[#0EB2D0] mt-1"></i>
-                <div>
-                  <p class="text-gray-700 font-medium raleway">
-                    145 1-2 Church Street
-                  </p>
-                  <p class="text-gray-700">Toronto</p>
-                  <p class="text-gray-700">Ontario</p>
-                  <p class="text-gray-700">M5B 1Y4</p>
-                </div>
-              </div>
-              <div class="flex items-center space-x-3 raleway">
-                <i class="fas fa-envelope text-[#0EB2D0]"></i>
-                <p class="text-gray-700">canada@iconoffices.co</p>
-              </div>
-              <div class="flex items-center space-x-3 raleway">
-                <i class="fas fa-phone text-[#0EB2D0]"></i>
-                <p class="text-gray-700">+1 (647) 258 47 48</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- United States Office -->
-          <div
-            class="bg-gray-50 border-l-4 border-[#0EB2D0] p-8 rounded-lg shadow-lg"
-          >
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 tilt-neon">
-              United States of America
-            </h3>
-            <div class="space-y-4">
-              <div class="mb-6">
-                <h4 class="font-bold text-gray-800 text-lg mb-2 raleway">
-                  Delaware Business Center
-                </h4>
-              </div>
-              <div class="flex items-start space-x-3">
-                <i
-                  class="fas fa-map-marker-alt text-[#0EB2D0] mt-1 text-[#0EB2D0]"
-                ></i>
-                <div>
-                  <p class="text-gray-700 font-medium">254 Chapman Rd</p>
-                  <p class="text-gray-700">Suite 101-B</p>
-                  <p class="text-gray-700">Newark, Delaware</p>
-                  <p class="text-gray-700">19702</p>
-                </div>
-              </div>
-              <div class="flex items-center space-x-3">
-                <i class="fas fa-envelope text-[#0EB2D0]"></i>
-                <p class="text-gray-700">usa@iconoffices.co</p>
-              </div>
-              <div class="flex items-center space-x-3">
-                <i class="fas fa-phone text-[#0EB2D0]"></i>
-                <p class="text-gray-700">+1 (302) 273 9319</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-black text-white">
+        <p class="text-lg md:text-[20px] font-raleway mb-2 md:mb-0 raleway">
+          © All Rights Reserved 2025
+          <span class="text-[#06AFCE]">Rental Property Maintenance</span>
+        </p>
+        <p class="text-lg md:text-xl raleway">
+          Designed & Developed By
+          <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]">Kyle Infotech</a>
+        </p>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
-        <!-- Top Section: Excellent Customer Support -->
-        <div class=""></div>
-        <div class="text-center mb-10">
-          <h3 class="text-5xl text-[#06AFCE] mb-5">logo</h3>
-          <p class="raleway text-[20px] text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            provident, iste cum asperiores sapiente odit? Excepturi ullam,
-            facere consequuntur tempore deleniti unde at accusamus reiciendis
-            cum aperiam, et dolore blanditiis.
-          </p>
-        </div>
-
-        <!-- Office Locations -->
-        <div class="text-center mb-10">
-          <h4
-            class="text-1xl md:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5"
-          >
-            OUR OFFICE LOCATIONS
-          </h4>
-          <div
-            class="flex flex-wrap justify-center gap-6 text-gray-300 raleway text-2xl cursor-pointer"
-          >
-            <span>London, UK</span>
-            <span>Belfast, Northern Ireland</span>
-            <span>Glasgow, Scotland</span>
-            <span>Toronto, Canada</span>
-            <span>Delaware, USA</span>
-          </div>
-        </div>
-
-        <!-- Useful Links -->
-        <!-- Useful Links -->
-        <div class="text-center mb-10 border-t-[1px] border-gray-300 pt-5">
-          <h4 class="font-semibold mb-3 text-[#06AFCE] text-3xl tilt-neon">
-            USEFUL LINKS
-          </h4>
-          <div
-            class="flex flex-wrap justify-center gap-6 text-gray-300 text-[24px] raleway"
-          >
-            <a
-              href="#"
-              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
-            >
-              <span
-                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
-              ></span>
-              Home
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
-            >
-              <span
-                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
-              ></span>
-              About
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
-            >
-              <span
-                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
-              ></span>
-              Contact
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
-            >
-              <span
-                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
-              ></span>
-              Service
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
-            >
-              <span
-                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
-              ></span>
-              Blog
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
-            >
-              <span
-                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
-              ></span>
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300"
-            >
-              <span
-                class="w-3 h-3 bg-[#06AFCE] rounded-full inline-block"
-              ></span>
-              Terms & Conditions
-            </a>
-          </div>
-        </div>
-
-        <!-- Bottom Section -->
-        <div
-          class="flex flex-col items-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-8"
-        >
-          <!-- Google Reviews -->
-          <div class="flex items-center justify-between w-[70vw]">
-            <div class="flex items-center gap-3">
-              <img
-                src="assets/images/google.webp"
-                alt="Google"
-                class="w-[180px] h-[80px]"
-              />
-              <div></div>
-            </div>
-            <div>
-              <p class="raleway text-[18px]">
-                Our Customer Gave us Excellant Rating
-              </p>
-              <img
-                src="assets/images/reviw-removebg-preview.png"
-                class="w-[280px] h-[50px]"
-              />
-            </div>
-            <div class="flex gap-5 mt-4">
-              <a
-                href="#"
-                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
-              >
-                <i class="fab fa-facebook-f text-2xl text-[#06AFCE]"></i>
-              </a>
-              <a
-                href="#"
-                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
-              >
-                <i class="fab fa-instagram text-2xl text-[#06AFCE]"></i>
-              </a>
-              <a
-                href="#"
-                class="w-14 h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition"
-              >
-                <i class="fab fa-youtube text-2xl text-[#06AFCE]"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Social Media Icons -->
-
-          <!-- Copyright -->
-        </div>
-        <div
-          class="flex gap-10 items-center border-b-[1px] border-gray-300 justify-center p-6 l shadow-md"
-        >
-          <!-- Google Pay -->
-          <img
-            src="https://www.pngplay.com/wp-content/uploads/5/American-Express-Logo-Download-Free-PNG.png"
-            alt="Google Pay"
-            class="h-20 hover:scale-110 transition duration-300"
-          />
-
-          <!-- Razorpay -->
-          <img
-            src="assets/images/Razorpay_logo.svg"
-            alt="Razorpay"
-            class="h-10 hover:scale-110 transition duration-300"
-          />
-
-          <!-- PhonePe -->
-          <img
-            src="assets/images/PhonePe-Logo.wine.png"
-            alt="PhonePe"
-            class="h-20 hover:scale-110 transition duration-300"
-          />
-
-          <!-- Paytm -->
-          <img
-            src="assets/images/Paytm-Logo.webp"
-            alt="Paytm"
-            class="h-16 hover:scale-110 transition duration-300"
-          />
-
-          <!-- PayPal -->
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-            alt="PayPal"
-            class="h-10 hover:scale-110 transition duration-300"
-          />
-
-          <!-- MasterCard -->
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-            alt="MasterCard"
-            class="h-10 hover:scale-110 transition duration-300"
-          />
-        </div>
-
-        <div
-          class="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-black text-white"
-        >
-          <p class="text-lg md:text-[20px] font-raleway mb-2 md:mb-0 raleway">
-            © All Rights Reserved 2025
-            <span class="text-[#06AFCE]">Rental Property Maintenance</span>
-          </p>
-          <p class="text-lg md:text-xl raleway">
-            Designed & Developed By
-            <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]"
-              >Kyle Infotech</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
         });
       });
+    });
 
-      // Form submission handling
-      document.querySelector("form").addEventListener("submit", function (e) {
-        e.preventDefault();
+    // Form submission handling
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-        // Simple form validation
-        const inputs = this.querySelectorAll(
-          "input[required], textarea[required]"
-        );
-        let isValid = true;
+      // Simple form validation
+      const inputs = this.querySelectorAll(
+        "input[required], textarea[required]"
+      );
+      let isValid = true;
 
-        inputs.forEach((input) => {
-          if (!input.value.trim()) {
-            isValid = false;
-            input.style.borderColor = "#ef4444";
-          } else {
-            input.style.borderColor = "#22d3ee";
-          }
-        });
-
-        if (isValid) {
-          alert("Thank you for your message! We will get back to you soon.");
-          this.reset();
+      inputs.forEach((input) => {
+        if (!input.value.trim()) {
+          isValid = false;
+          input.style.borderColor = "#ef4444";
         } else {
-          alert("Please fill in all required fields.");
+          input.style.borderColor = "#22d3ee";
         }
       });
 
-      // Add loading animation
-      window.addEventListener("load", function () {
-        document.body.style.opacity = "0";
-        document.body.style.transition = "opacity 0.5s";
-        setTimeout(() => {
-          document.body.style.opacity = "1";
-        }, 100);
-      });
-    </script>
-  </body>
+      if (isValid) {
+        alert("Thank you for your message! We will get back to you soon.");
+        this.reset();
+      } else {
+        alert("Please fill in all required fields.");
+      }
+    });
+
+    // Add loading animation
+    window.addEventListener("load", function () {
+      document.body.style.opacity = "0";
+      document.body.style.transition = "opacity 0.5s";
+      setTimeout(() => {
+        document.body.style.opacity = "1";
+      }, 100);
+    });
+  </script>
+</body>
+
 </html>
