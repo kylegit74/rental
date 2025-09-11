@@ -783,20 +783,19 @@ What's covered in weatherproof container hire in Skelmersdale service?          
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="reveal">
                 <h2 class="text-5xl md:text-5xl font-black text-black  mb-8 leading-tight tilt-neon">
-                    Ready to Experience
+                    Ready to Experience the Best 
                     <span class="block text-white">
-                        Excellence?
+                       Coworking Space Near Manchester for Startups?
                     </span>
                 </h2>
                 <p class="text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed raleway">
-                    Join thousands of satisfied clients who trust us with their property needs.
-                    Let's start your success story today.
+                   Find a private office for rent in Heywood with 24/7 access and month office rental in Skelmersdale with parking.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
                     <a href="tel:+447989991150"
                         class="group bg-white   raleway text-black   px-10 py-5 rounded-2xl font-black text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl">
-                        Contact us immediately 
+                        Book Your Tour 
                         <svg class="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -805,7 +804,7 @@ What's covered in weatherproof container hire in Skelmersdale service?          
                     </a>
                     <a href="contact.html"
                         class="group border-2 border-black   text-black raleway  px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm">
-                        Schedule Consultation
+                         Get Custom Quote
                         <svg class="ml-3 h-6 w-6 group-hover:rotate-12 transition-transform duration-300" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1036,5 +1035,25 @@ What's covered in weatherproof container hire in Skelmersdale service?          
         </div>
       </div>
     </footer>
+    <script>
+       document.querySelectorAll(".faq-toggle").forEach((toggle) => {
+            toggle.addEventListener("click", () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector(".faq-icon");
+                const isOpen = !content.classList.contains("hidden");
+
+                // Close all other FAQs
+                document.querySelectorAll(".faq-content").forEach((faq) => faq.classList.add("hidden"));
+                document.querySelectorAll(".faq-icon").forEach((icon) => icon.classList.remove("rotate-180"));
+
+                // Toggle current FAQ
+                if (!isOpen) {
+                    content.classList.remove("hidden");
+                    icon.classList.add("rotate-180");
+                }
+            });
+        });
+
+    </script>
   </body>
 </html>
