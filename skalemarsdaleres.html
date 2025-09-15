@@ -1600,12 +1600,18 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      lightGallery(document.getElementById("lightgallery"), {
-        plugins: [lgZoom, lgThumbnail],
-        speed: 500,
-        download: false,
-      });
-    });
+  lightGallery(document.getElementById("lightgallery"), {
+    plugins: [lgZoom, lgThumbnail],
+    speed: 500,
+    download: false,
+    mobileSettings: {
+      controls: true,        // keep controls on mobile
+      showCloseIcon: true,   // show the close icon always
+      download: false        // also disables download on mobile
+    }
+  });
+});
+
 
     // Contact form handling
     document
