@@ -19,7 +19,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/css/lightgallery-bundle.min.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -45,16 +46,19 @@
             }
         }
     </script>
-    
+
     <style>
         .raleway {
             font-family: 'Raleway', sans-serif;
         }
 
         @keyframes pulseShadow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.6);
             }
+
             50% {
                 box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.3);
             }
@@ -131,12 +135,15 @@
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 1;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0;
@@ -177,9 +184,12 @@
         }
 
         @keyframes pulseGlow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
             }
+
             50% {
                 box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
             }
@@ -214,9 +224,11 @@
             0% {
                 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             }
+
             50% {
                 border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
             }
+
             100% {
                 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             }
@@ -231,9 +243,11 @@
             0% {
                 box-shadow: 0 0 5px #06AFCE, 0 0 10px #06AFCE, 0 0 15px #06AFCE;
             }
+
             50% {
                 box-shadow: 0 0 15px #06AFCE, 0 0 25px #06AFCE, 0 0 35px #06AFCE;
             }
+
             100% {
                 box-shadow: 0 0 5px #06AFCE, 0 0 10px #06AFCE, 0 0 15px #06AFCE;
             }
@@ -247,9 +261,11 @@
             0% {
                 box-shadow: 0 0 5px #06AFCE, 0 0 10px #06AFCE, 0 0 20px #06AFCE;
             }
+
             50% {
                 box-shadow: 0 0 15px #06AFCE, 0 0 30px #06AFCE, 0 0 40px #06AFCE;
             }
+
             100% {
                 box-shadow: 0 0 5px #06AFCE, 0 0 10px #06AFCE, 0 0 20px #06AFCE;
             }
@@ -264,6 +280,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -284,7 +301,8 @@
 
 <body>
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center h-[60vh] sm:h-[40vh] lg:h-[60vh] w-full" style="background-image: url('assets/images/bannerimage2.jpg');">
+    <section class="relative bg-cover bg-center h-[40vh] sm:h-[40vh] lg:h-[60vh] w-full"
+        style="background-image: url('assets/images/bannerimage2.jpg');">
         <!-- Black Overlay -->
         <div class="absolute inset-0 bg-black/80"></div>
 
@@ -312,16 +330,20 @@
 
                 <!-- Right Social Section -->
                 <div class="flex items-center gap-3">
-                    <a href="#" class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+                    <a href="#"
+                        class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
                         <i class="fab fa-facebook-f text-white text-sm"></i>
                     </a>
-                    <a href="#" class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+                    <a href="#"
+                        class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
                         <i class="fab fa-linkedin-in text-white text-sm"></i>
                     </a>
-                    <a href="#" class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+                    <a href="#"
+                        class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
                         <i class="fab fa-instagram text-white text-sm"></i>
                     </a>
-                    <a href="#" class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+                    <a href="#"
+                        class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
                         <i class="fab fa-youtube text-white text-sm"></i>
                     </a>
                 </div>
@@ -341,61 +363,84 @@
 
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex space-x-4 lg:space-x-8 items-center text-sm lg:text-base">
-                    <li><a href="index.html" class="text-white hover:text-cyan-400 transition duration-300">HOME</a></li>
-                    <li><a href="about.html" class="text-white hover:text-cyan-400 transition duration-300">ABOUT US</a></li>
-                    
+                    <li><a href="index.html" class="text-white hover:text-cyan-400 transition duration-300">HOME</a>
+                    </li>
+                    <li><a href="about.html" class="text-white hover:text-cyan-400 transition duration-300">ABOUT US</a>
+                    </li>
+
                     <!-- Services Menu with Hover -->
                     <li class="relative group">
-                        <a href="services.html" class="text-white hover:text-cyan-400 transition duration-300">SERVICES</a>
-                        
+                        <a href="services.html"
+                            class="text-white hover:text-cyan-400 transition duration-300">SERVICES</a>
+
                         <!-- Dropdown -->
-                        <div class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50">
+                        <div
+                            class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50">
                             <div class="grid grid-cols-1 gap-2 text-left">
                                 <!-- Column 1 -->
                                 <div class="group">
-                                    <h3 class="font-bold office group text-cyan-500 mb-2 tilt-neon text-lg flex items-center gap-2 cursor-pointer">
+                                    <h3
+                                        class="font-bold office group text-cyan-500 mb-2 tilt-neon text-lg flex items-center gap-2 cursor-pointer">
                                         Office Space
-                                        <i class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"></i>
+                                        <i
+                                            class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"></i>
                                     </h3>
                                     <ul class="space-y-2 listtodisplay ml-[10px] text-gray-700 font-raleway hidden">
-                                        <li><a href="independence-house-heywood.html" class="hover:text-cyan-500">&rsaquo; independence house heywood</a></li>
-                                        <li><a href="#" class="hover:text-cyan-500">&rsaquo; certacs house skelsmerdale</a></li>
+                                        <li><a href="independence-house-heywood.html"
+                                                class="hover:text-cyan-500">&rsaquo; independence house heywood</a></li>
+                                        <li><a href="#" class="hover:text-cyan-500">&rsaquo; certacs house
+                                                skelsmerdale</a></li>
                                     </ul>
                                 </div>
                                 <!-- Column 2 -->
-                                <a href="virtual-office.html" class="cursor-pointer font-bold text-cyan-500 text-lg tilt-neon">Virtual Office</a>
-                                <a href="storage-container.html" class="cursor-pointer font-bold text-cyan-500 text-lg tilt-neon">Storage Container</a>
+                                <a href="virtual-office.html"
+                                    class="cursor-pointer font-bold text-cyan-500 text-lg tilt-neon">Virtual Office</a>
+                                <a href="storage-container.html"
+                                    class="cursor-pointer font-bold text-cyan-500 text-lg tilt-neon">Storage
+                                    Container</a>
                             </div>
                         </div>
                     </li>
 
-                    <li><a href="contact.html" class="text-white hover:text-cyan-400 transition duration-300">CONTACTS</a></li>
+                    <li><a href="contact.html"
+                            class="text-white hover:text-cyan-400 transition duration-300">CONTACTS</a></li>
                     <li><a href="blog.html" class="text-white hover:text-cyan-400 transition duration-300">BLOG</a></li>
                 </ul>
 
                 <!-- CTA Button -->
-                <a href="#" class="hidden md:flex relative items-center text-xs lg:text-sm font-semibold text-white px-3 lg:px-6 py-2 lg:py-3 rounded-full border-2 border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg">
+                <a href="#"
+                    class="hidden md:flex relative items-center text-xs lg:text-sm font-semibold text-white px-3 lg:px-6 py-2 lg:py-3 rounded-full border-2 border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg">
                     <!-- Button Text -->
                     <span class="relative z-10">GET A FREE QUOTE</span>
                     <!-- Arrow Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-5 lg:w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 lg:h-5 lg:w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                     <!-- Glowing Background -->
-                    <span class="absolute inset-0 bg-[#06B6D4] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"></span>
+                    <span
+                        class="absolute inset-0 bg-[#06B6D4] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"></span>
                     <!-- Inner Animated Shine -->
-                    <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
                 </a>
 
                 <!-- Mobile Menu -->
-                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl rounded-b-xl z-50">
+                <div id="mobile-menu"
+                    class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl rounded-b-xl z-50">
                     <div class="p-6 space-y-4">
                         <a href="index.html" class="block text-gray-700 hover:text-cyan-500 font-semibold">HOME</a>
                         <a href="about.html" class="block text-cyan-500 font-semibold">ABOUT US</a>
-                        <a href="services.html" class="block text-gray-700 hover:text-cyan-500 font-semibold">SERVICES</a>
-                        <a href="contact.html" class="block text-gray-700 hover:text-cyan-500 font-semibold">CONTACTS</a>
+                        <a href="services.html"
+                            class="block text-gray-700 hover:text-cyan-500 font-semibold">SERVICES</a>
+                        <a href="contact.html"
+                            class="block text-gray-700 hover:text-cyan-500 font-semibold">CONTACTS</a>
                         <a href="blog.html" class="block text-gray-700 hover:text-cyan-500 font-semibold">BLOG</a>
-                        <a href="#" class="block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-semibold text-center">GET A FREE QUOTE</a>
+                        <a href="#"
+                            class="block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-semibold text-center">GET
+                            A FREE QUOTE</a>
                     </div>
                 </div>
             </div>
@@ -403,43 +448,55 @@
 
         <div class="w-full flex justify-center relative">
             <div class="w-[95%] sm:w-[90%]">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tilt-neon mt-5 sm:mt-10">About Us</h2>
+                <h2
+                    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tilt-neon mt-5 sm:mt-10 text-center md:text-start">
+                    About Us</h2>
             </div>
         </div>
     </section>
 
     <!-- Company Story -->
-    <section id="story" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white relative">
+    <section id="story" class="pt-12 sm:py-16 md:py-20 lg:py-24 bg-white relative">
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
                 <div class="reveal">
-                    <div class="inline-flex items-center bg-cyan-50 rounded-full px-4 py-2 mb-6">
+                    <div class=" hidden  md:inline-flex items-center  bg-cyan-50 rounded-full px-4 py-2 mb-6">
                         <svg class="w-4 h-4 text-cyan-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                         <span class="text-cyan-700 font-semibold text-sm font-raleway">Our Story</span>
                     </div>
 
-                    <h2 class="text-3xl sm:text-4xl text-center md:text-start md:text-5xl font-black text-gray-900 mb-6 sm:mb-8 leading-tight tilt-neon">
+                    <h2
+                        class="text-3xl sm:text-4xl text-center md:text-start md:text-5xl font-black text-gray-900 mb-6 sm:mb-8 leading-tight tilt-neon">
                         Transforming <span class="text-gradient">Coworking</span>
                         <br>Space Solutions Since 1995
                     </h2>
 
-                    <div class="space-y-4 sm:space-y-6  text-center md:text-start text-base sm:text-lg text-gray-600 leading-relaxed font-raleway">
+                    <div
+                        class="space-y-4 sm:space-y-6  text-center md:text-start text-base sm:text-lg text-gray-600 leading-relaxed font-raleway">
                         <p>
-                            We began our journey with a simple goal to change the way businesses think about coworking space and office space for rent in Heywood. <span class="font-semibold text-[#4BC5DC]">Over a period of 30 years,</span> there is something special that we've helped create from the Independence House Heywood and Certacs House Skelmersdale.
+                            We began our journey with a simple goal to change the way businesses think about coworking
+                            space and office space for rent in Heywood. <span class="font-semibold text-[#4BC5DC]">Over
+                                a period of 30 years,</span> there is something special that we've helped create from
+                            the Independence House Heywood and Certacs House Skelmersdale.
                         </p>
                         <p>
-                            We know that today's businesses require flexible coworking spaces that expand with them, whether it be hot desk Skelmersdale spaces for freelancers or private office rental Skelmersdale suites for growing teams.
+                            We know that today's businesses require flexible coworking spaces that expand with them,
+                            whether it be hot desk Skelmersdale spaces for freelancers or private office rental
+                            Skelmersdale suites for growing teams.
                         </p>
                         <p>
-                            Our extensive portfolio encompasses cutting edge coworking spaces, private office rentals, virtual office services, meeting room facilities and security storage container solutions.
+                            Our extensive portfolio encompasses cutting edge coworking spaces, private office rentals,
+                            virtual office services, meeting room facilities and security storage container solutions.
                         </p>
                     </div>
                     <div class="flex gap-4 justify-center sm:justify-start">
-                        <a href="tel:+447989991150" class="w-[240px] sm:w-[260px] bg-white text-black font-bold font-raleway py-2 px-4 rounded-full flex justify-center sm:justify-between items-center mt-5 animate-glow">
+                        <a href="tel:+447989991150"
+                            class="w-[240px] sm:w-[260px] bg-white text-black font-bold font-raleway py-2 px-4 rounded-full flex justify-center sm:justify-between items-center mt-5 animate-glow">
                             <i class="fa fa-phone bg-black text-white px-4 py-4 rounded-full mr-3 sm:mr-1"></i>
                             <span class="text-sm sm:text-base">Book An Appointment</span>
                         </a>
@@ -447,13 +504,29 @@
                 </div>
 
                 <div class="relative revea  stagger-2 h-[38vh] sm:h-[70vh] md:h-[80vh]">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl opacity-20 blur-xl"></div>
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl opacity-0 md:opacity-20 blur-xl">
+                    </div>
                     <div class="relative  md:bg-white rounded-3xl p-4 sm:p-6 md:p-8 md:shadow-2xl h-full">
-                        <div class="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 h-full">
-                            <img src="assets/images/EXTERIOR 3 page 1 Skelmersdale  (1).jpeg" alt="Office collaboration" class="rounded-2xl h-full lg:h-40 w-full object-cover">
-                            <img src="assets/images/MEETING ROOM-skelmersdale.jpeg" alt="Team meeting" class="rounded-2xl h-full lg:h-40  w-full object-cover">
-                            <img src="assets/images/INTERNAL PATIO OFFICE-skelmersdale.jpeg" alt="Modern workspace" class="rounded-2xl h-32 pb-2 md:h-full lg:h-52 w-full object-cover col-span-2">
+                        <div id="lightgallery" class="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 h-full">
+                            <a href="assets/images/EXTERIOR 3 page 1 Skelmersdale  (1).jpeg">
+                                <img src="assets/images/EXTERIOR 3 page 1 Skelmersdale  (1).jpeg"
+                                    alt="Office collaboration" class="rounded-2xl h-full lg:h-40 w-full object-cover">
+                            </a>
+                            <a href="assets/images/MEETING ROOM-skelmersdale.jpeg">
+                                <img src="assets/images/MEETING ROOM-skelmersdale.jpeg" alt="Team meeting"
+                                    class="rounded-2xl h-full lg:h-40 w-full object-cover">
+                            </a>
+                            <a href="assets/images/INTERNAL PATIO OFFICE-skelmersdale.jpeg">
+                                <img src="assets/images/INTERNAL PATIO OFFICE-skelmersdale.jpeg" alt="Modern workspace"
+                                    class="rounded-2xl h-32 pb-2 md:h-full lg:h-52 w-full object-cover col-span-2">
+                            </a>
+                            <a href="assets/images/heywoodluxury.JPG">
+                                <img src="assets/images/heywoodluxury.JPG" alt="Modern workspace"
+                                    class="rounded-2xl h-32 pb-2 md:h-full lg:h-52 w-full object-cover col-span-2">
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -461,57 +534,83 @@
     </section>
 
     <!-- Why Choose Section -->
-    <section class="w-full min-h-[110vh] overflow-scroll md:overflow-hidden sm:min-h-[60vh]  lg:min-h-[130vh] xl:min-h-[110vh] pb-10 mb-20 sm:mb-32 lg:mb-[150px]">
-        <div class="bg-cover bg-no-repeat h-[300px] sm:h-[400px] lg:h-[500px] w-full flex justify-center cursor-pointer" style="background-image: url('assets/images/curveshape.png');">
-            <div class="w-[95%] sm:w-[90%] mt-12 sm:mt-16 lg:mt-24">
-               
-                <h2 class="mt-6 sm:mt-8 lg:mt-10 text-center  md:text-start text-2xl sm:text-3xl lg:text-4xl font-bold ml-5 sm:ml-10 tilt-neon">
-                    Why <span class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#37E1ED] font-raleway">Choose Our</span> Shared Office Space Heywood or Skelmersdale
+    <section
+        class="w-full min-h-auto  md:overflow-hidden sm:min-h-[60vh]  lg:min-h-[130vh] xl:min-h-[110vh]  sm:mb-32 lg:mb-[150px]">
+        <div
+            class="bg-cover bg-no-repeat  w-full flex justify-center cursor-pointer md:bg-[url('assets/images/curveshape.png')]">
+            <div class="w-[95%] sm:w-[90%] sm:mt-16 lg:mt-24">
+
+                <h2
+                    class="mt-6 sm:mt-8 lg:mt-10 text-center  md:text-start text-2xl sm:text-3xl lg:text-4xl font-bold ml-5 sm:ml-10 tilt-neon">
+                    Why <span class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#37E1ED] font-raleway">Choose
+                        Our</span> Shared Office Space Heywood or Skelmersdale
                 </h2>
 
                 <section class="max-w-7xl mx-auto px-6 mb-10 mt-6 sm:mt-8 lg:mt-10">
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                         <!-- Card 1 -->
-                        <div class="group relative flex-col items-center rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg backdrop-blur-lg bg-white/10 border border-white/20 hover:scale-105 transition-transform duration-300 hover:shadow-[0_10px_40px_rgba(55,225,237,0.4)]">
+                        <div
+                            class="group relative flex-col items-center rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg backdrop-blur-lg bg-white/10 border border-white/20 hover:scale-105 transition-transform duration-300 hover:shadow-[0_10px_40px_rgba(55,225,237,0.4)]">
                             <!-- Icon -->
-                             <div class="w-full flex justify-center md:justify-start">
-                            <div class="w-16  sm:w-18 lg:w-20 h-16 sm:h-18 lg:h-20 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/40">
-                                <i class="fa-solid fa-arrows-left-right text-white text-xl sm:text-2xl lg:text-3xl"></i>
-                            </div>
+                            <div class="w-full flex justify-center md:justify-start">
+                                <div
+                                    class="w-16  sm:w-18 lg:w-20 h-16 sm:h-18 lg:h-20 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/40">
+                                    <i
+                                        class="fa-solid fa-arrows-left-right text-white text-xl sm:text-2xl lg:text-3xl"></i>
+                                </div>
                             </div>
                             <!-- Content -->
-                            <h3 class="text-lg text-center md:text-start sm:text-xl lg:text-2xl font-extrabold text-black mb-3 sm:mb-4 tilt-neon">Complete Flexibility</h3>
-                            <p class="text-black text-center md:text-start leading-relaxed text-sm sm:text-base lg:text-lg font-raleway">
-                                Our workspace options adjust to your business needs with scalable arrangements that expand or contract as necessary.
+                            <h3
+                                class="text-lg text-center md:text-start sm:text-xl lg:text-2xl font-extrabold text-black mb-3 sm:mb-4 tilt-neon">
+                                Complete Flexibility</h3>
+                            <p
+                                class="text-black text-center md:text-start leading-relaxed text-lg sm:text-base lg:text-lg font-raleway">
+                                Our workspace options adjust to your business needs with scalable arrangements that
+                                expand or contract as necessary.
                             </p>
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="group relative rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg backdrop-blur-lg bg-white/10 border border-white/20 hover:scale-105 transition-transform duration-300 hover:shadow-[0_10px_40px_rgba(59,130,246,0.4)]">
+                        <div
+                            class="group relative rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg backdrop-blur-lg bg-white/10 border border-white/20 hover:scale-105 transition-transform duration-300 hover:shadow-[0_10px_40px_rgba(59,130,246,0.4)]">
                             <!-- Icon -->
-                             <div class="flex justify-center md:justify-start">
-                            <div class="w-16 sm:w-18 lg:w-20 h-16 sm:h-18 lg:h-20 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-400/40">
-                                <i class="fa-solid fa-location-dot text-white text-xl sm:text-2xl lg:text-3xl"></i>
-                            </div>
+                            <div class="flex justify-center md:justify-start">
+                                <div
+                                    class="w-16 sm:w-18 lg:w-20 h-16 sm:h-18 lg:h-20 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-400/40">
+                                    <i class="fa-solid fa-location-dot text-white text-xl sm:text-2xl lg:text-3xl"></i>
+                                </div>
                             </div>
                             <!-- Content -->
-                            <h3 class="text-lg sm:text-xl text-center md:text-start lg:text-2xl font-extrabold text-black mb-3 sm:mb-4 tilt-neon">Prime Locations</h3>
-                            <p class="text-black text-center md:text-start leading-relaxed text-sm sm:text-base lg:text-lg font-raleway">
-                                Both buildings have great transport links and impressive business environments that make the right first impression.
+                            <h3
+                                class="text-lg sm:text-xl text-center md:text-start lg:text-2xl font-extrabold text-black mb-3 sm:mb-4 tilt-neon">
+                                Prime Locations</h3>
+                            <p
+                                class="text-black text-center md:text-start leading-relaxed text-lg sm:text-base lg:text-lg font-raleway">
+                                Both buildings have great transport links and impressive business environments that make
+                                the right first impression.
                             </p>
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="group relative rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg backdrop-blur-lg bg-white/10 border border-white/20 hover:scale-105 transition-transform duration-300 hover:shadow-[0_10px_40px_rgba(139,92,246,0.4)] sm:col-span-2 lg:col-span-1">
+                        <div
+                            class="group relative rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg backdrop-blur-lg bg-white/10 border border-white/20 hover:scale-105 transition-transform duration-300 hover:shadow-[0_10px_40px_rgba(139,92,246,0.4)] sm:col-span-2 lg:col-span-1">
                             <!-- Icon -->
-                             <div class="flex justify-center md:justify-start"> <div class="w-16 sm:w-18 lg:w-20 h-16 sm:h-18 lg:h-20 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-400/40">
-                                <i class="fa-solid fa-hand-holding-heart text-white text-xl sm:text-2xl lg:text-3xl"></i>
-                            </div></div>
-                            
+                            <div class="flex justify-center md:justify-start">
+                                <div
+                                    class="w-16 sm:w-18 lg:w-20 h-16 sm:h-18 lg:h-20 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-400/40">
+                                    <i
+                                        class="fa-solid fa-hand-holding-heart text-white text-xl sm:text-2xl lg:text-3xl"></i>
+                                </div>
+                            </div>
+
                             <!-- Content -->
-                            <h3 class="text-lg sm:text-xl lg:text-2xl text-center md:text-start font-extrabold text-black mb-3 sm:mb-4 tilt-neon">All-Inclusive Service</h3>
-                            <p class="text-black text-center md:text-start leading-relaxed text-sm sm:text-base lg:text-lg font-raleway">
-                                We take care of utilities, maintenance and administration so you can focus all your energy on what's most important to your business.
+                            <h3
+                                class="text-lg sm:text-xl lg:text-2xl text-center md:text-start font-extrabold text-black mb-3 sm:mb-4 tilt-neon">
+                                All-Inclusive Service</h3>
+                            <p
+                                class="text-black text-center md:text-start leading-relaxed text-lg sm:text-base lg:text-lg font-raleway">
+                                We take care of utilities, maintenance and administration so you can focus all your
+                                energy on what's most important to your business.
                             </p>
                         </div>
                     </div>
@@ -524,11 +623,14 @@
     <section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#E6F4F6] relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-black mb-4 text-center md:text-start sm:mb-6 tilt-neon">
-                    Affordable Office Rental <span class="text-[#06AFCE] font-raleway">Manchester And Lancashire Excellence</span>
+                <h2
+                    class="text-2xl sm:text-3xl lg:text-4xl font-black text-black mb-4 text-center md:text-start sm:mb-6 tilt-neon">
+                    Affordable Office Rental <span class="text-[#06AFCE] font-raleway">Manchester And Lancashire
+                        Excellence</span>
                 </h2>
-                <p class="text-base sm:text-lg text-black max-w-3xl mx-auto font-raleway">
-                    Our extensive track record and full regulatory compliance prove our absolute commitment to keeping the highest professional standards you can rely on with confidence.
+                <p class="text-lg text-black max-w-3xl mx-auto font-raleway">
+                    Our extensive track record and full regulatory compliance prove our absolute commitment to keeping
+                    the highest professional standards you can rely on with confidence.
                 </p>
             </div>
 
@@ -536,30 +638,41 @@
                 <!-- Company Number -->
                 <div class="text-center bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-xl transition">
                     <div class="text-[#06AFCE] text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M9 8h6m-3-5v5m-7 4h14v9H5v-9z" />
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 21h18M9 8h6m-3-5v5m-7 4h14v9H5v-9z" />
                         </svg>
                     </div>
-                    <p class="text-black font-semibold text-sm sm:text-base lg:text-lg font-raleway">Our Company Number is</p>
+                    <p class="text-black font-semibold text-sm sm:text-base lg:text-lg font-raleway">Our Company Number
+                        is</p>
                     <p class="text-[#06AFCE] font-bold text-lg sm:text-xl lg:text-2xl mt-2">06293987</p>
                 </div>
 
                 <!-- Years of Experience -->
                 <div class="text-center bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-xl transition">
                     <div class="text-[#06AFCE] text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-4-2h4a2 2 0 012 2v0a2 2 0 01-2 2h-4a2 2 0 01-2-2v0a2 2 0 012-2z" />
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-4-2h4a2 2 0 012 2v0a2 2 0 01-2 2h-4a2 2 0 01-2-2v0a2 2 0 012-2z" />
                         </svg>
                     </div>
-                    <p class="text-black font-semibold text-sm sm:text-base lg:text-lg font-raleway">Years Of Experience</p>
+                    <p class="text-black font-semibold text-sm sm:text-base lg:text-lg font-raleway">Years Of Experience
+                    </p>
                     <p class="text-[#06AFCE] font-bold text-lg sm:text-xl lg:text-2xl mt-2">20+</p>
                 </div>
 
                 <!-- VAT Number -->
                 <div class="text-center bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-xl transition">
                     <div class="text-[#06AFCE] text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l2-2 4 4m0-4l-4 4m-6-8V5a2 2 0 012-2h8a2 2 0 012 2v14l-4-2-4 2-4-2-4 2V9z" />
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 14l2-2 4 4m0-4l-4 4m-6-8V5a2 2 0 012-2h8a2 2 0 012 2v14l-4-2-4 2-4-2-4 2V9z" />
                         </svg>
                     </div>
                     <p class="text-black font-semibold text-sm sm:text-base lg:text-lg font-raleway">VAT No:</p>
@@ -569,8 +682,11 @@
                 <!-- ICO Number -->
                 <div class="text-center bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-xl transition">
                     <div class="text-[#06AFCE] text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22c4.418-2.667 8-5.333 8-10V6l-8-4-8 4v6c0 4.667 3.582 7.333 8 10z" />
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 sm:h-9 lg:h-10 w-8 sm:w-9 lg:w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 22c4.418-2.667 8-5.333 8-10V6l-8-4-8 4v6c0 4.667 3.582 7.333 8 10z" />
                         </svg>
                     </div>
                     <p class="text-black font-semibold text-sm sm:text-base lg:text-lg font-raleway">ICO No:</p>
@@ -581,65 +697,112 @@
     </section>
 
     <!-- Best Coworking Space Section -->
-    <section class="w-full relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] bg-cover bg-center bg-no-repeat flex justify-center items-center overflow-hidden" style="background-image: url('assets/images/ourrentalimage.jpg');">
+    <section
+        class="w-full relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] bg-cover bg-center bg-no-repeat flex justify-center items-center overflow-hidden"
+        style="background-image: url('assets/images/ourrentalimage.jpg');">
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
 
         <!-- Content Wrapper -->
-        <div class="relative z-10 w-[95%] sm:w-[90%] px-4 sm:px-6 md:px-12 lg:px-16 py-12 sm:py-16 flex flex-col xl:flex-row justify-between items-start lg:items-center gap-8 sm:gap-10 lg:gap-12">
+        <div
+            class="relative z-10 w-[95%] sm:w-[90%] px-4 sm:px-6 md:px-12 lg:px-16 py-12 sm:py-16 flex flex-col xl:flex-row justify-between items-start lg:items-center gap-8 sm:gap-10 lg:gap-12">
             <!-- Left Section -->
             <div class="text-white max-w-full lg:max-w-xl animate-fade-in">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center md:text-start tilt-neon mb-4 sm:mb-6 leading-snug">
-                    Best Coworking Space Near Heywood or Skelmersdale <span class="text-[#06AFCE]">for Startups and Growing Businesses</span>
+                <h2
+                    class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center md:text-start tilt-neon mb-4 sm:mb-6 leading-snug">
+                    Best Coworking Space Near Heywood or Skelmersdale <span class="text-[#06AFCE]">for Startups and
+                        Growing Businesses</span>
                 </h2>
-                <p class="text-gray-300 mb-4 sm:mb-6 lg:mb-8 text-sm text-center md:text-start sm:text-base lg:text-lg font-raleway leading-relaxed">
-                    We believe great workspaces provide opportunities for meaningful connections and collaborative success. Our facilities are an active centre for innovation and practicality, supporting anything from freelance consultants to growing corporations.
+                <p
+                    class="text-gray-300 mb-4 sm:mb-6 lg:mb-8 text-lg text-center md:text-start sm:text-base lg:text-lg font-raleway leading-relaxed">
+                    We believe great workspaces provide opportunities for meaningful connections and collaborative
+                    success. Our facilities are an active centre for innovation and practicality, supporting anything
+                    from freelance consultants to growing corporations.
                 </p>
-                <p class="text-gray-300 mb-6 sm:mb-8 text-sm sm:text-base text-center md:text-start lg:text-lg font-raleway leading-relaxed">
-                    We've seen entrepreneurial journeys thrive within our walls, for everything from a starting point to a successful enterprise. Each member becomes a part of our extended community and benefits from networking opportunities and shared resources while enjoying modern amenities and technology infrastructure.
+                <p
+                    class="text-gray-300 mb-6 sm:mb-8 text-lg sm:text-base text-center md:text-start lg:text-lg font-raleway leading-relaxed">
+                    We've seen entrepreneurial journeys thrive within our walls, for everything from a starting point to
+                    a successful enterprise. Each member becomes a part of our extended community and benefits from
+                    networking opportunities and shared resources while enjoying modern amenities and technology
+                    infrastructure.
                 </p>
 
                 <div class="flex justify-center sm:justify-start gap-4">
-                    <a href="tel:+447989991150" class="w-[200px] sm:w-[240px] bg-black text-white font-semibold tilt-neon py-2 text-lg sm:text-xl lg:text-2xl px-4 rounded-full flex justify-center sm:justify-start items-center mt-5 animate-glow">
-                        <i class="fa fa-phone bg-white text-black ml-[-30px] sm:ml-[-20px] px-4 py-4 rounded-full mr-3"></i>
+                    <a href="tel:+447989991150"
+                        class="w-[200px] sm:w-[240px] bg-black text-white font-semibold tilt-neon py-2 text-lg sm:text-xl lg:text-2xl px-4 rounded-full flex justify-center sm:justify-start items-center mt-5 animate-glow">
+                        <i
+                            class="fa fa-phone bg-white text-black ml-[-30px] sm:ml-[-20px] px-4 py-4 rounded-full mr-3"></i>
                         <span class="text-sm sm:text-base lg:text-xl">07989991150</span>
                     </a>
                 </div>
             </div>
 
             <!-- Right Section - Image Slider -->
-            <div class="relative flex justify-center items-center w-full lg:w-auto">
-                <div class="relative flex justify-center items-center w-full max-w-sm sm:max-w-md mx-auto">
-                    <div class="swiper mySwiper1 w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden shadow-2xl rounded-lg">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide">
-                                <img src="assets/images/MEETING ROOM-skelmersdale.jpeg" class="w-full rounded-lg h-full object-cover">
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="swiper-slide">
-                                <img src="assets/images/coworkingspace2.jpg" class="w-full rounded-lg h-full object-cover">
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="swiper-slide">
-                                <img src="assets/images/privateroom1.jpg" class="w-full rounded-lg h-full object-cover">
-                            </div>
-                            <!-- Slide 4 -->
-                            <div class="swiper-slide">
-                                <img src="assets/images/luxuryoffice.webp" class="w-full rounded-lg h-full object-cover">
-                            </div>
-                            <!-- Slide 5 -->
-                            <div class="swiper-slide">
-                                <img src="assets/images/privateroom2.jpg" class="w-full rounded-lg h-full object-cover">
-                            </div>
-                            <!-- Slide 6 -->
-                            <div class="swiper-slide">
-                                <img src="assets/images/luxurymeetingroom.webp" class="w-full rounded-lg h-full object-cover">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <div class="relative flex justify-center items-center w-full lg:w-auto">
+  <div class="relative flex justify-center items-center w-full max-w-sm sm:max-w-md mx-auto">
+    <div class="swiper mySwiper1 w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden shadow-2xl rounded-lg">
+      <div class="swiper-wrapper" id="lightgallery1"> 
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <a href="assets/images/heywoodcommercial.JPG" 
+             data-src="assets/images/heywoodcommercial.JPG">
+            <img src="assets/images/heywoodcommercial.JPG"
+                 class="w-full rounded-lg h-full object-cover">
+          </a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <a href="assets/images/coworkingspace2.jpg" 
+             data-src="assets/images/coworkingspace2.jpg">
+            <img src="assets/images/coworkingspace2.jpg"
+                 class="w-full rounded-lg h-full object-cover">
+          </a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <a href="assets/images/privateroom1.jpg" 
+             data-src="assets/images/privateroom1.jpg">
+            <img src="assets/images/privateroom1.jpg"
+                 class="w-full rounded-lg h-full object-cover">
+          </a>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <a href="assets/images/luxuryoffice.webp" 
+             data-src="assets/images/luxuryoffice.webp">
+            <img src="assets/images/luxuryoffice.webp"
+                 class="w-full rounded-lg h-full object-cover">
+          </a>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <a href="assets/images/privateroom2.jpg" 
+             data-src="assets/images/privateroom2.jpg">
+            <img src="assets/images/privateroom2.jpg"
+                 class="w-full rounded-lg h-full object-cover">
+          </a>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <a href="assets/images/luxurymeetingroom.webp" 
+             data-src="assets/images/luxurymeetingroom.webp">
+            <img src="assets/images/luxurymeetingroom.webp"
+                 class="w-full rounded-lg h-full object-cover">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
         </div>
     </section>
 
@@ -648,72 +811,93 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <!-- Heading -->
             <div class="text-center mb-8 sm:mb-12">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black tilt-neon">
+                <h2 class="text-4xl sm:text-4xl md:text-5xl font-extrabold text-black tilt-neon">
                     Frequently Asked <span class="text-[#37E1ED]">Questions</span>
                 </h2>
-                <p class="text-black font-raleway mt-4 text-sm sm:text-base lg:text-lg">
-                    Here you'll find quick answers to some of the most common questions about renting a coworking desk. If you have more questions, we'd be happy to talk with you directly!
+                <p class="text-black font-raleway mt-4 text-lg sm:text-base lg:text-lg">
+                    Here you'll find quick answers to some of the most common questions about renting a coworking desk.
+                    If you have more questions, we'd be happy to talk with you directly!
                 </p>
             </div>
 
             <!-- FAQ Container -->
             <div class="space-y-4 sm:space-y-5">
                 <!-- FAQ 1 -->
-                <div class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
-                    <button class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
-                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">What comes with a monthly coworking membership Skelmersdale packages?</h3>
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div
+                    class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
+                    <button
+                        class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
+                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">What
+                            comes with a monthly coworking membership Skelmersdale packages?</h3>
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div class="px-4 sm:px-6 pb-4 sm:pb-5 hidden faq-content">
-                        <p class="text-black font-raleway leading-relaxed text-sm sm:text-base">
-                            You get the high-speed internet connection, the printing facilities, access to the kitchen, services like professional receptionists, and 24/7 security at one simple monthly fee.
+                        <p class="text-black font-raleway leading-relaxed text-lg sm:text-base">
+                            You get the high-speed internet connection, the printing facilities, access to the kitchen,
+                            services like professional receptionists, and 24/7 security at one simple monthly fee.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
-                    <button class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
-                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">How do I book a meeting room by the hour in Heywood?</h3>
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div
+                    class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
+                    <button
+                        class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
+                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">How
+                            do I book a meeting room by the hour in Heywood?</h3>
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div class="px-4 sm:px-6 pb-4 sm:pb-5 hidden faq-content">
-                        <p class="text-black font-raleway leading-relaxed text-sm sm:text-base">
-                            Our complete with projector & Wi-Fi equipped meeting room can be booked online with flexible hourly rates for all your business needs
+                        <p class="text-black font-raleway leading-relaxed text-lg sm:text-base">
+                            Our complete with projector & Wi-Fi equipped meeting room can be booked online with flexible
+                            hourly rates for all your business needs
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
-                    <button class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
-                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">What does a virtual business address Heywood service include?</h3>
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div
+                    class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
+                    <button
+                        class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
+                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">What
+                            does a virtual business address Heywood service include?</h3>
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div class="px-4 sm:px-6 pb-4 sm:pb-5 hidden faq-content">
-                        <p class="text-black font-raleway leading-relaxed text-sm sm:text-base">
-                            You get a prestigious business address + professional business address with mail handling services with telephone support for company registration.
+                        <p class="text-black font-raleway leading-relaxed text-lg sm:text-base">
+                            You get a prestigious business address + professional business address with mail handling
+                            services with telephone support for company registration.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 4 -->
-                <div class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
-                    <button class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
-                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">Can I rent 20ft storage containers for equipment on flexible terms?</h3>
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div
+                    class="group border border-[#37E1EE] rounded-2xl bg-white/5 hover:bg-white/10 shadow-lg transition-all duration-300">
+                    <button
+                        class="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 focus:outline-none faq-toggle">
+                        <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-black font-raleway text-left">Can
+                            I rent 20ft storage containers for equipment on flexible terms?</h3>
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#37E1ED] transform transition-transform duration-300 rotate-0 faq-icon flex-shrink-0 ml-4"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div class="px-4 sm:px-6 pb-4 sm:pb-5 hidden faq-content">
-                        <p class="text-black font-raleway leading-relaxed text-sm sm:text-base">
-                            Yes, our affordable storage container rental near Heywood provides safe and weatherproof solutions for business inventory and equipment storage.
+                        <p class="text-black font-raleway leading-relaxed text-lg sm:text-base">
+                            Yes, our affordable storage container rental near Heywood provides safe and weatherproof
+                            solutions for business inventory and equipment storage.
                         </p>
                     </div>
                 </div>
@@ -737,21 +921,29 @@
                         Coworking Space Near Manchester And Lancashire for Startups?
                     </span>
                 </h2>
-                <p class="text-base sm:text-lg lg:text-xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-raleway">
-                    Find a private office for rent in Heywood with 24/7 access and month office rental in Skelmersdale with parking.
+                <p
+                    class="text-base sm:text-lg lg:text-xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-raleway">
+                    Find a private office for rent in Heywood with 24/7 access and month office rental in Skelmersdale
+                    with parking.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                    <a href="tel:+447989991150" class="group bg-white font-raleway text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl">
+                    <a href="tel:+447989991150"
+                        class="group bg-white font-raleway text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl">
                         Book An Appointment
-                        <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </a>
-                    <a href="contact.html" class="group border-2 border-black text-black font-raleway px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm">
+                    <a href="contact.html"
+                        class="group border-2 border-black text-black font-raleway px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm">
                         Get A Free Quote
-                        <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:rotate-12 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:rotate-12 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                     </a>
                 </div>
@@ -759,129 +951,178 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <!-- Footer Section -->
-   <footer class="bg-black text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 sm:px-8 lg:px-12 py-10 md:py-14">
-      <!-- Top Section: Excellent Customer Support -->
-      <div class="text-center mt-[-30px] md:mt-[-50px]">
-        <div class="text-3xl md:text-5xl text-[#06AFCE] mb-3 md:mb-5 w-full flex justify-center items-start">
-          <img src="assets/images/footerlogo.png"  class="w-[140px] md:w-[180px] lg:w-[240px]" />
+    <footer class="bg-black text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 sm:px-8 lg:px-12 py-10 md:py-14">
+            <!-- Top Section: Excellent Customer Support -->
+            <div class="text-center mt-[-30px] md:mt-[-50px]">
+                <div class="text-3xl md:text-5xl text-[#06AFCE] mb-3 md:mb-5 w-full flex justify-center items-start">
+                    <img src="assets/images/footerlogo.png" class="w-[140px] md:w-[180px] lg:w-[240px]" />
+                </div>
+                <p
+                    class="raleway text-[14px] md:text-[16px] lg:text-[20px] text-gray-300 mt-[-30px] md:mt-[-50px] px-4">
+                    From startups to established companies, our dynamic workspaces are designed to inspire
+                    collaboration, foster growth and drive success. Find a workspace that works for you.
+                </p>
+            </div>
+
+            <!-- Office Locations -->
+            <div class="text-center mb-8 md:mb-10">
+                <h4 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5">
+                    OUR OFFICE LOCATIONS
+                </h4>
+                <div
+                    class="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-10 lg:gap-20 text-gray-300 raleway text-base md:text-lg lg:text-2xl cursor-pointer">
+                    <a href="independence-house-heywood.html">Independence House Heywood</a>
+                    <a href="skelmersdale.html">Certacs House Skelmersdale</a>
+                </div>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="text-center mb-8 md:mb-10 border-t-[1px] border-gray-300 pt-5">
+                <h4 class="font-semibold mb-3 text-[#06AFCE] text-lg md:text-xl lg:text-3xl tilt-neon">
+                    USEFUL LINKS
+                </h4>
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
+                    <a href="index.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Home
+                    </a>
+                    <a href="about.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        About
+                    </a>
+                    <a href="contact.html"
+                        class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Contact
+                    </a>
+                    <a href="services.html"
+                        class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Service
+                    </a>
+                    <a href="blog.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Blog
+                    </a>
+                    <a href="privacy-policy.html"
+                        class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Privacy Policy
+                    </a>
+                    <a href="terms-and-conditions.html"
+                        class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Terms & Conditions
+                    </a>
+
+                    <a href="virtual-office.html"
+                        class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Virtual Office
+                    </a>
+                    <a href="storage-container.html"
+                        class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+                        <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+                        Storage Container
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div
+                class="flex flex-col lg:flex-row items-center  justify-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-6 md:pt-8">
+                <!-- Google Reviews -->
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between w-full lg:w-[90vw] xl:w-[75vw] gap-4">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/google.webp" alt="Google"
+                            class="w-[100px] md:w-[120px] lg:w-[180px] h-[40px] md:h-[50px] lg:h-[80px]" />
+                    </div>
+                    <div class="text-center">
+                        <p class="raleway text-[12px] md:text-[14px] lg:text-[18px]">
+                            Our Customer Gave us Excellant Rating
+                        </p>
+                        <img src="assets/images/reviw-removebg-preview.png"
+                            class="w-[160px] md:w-[200px] lg:w-[280px] h-[25px] md:h-[30px] lg:h-[50px] mx-auto" />
+                    </div>
+                    <div class="flex gap-2 md:gap-3 lg:gap-5">
+                        <a href="#"
+                            class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+                            <i class="fab fa-facebook-f text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+                            <i class="fab fa-instagram text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
+                            <i class="fab fa-youtube text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 items-center border-b-[1px] border-gray-300 justify-center p-4 md:p-6 shadow-md">
+                <p class="text-lg md:text-xl lg:text-3xl raleway text-center">We <span
+                        class="text-[#06AFCE]">Accepts</span> </p>
+                <img src="assets/images/credit_card_logos-removebg-preview.png" class="max-w-full h-auto" />
+            </div>
+
+            <div
+                class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-6 bg-black text-white gap-4">
+                <p class="text-xs md:text-sm lg:text-lg xl:text-[20px] font-raleway text-center md:text-left raleway">
+                    © All Rights Reserved 2025
+                    <span class="text-[#06AFCE]">Quality Properties NW Ltd</span>
+                </p>
+                <p class="text-xs md:text-sm lg:text-xl raleway text-center md:text-right">
+                    Designed & Developed By
+                    <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]">Kyle Infotech</a>
+                </p>
+            </div>
         </div>
-        <p class="raleway text-[14px] md:text-[16px] lg:text-[20px] text-gray-300 mt-[-30px] md:mt-[-50px] px-4">
-          From startups to established companies, our dynamic workspaces are designed to inspire collaboration, foster growth and drive success. Find a workspace that works for you.
-        </p>
-      </div>
-
-      <!-- Office Locations -->
-      <div class="text-center mb-8 md:mb-10">
-        <h4 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5">
-          OUR OFFICE LOCATIONS
-        </h4>
-        <div class="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-10 lg:gap-20 text-gray-300 raleway text-base md:text-lg lg:text-2xl cursor-pointer">
-          <a href="independence-house-heywood.html">Independence House Heywood</a>
-          <a href="skelmersdale.html">Certacs House Skelmersdale</a>
-        </div>
-      </div>
-
-      <!-- Useful Links -->
-      <div class="text-center mb-8 md:mb-10 border-t-[1px] border-gray-300 pt-5">
-        <h4 class="font-semibold mb-3 text-[#06AFCE] text-lg md:text-xl lg:text-3xl tilt-neon">
-          USEFUL LINKS
-        </h4>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
-          <a href="index.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Home
-          </a>
-          <a href="about.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            About
-          </a>
-          <a href="contact.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Contact
-          </a>
-          <a href="services.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Service
-          </a>
-          <a href="blog.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Blog
-          </a>
-          <a href="privacy-policy.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Privacy Policy
-          </a>
-          <a href="terms-and-conditions.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Terms & Conditions
-          </a>
-
-            <a href="virtual-office.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Virtual Office
-          </a>
-          <a href="storage-container.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Storage Container
-          </a>
-        </div>
-      </div>
-
-      <!-- Bottom Section -->
-      <div class="flex flex-col lg:flex-row items-center  justify-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-6 md:pt-8">
-        <!-- Google Reviews -->
-        <div class="flex flex-col md:flex-row items-center justify-between w-full lg:w-[90vw] xl:w-[75vw] gap-4">
-          <div class="flex items-center gap-3">
-            <img src="assets/images/google.webp" alt="Google" class="w-[100px] md:w-[120px] lg:w-[180px] h-[40px] md:h-[50px] lg:h-[80px]" />
-          </div>
-          <div class="text-center">
-            <p class="raleway text-[12px] md:text-[14px] lg:text-[18px]">
-              Our Customer Gave us Excellant Rating
-            </p>
-            <img src="assets/images/reviw-removebg-preview.png" class="w-[160px] md:w-[200px] lg:w-[280px] h-[25px] md:h-[30px] lg:h-[50px] mx-auto" />
-          </div>
-          <div class="flex gap-2 md:gap-3 lg:gap-5">
-            <a href="#"
-              class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
-              <i class="fab fa-facebook-f text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
-            </a>
-            <a href="#"
-              class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
-              <i class="fab fa-instagram text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
-            </a>
-            <a href="#"
-              class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
-              <i class="fab fa-youtube text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 items-center border-b-[1px] border-gray-300 justify-center p-4 md:p-6 shadow-md">
-        <p class="text-lg md:text-xl lg:text-3xl raleway text-center">We <span class="text-[#06AFCE]">Accepts</span> </p>
-        <img src="assets/images/credit_card_logos-removebg-preview.png" class="max-w-full h-auto" />
-      </div>
-
-      <div class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-6 bg-black text-white gap-4">
-        <p class="text-xs md:text-sm lg:text-lg xl:text-[20px] font-raleway text-center md:text-left raleway">
-          © All Rights Reserved 2025
-          <span class="text-[#06AFCE]">Quality Properties NW Ltd</span>
-        </p>
-        <p class="text-xs md:text-sm lg:text-xl raleway text-center md:text-right">
-          Designed & Developed By
-          <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]">Kyle Infotech</a>
-        </p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/plugins/zoom/lg-zoom.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/plugins/thumbnail/lg-thumbnail.min.js"></script>
 
     <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // First gallery
+            lightGallery(document.getElementById("lightgallery"), {
+                plugins: [lgZoom, lgThumbnail],
+                speed: 500,
+                download: false,
+                mobileSettings: {
+                    controls: true,
+                    showCloseIcon: true,
+                    download: false
+                }
+            });
+
+            lightGallery(document.getElementById("lightgallery1"), {
+        selector: 'a',   // target the <a> tags inside swiper
+        plugins: [lgThumbnail, lgZoom],
+        speed: 500,
+        download: false,
+        thumbnail: true,
+        zoom: true
+    });
+        });
+
+
+
+
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -996,15 +1237,16 @@
                 768: { slidesPerView: 1 },
                 1024: { slidesPerView: 1 },
             }
+            
         });
 
         // Services dropdown functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const officeGroup = document.querySelector('.office.group');
             const listToDisplay = document.querySelector('.listtodisplay');
             const chevronIcon = officeGroup.querySelector('.fa-chevron-down');
 
-            officeGroup.addEventListener('click', function() {
+            officeGroup.addEventListener('click', function () {
                 listToDisplay.classList.toggle('hidden');
                 chevronIcon.classList.toggle('rotate-180');
             });

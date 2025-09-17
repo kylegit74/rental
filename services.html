@@ -20,137 +20,177 @@
     .raleway {
       font-family: "Raleway", sans-serif;
     }
+
     .tiltwrap {
       font-family: "Tilt Warp", sans-serif;
     }
+
     .tilt-neon {
       font-family: "Tilt Neon", sans-serif;
       font-variation-settings: "XROT" 15, "YROT" -10;
     }
+
     .text-gradient {
       background: linear-gradient(135deg, #06b6d4, #0891b2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     .gradient-bg {
       background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
     }
+
     .parallax-bg {
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
+
     @media (max-width: 768px) {
       .parallax-bg {
         background-attachment: scroll;
       }
     }
+
     /* Animations */
     @keyframes pulseShadow {
-      0%, 100% {
+
+      0%,
+      100% {
         box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.6);
       }
+
       50% {
         box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.3);
       }
     }
+
     @keyframes pulseGlow {
-      0%, 100% {
+
+      0%,
+      100% {
         box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
       }
+
       50% {
         box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
       }
     }
+
     .pulse-glow {
       animation: pulseGlow 3s ease-in-out infinite;
     }
+
     @keyframes glowing {
       0% {
         box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 15px #06afce;
       }
+
       50% {
         box-shadow: 0 0 15px #06afce, 0 0 25px #06afce, 0 0 35px #06afce;
       }
+
       100% {
         box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 15px #06afce;
       }
     }
+
     .animate-glow {
       animation: glowing 1.8s infinite ease-in-out;
     }
+
     @keyframes shadowPulse {
       0% {
         box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 20px #06afce;
       }
+
       50% {
         box-shadow: 0 0 15px #06afce, 0 0 30px #06afce, 0 0 40px #06afce;
       }
+
       100% {
         box-shadow: 0 0 5px #06afce, 0 0 10px #06afce, 0 0 20px #06afce;
       }
     }
+
     .shadow-pulse {
       animation: shadowPulse 1.8s infinite ease-in-out;
     }
+
     @keyframes fadeIn {
       from {
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     .animate-fade-in {
       animation: fadeIn 1.2s ease-in-out forwards;
     }
+
     @keyframes morph {
       0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
       }
+
       50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
       }
+
       100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
       }
     }
+
     .morphing-blob {
       border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
       animation: morph 8s ease-in-out infinite;
     }
+
     @keyframes float {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0px);
       }
+
       50% {
         transform: translateY(-20px);
       }
     }
+
     .floating-animation {
       animation: float 6s ease-in-out infinite;
     }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(50px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     .fade-in-up {
       animation: fadeInUp 0.8s ease-out;
     }
+
     .team-card {
       position: relative;
       overflow: hidden;
     }
+
     .team-card::before {
       content: "";
       position: absolute;
@@ -161,16 +201,20 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transition: left 0.5s;
     }
+
     .team-card:hover::before {
       left: 100%;
     }
+
     .nav-blur {
       backdrop-filter: blur(20px);
       background: rgba(255, 255, 255, 0.9);
     }
+
     .timeline-container {
       position: relative;
     }
+
     .timeline-container::before {
       content: "";
       position: absolute;
@@ -182,10 +226,12 @@
       transform: translateX(-50%);
       z-index: 1;
     }
+
     .timeline-step {
       position: relative;
       margin-bottom: 6rem;
     }
+
     .step-number {
       position: absolute;
       left: 50%;
@@ -202,18 +248,22 @@
       z-index: 10;
       box-shadow: 0 10px 30px rgba(20, 184, 166, 0.3);
     }
+
     .service-card {
       transition: all 0.4s ease;
       backdrop-filter: blur(10px);
     }
+
     .service-card:hover {
       transform: translateY(-10px) scale(1.02);
       box-shadow: 0 25px 50px rgba(20, 184, 166, 0.15);
     }
+
     @media (max-width: 1023px) {
       .timeline-container::before {
         display: none;
       }
+
       .step-number {
         position: relative;
         left: auto;
@@ -254,16 +304,20 @@
 
         <!-- Right Social Section -->
         <div class="flex items-center gap-3">
-          <a href="#" class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
             <i class="fab fa-facebook-f text-white text-xs lg:text-sm"></i>
           </a>
-          <a href="#" class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
             <i class="fab fa-linkedin-in text-white text-xs lg:text-sm"></i>
           </a>
-          <a href="#" class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
             <i class="fab fa-instagram text-white text-xs lg:text-sm"></i>
           </a>
-          <a href="#" class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-6 h-6 lg:w-8 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
             <i class="fab fa-youtube text-white text-xs lg:text-sm"></i>
           </a>
         </div>
@@ -291,21 +345,25 @@
             <div class="absolute left-[-30px] hidden group-hover:flex w-[320px] bg-white shadow-xl rounded-xl p-6 z-50">
               <div class="grid grid-cols-1 gap-2 text-left">
                 <div class="group">
-                  <h3 class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer">
+                  <h3
+                    class="font-bold office group text-cyan-500 mb-2 tilt-neon text-1xl flex items-center gap-2 cursor-pointer">
                     Office Space
                     <i class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"></i>
                   </h3>
                   <ul class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden">
                     <li>
-                      <a href="independence-house-heywood.html" class="hover:text-cyan-500">&rsaquo; independence house heywood</a>
+                      <a href="independence-house-heywood.html" class="hover:text-cyan-500">&rsaquo; independence house
+                        heywood</a>
                     </li>
                     <li>
                       <a href="#" class="hover:text-cyan-500">&rsaquo; certacs house skelsmerdale</a>
                     </li>
                   </ul>
                 </div>
-                <a href="virtual-office.html" class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">Virtual Office</a>
-                <a href="storage-container.html" class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">Storage Container</a>
+                <a href="virtual-office.html" class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">Virtual
+                  Office</a>
+                <a href="storage-container.html"
+                  class="cursor-pointer font-bold text-cyan-500 text-1xl tilt-neon">Storage Container</a>
               </div>
             </div>
           </li>
@@ -323,13 +381,18 @@
         </button>
 
         <!-- Desktop CTA Button -->
-        <a href="#" class="hidden lg:flex relative items-center text-xs xl:text-sm font-semibold text-white px-4 xl:px-6 py-2 xl:py-3 rounded-full border-2 border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg">
+        <a href="#"
+          class="hidden lg:flex relative items-center text-xs xl:text-sm font-semibold text-white px-4 xl:px-6 py-2 xl:py-3 rounded-full border-2 border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg">
           <span class="relative z-10">GET A FREE QUOTE</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 xl:h-5 xl:w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 xl:h-5 xl:w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-          <span class="absolute inset-0 bg-[#06B6D4] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"></span>
-          <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
+          <span
+            class="absolute inset-0 bg-[#06B6D4] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"></span>
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
         </a>
       </div>
 
@@ -339,27 +402,33 @@
           <a href="index.html" class="text-white hover:text-cyan-400 transition duration-300 py-2">HOME</a>
           <a href="about.html" class="text-white hover:text-cyan-400 transition duration-300 py-2">ABOUT US</a>
           <div class="relative">
-            <a href="services.html" class="text-white hover:text-cyan-400 transition duration-300 py-2 flex items-center justify-between">
+            <a href="services.html"
+              class="text-white hover:text-cyan-400 transition duration-300 py-2 flex items-center justify-between">
               SERVICES
               <i class="fas fa-chevron-down"></i>
             </a>
             <div class="ml-4 mt-2 space-y-2">
-              <a href="independence-house-heywood.html" class="block text-gray-300 hover:text-cyan-400 py-1">Independence House Heywood</a>
-              <a href="#" class="block text-gray-300 hover:text-cyan-400 py-1">Certacs House Skelsmerdale</a>
+              <a href="independence-house-heywood.html"
+                class="block text-gray-300 hover:text-cyan-400 py-1">Independence House Heywood</a>
+              <a href="#" class="block text-gray-300 hover:text-cyan-400 py-1">Certacs House skelmersdale</a>
               <a href="virtual-office.html" class="block text-gray-300 hover:text-cyan-400 py-1">Virtual Office</a>
-              <a href="storage-container.html" class="block text-gray-300 hover:text-cyan-400 py-1">Storage Container</a>
+              <a href="storage-container.html" class="block text-gray-300 hover:text-cyan-400 py-1">Storage
+                Container</a>
             </div>
           </div>
           <a href="contact.html" class="text-white hover:text-cyan-400 transition duration-300 py-2">CONTACTS</a>
           <a href="blog.html" class="text-white hover:text-cyan-400 transition duration-300 py-2">BLOG</a>
-          <a href="#" class="bg-[#06B6D4] text-white font-semibold px-6 py-3 rounded-full text-center mt-4">GET A FREE QUOTE</a>
+          <a href="#" class="bg-[#06B6D4] text-white font-semibold px-6 py-3 rounded-full text-center mt-4">GET A FREE
+            QUOTE</a>
         </div>
       </div>
     </div>
 
     <div class="w-full flex justify-center relative px-4">
       <div class="w-full max-w-7xl">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl text-center lg:text-start lg:text-5xl text-white tilt-neon mt-6 lg:mt-10">Our Service</h2>
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl text-center lg:text-start lg:text-5xl text-white tilt-neon mt-6 lg:mt-10">
+          Our Service</h2>
       </div>
     </div>
   </section>
@@ -371,48 +440,60 @@
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
         <!-- Image Section -->
         <div class="relative reveal stagger-2 h-[50vh] md:h-[60vh] lg:h-[80vh]">
-          <div class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl opacity-20 blur-xl"></div>
+          <div class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl opacity-20 blur-xl">
+          </div>
           <div class="relative bg-white rounded-2xl p-2 md:p-4 shadow-2xl h-full flex items-center justify-center">
-            <img src="assets/images/meetingroom2.jpg" alt="Our Service" class="rounded-2xl lg:rounded-3xl h-[90%] w-full object-cover" />
+            <img src="assets/images/meetingroom2.jpg" alt="Our Service"
+              class="rounded-2xl lg:rounded-3xl h-[90%] w-full object-cover" />
           </div>
         </div>
 
         <!-- Content Section -->
         <div class="reveal">
-          
+
           <div class="flex justify-center sm:justify-start">
-          <div class="inline-flex items-center bg-cyan-50 rounded-full px-3 md:px-4 py-2 mb-4 md:mb-6">
-            <svg class="w-3 h-3 md:w-4 md:h-4 text-cyan-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            <span class="text-cyan-700 font-semibold text-xs md:text-sm raleway">Our Service</span>
-          </div>
+            <div class="inline-flex items-center bg-cyan-50 rounded-full px-3 md:px-4 py-2 mb-4 md:mb-6">
+              <svg class="w-3 h-3 md:w-4 md:h-4 text-cyan-500 mr-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <span class="text-cyan-700 font-semibold text-xs md:text-sm raleway">Our Service</span>
+            </div>
           </div>
 
-          <h2 class="text-2xl sm:text-3xl text-center md:text-start  md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 md:mb-6 lg:mb-8 leading-tight tilt-neon">
+          <h2
+            class="text-2xl sm:text-3xl text-center md:text-start  md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 md:mb-6 lg:mb-8 leading-tight tilt-neon">
             Complete Business
             <span class="text-gradient raleway">Solutions for</span>
             <br class="hidden sm:block" /> Premium Locations
           </h2>
 
-          <div class="space-y-4 md:space-y-6 text-center md:text-start text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed tilt-neon">
+          <div
+            class="space-y-4 md:space-y-6 text-center md:text-start text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed tilt-neon">
             <p>
-              We provide a full range of workspace and business services intended to help you grow professionally and work successfully.
+              We provide a full range of workspace and business services intended to help you grow professionally and
+              work successfully.
             </p>
             <p>
-              From flexible coworking Heywood spaces, to private office rental Skelmersdale suites, our facilities meet a range of business needs. Whether you're looking for hot desk Skelmersdale, virtual office Heywood services, or storage container rental Heywood solutions, we offer flexible options that adapt to your changing needs.
+              From flexible coworking Heywood spaces, to private office rental Skelmersdale suites, our facilities meet
+              a range of business needs. Whether you're looking for hot desk Skelmersdale, virtual office Heywood
+              services, or storage container rental Heywood solutions, we offer flexible options that adapt to your
+              changing needs.
             </p>
             <p>
-              Our professional work hub Heywood provide contemporary amenities, networking opportunities and administrative support to help your business thrive in competitive markets.
+              Our professional work hub Heywood provide contemporary amenities, networking opportunities and
+              administrative support to help your business thrive in competitive markets.
             </p>
           </div>
 
-           <div class="flex gap-4 justify-center sm:justify-start">
-                        <a href="tel:+447989991150" class="w-[240px] sm:w-[260px] bg-white text-black font-bold font-raleway py-2 px-4 rounded-full flex justify-center sm:justify-between items-center mt-5 animate-glow">
-                            <i class="fa fa-phone bg-black text-white px-4 py-4 rounded-full mr-3 sm:mr-1"></i>
-                            <span class="text-sm sm:text-base">Book An Appointment</span>
-                        </a>
-                    </div>
+          <div class="flex gap-4 justify-center sm:justify-start">
+            <a href="tel:+447989991150"
+              class="w-[240px] sm:w-[260px] bg-white text-black font-bold font-raleway py-2 px-4 rounded-full flex justify-center sm:justify-between items-center mt-5 animate-glow">
+              <i class="fa fa-phone bg-black text-white px-4 py-4 rounded-full mr-3 sm:mr-1"></i>
+              <span class="text-sm sm:text-base">Book An Appointment</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -438,11 +519,12 @@
           </div>
           <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <div class="lg:pr-16 order-2 lg:order-1">
-              <div class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
-                
+              <div
+                class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
+
                 <!-- Tag -->
-                <div class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-4 md:mb-6">
-                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base">
+                <div class="inline-flex items-center border border-cyan-300 py-1 rounded-full mb-4 md:mb-6">
+                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base text-cyan-600">
                     Premium Office Space
                   </span>
                 </div>
@@ -453,37 +535,62 @@
                 </h3>
 
                 <!-- Description -->
-                <p class="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
-                  Our modern coworking space in Heywood features open-plan spaces, private offices, and collaborative areas, all with excellent travel connections and professional amenities.
+                <p class="text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
+                  Our modern coworking space in Heywood features open-plan spaces, private offices, and collaborative
+                  areas, all with excellent travel connections and professional amenities.
                 </p>
 
                 <!-- Features with related icons -->
                 <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
                   <div class="flex items-center">
                     <i class="fas fa-users text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Shared office space Heywood with flexible membership options</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Shared office space Heywood with flexible
+                      membership options</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-chair text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Private desk rentals Heywood in contemporary business environment</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Private desk rentals Heywood in
+                      contemporary business environment</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-chalkboard text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Meeting room hire Heywood with advanced presentation technology</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Meeting room hire Heywood with advanced
+                      presentation technology</span>
                   </div>
                 </div>
 
                 <!-- Read More -->
-                <a href="independence-house-heywood.html" class="flex items-center text-[#06afce] font-semibold raleway text-sm md:text-base">
-                  Read More
+                <!-- From Uiverse.io by Itskrish01 -->
+                
+                <a href="independence-house-heywood.html">
+                <button
+                  class="relative flex items-center px-6 py-2 overflow-hidden font-medium transition-all bg-cyan-400 rounded-md group">
+                  <span
+                    class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-ml-4 group-hover:-mb-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-cyan-200 rounded-md group-hover:translate-x-0"></span>
+                  <span
+                    class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">Read
+                    More</span>
+                </button>
                 </a>
+
               </div>
             </div>
 
             <!-- Image -->
             <div class="lg:pl-16 order-1 lg:order-2">
               <div class="relative">
-                <img src="assets/images/heywoodexterior.jpg" alt="Independence House Heywood" class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
+                <img src="assets/images/heywoodexterior.jpg" alt="Independence House Heywood"
+                  class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
                 <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
@@ -496,24 +603,27 @@
             <span class="text-xl md:text-2xl font-bold text-white">02</span>
           </div>
           <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
-            
+
             <!-- Image -->
             <div class="lg:pr-16">
               <div class="relative">
-                <img src="assets/images/EXTERIOR 3 page 1 Skelmersdale .jpeg" alt="Certacs House Skelmersdale" class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
+                <img src="assets/images/EXTERIOR 3 page 1 Skelmersdale .jpeg" alt="Certacs House Skelmersdale"
+                  class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#06afce]/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
 
             <!-- Content -->
             <div class="lg:pl-16">
-              <div class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
+              <div
+                class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
 
                 <!-- Tag -->
-                <div class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-4 md:mb-6">
-                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base">Business Hub</span>
+                <div class="inline-flex items-center border border-cyan-300 py-1 rounded-full mb-4 md:mb-6">
+                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base text-cyan-600">
+                   Business Hub
+                  </span>
                 </div>
-
                 <!-- Title -->
                 <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 raleway tilt-neon">
                   Certacs House
@@ -521,29 +631,50 @@
                 </h3>
 
                 <!-- Description -->
-                <p class="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
-                  Our contemporary small office space solutions in Skelmersdale feature private suites, hot desks & meeting rooms in a prestigious business location.
+                <p class="text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
+                  Our contemporary small office space solutions in Skelmersdale feature private suites, hot desks &
+                  meeting rooms in a prestigious business location.
                 </p>
 
                 <!-- Features with better-matched icons -->
                 <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
                   <div class="flex items-center">
                     <i class="fas fa-laptop-house text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Hot desk Skelmersdale - with networking opportunities</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Hot desk Skelmersdale - with networking
+                      opportunities</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-user-lock text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Private office rental Skelmersdale 24/7 access</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Private office rental Skelmersdale 24/7
+                      access</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-parking text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Monthly office rental Skelmersdale including parking facilities</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Monthly office rental Skelmersdale
+                      including parking facilities</span>
                   </div>
                 </div>
 
                 <!-- Read More -->
-                <a href="" class="flex items-center text-[#06afce] font-semibold raleway text-sm md:text-base">
-                  Read More
+                 <a href="skelmersdale.html">
+                <button
+                  class="relative flex items-center px-6 py-2 overflow-hidden font-medium transition-all bg-cyan-400 rounded-md group">
+                  <span
+                    class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-ml-4 group-hover:-mb-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-cyan-200 rounded-md group-hover:translate-x-0"></span>
+                  <span
+                    class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">Read
+                    More</span>
+                </button>
                 </a>
               </div>
             </div>
@@ -558,33 +689,58 @@
           <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <!-- Left Side -->
             <div class="lg:pr-16 order-2 lg:order-1">
-              <div class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
-                <div class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-4 md:mb-6">
-                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base">Virtual Solutions</span>
+              <div
+                class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
+               <div class="inline-flex items-center border border-cyan-300 py-1 rounded-full mb-4 md:mb-6">
+                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base text-cyan-600">
+                    Virtual Solutions
+                  </span>
                 </div>
+
                 <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 raleway tilt-neon">
                   Virtual
                   <span class="raleway font-bold text-[#06afce]">Office Services</span>
                 </h3>
-                <p class="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
-                  Our professional virtual business address in Heywood and Skelmersdale provides a credible business presence without the costs of a physical office.
+                <p class="text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
+                  Our professional virtual business address in Heywood and Skelmersdale provides a credible business
+                  presence without the costs of a physical office.
                 </p>
                 <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
                   <div class="flex items-center">
                     <i class="fas fa-building text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Registered business address for company formation</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Registered business address for company
+                      formation</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-mail-bulk text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Mail handling & forwarding with secure management</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Mail handling & forwarding with secure
+                      management</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-globe text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Virtual office address in Heywood for company registration</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Virtual office address in Heywood for
+                      company registration</span>
                   </div>
                 </div>
-                <a href="virtual-office.html" class="flex items-center text-[#06afce] font-semibold raleway text-sm md:text-base">
-                  Read More
+                <a href="virtual-office.html">
+                <button
+                  class="relative flex items-center px-6 py-2 overflow-hidden font-medium transition-all bg-cyan-400 rounded-md group">
+                  <span
+                    class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-ml-4 group-hover:-mb-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-cyan-200 rounded-md group-hover:translate-x-0"></span>
+                  <span
+                    class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">Read
+                    More</span>
+                </button>
                 </a>
               </div>
             </div>
@@ -592,7 +748,8 @@
             <!-- Right Side -->
             <div class="lg:pl-16 order-1 lg:order-2">
               <div class="relative">
-                <img src="assets/images/office2heywood.JPG" alt="Virtual Office" class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
+                <img src="assets/images/office2heywood.JPG" alt="Virtual Office"
+                  class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#06afce]/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
@@ -607,38 +764,64 @@
           <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <div class="lg:pr-16">
               <div class="relative">
-                <img src="assets/images/storageContainer.webp" alt="Storage Container" class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
+                <img src="assets/images/storageContainer.webp" alt="Storage Container"
+                  class="rounded-2xl shadow-2xl w-full h-64 md:h-80 lg:h-96 object-cover pulse-glow" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#06afce]/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
             <div class="lg:pl-16">
-              <div class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
-                <div class="inline-flex items-center bg-[#06afce] text-white py-1 rounded-full mb-4 md:mb-6">
-                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base">Secure Storage</span>
+              <div
+                class="service-card bg-gradient-to-br from-primary/5 to-accent/5 p-4 md:p-6 lg:p-8 rounded-2xl border border-primary/20">
+                <div class="inline-flex items-center border border-cyan-300 py-1 rounded-full mb-4 md:mb-6">
+                  <span class="font-semibold raleway px-3 md:px-4 py-1 rounded-full text-sm md:text-base text-cyan-600">
+                    Storage
+                  </span>
                 </div>
+
                 <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 raleway tilt-neon">
                   Storage
                   <span class="raleway font-bold text-[#06afce]">Containers</span>
                 </h3>
-                <p class="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
-                  We offer secure portable storage containers Skelmersdale and storage container rental Heywood options for business equipment, inventory and personal possessions storage.
+                <p class="text-lg sm:text-base lg:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed raleway">
+                  We offer secure portable storage containers Skelmersdale and storage container rental Heywood options
+                  for business equipment, inventory and personal possessions storage.
                 </p>
                 <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
                   <div class="flex items-center">
                     <i class="fas fa-calendar-alt text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Flexible term hire weatherproof container Skelmersdale</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Flexible term hire weatherproof container
+                      Skelmersdale</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-boxes text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Hire 20ft storage containers for equipment and machinery</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Hire 20ft storage containers for equipment
+                      and machinery</span>
                   </div>
                   <div class="flex items-center">
                     <i class="fas fa-shipping-fast text-[#06afce] mr-3 text-sm md:text-base"></i>
-                    <span class="text-gray-700 raleway text-sm md:text-base">Affordable storage container rental near Heywood with delivery</span>
+                    <span class="text-gray-700 raleway text-lg md:text-base">Affordable storage container rental near
+                      Heywood with delivery</span>
                   </div>
                 </div>
-                <a href="storage-container.html" class="flex items-center text-[#06afce] font-semibold raleway text-sm md:text-base">
-                  Read More
+                <a href="storage-container.html">
+                <button
+                  class="relative flex items-center px-6 py-2 overflow-hidden font-medium transition-all bg-cyan-400 rounded-md group">
+                  <span
+                    class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-black rounded group-hover:-ml-4 group-hover:-mb-4">
+                    <span
+                      class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-cyan-200 rounded-md group-hover:translate-x-0"></span>
+                  <span
+                    class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">Read
+                    More</span>
+                </button>
                 </a>
               </div>
             </div>
@@ -650,26 +833,29 @@
   </section>
 
   <!---review -->
-  <section class="w-full relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] bg-[#DDF0F2B8] bg-center bg-cover bg-no-repeat flex justify-center items-center rounded-none md:rounded-3xl py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-16">
+  <section
+    class="w-full relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] bg-[#DDF0F2B8] bg-center bg-cover bg-no-repeat flex justify-center items-center rounded-none md:rounded-3xl py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-16">
     <div class="relative z-10 w-full max-w-7xl">
       <!-- Heading -->
       <div class="text-center mb-8 md:mb-10 lg:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tilt-neon">
           What Our <span class="text-[#06afce] raleway">Clients Say</span>
         </h2>
-        <p class="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-3 px-4">
-          See how Quality Properties NW has helped landlords and tenants enjoy hassle-free property management across the North West.
+        <p class="text-gray-600 text-lg sm:text-base md:text-lg max-w-2xl mx-auto mt-3 px-4">
+          See how Quality Properties NW has helped landlords and tenants enjoy hassle-free property management across
+          the North West.
         </p>
       </div>
 
       <!-- Review Cards Container -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
         <!-- Card 1 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl h-auto min-h-[250px] md:min-h-[290px] p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl h-auto min-h-[250px] md:min-h-[290px] p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">James R.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Landlord</p>
+              <h3 class="text-[#06afce] font-bold text-lg">James R.</h3>
+              <p class="text-sm text-gray-700 font-medium">Landlord</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -680,17 +866,19 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
-            "Quality Properties NW made letting my property completely stress-free. Rent is always on time and everything is handled smoothly."
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Quality Properties NW made letting my property completely stress-free. Rent is always on time and
+            everything is handled smoothly."
           </p>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">Sophie L.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Tenant</p>
+              <h3 class="text-[#06afce] font-bold text-lg">Sophie L.</h3>
+              <p class="text-sm text-gray-700 font-medium">Tenant</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -701,17 +889,19 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
-            "Whenever I've had an issue, the team responded quickly and sorted it out straight away. Couldn't ask for better service."
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Whenever I've had an issue, the team responded quickly and sorted it out straight away. Couldn't ask for
+            better service."
           </p>
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">David P.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Landlord</p>
+              <h3 class="text-[#06afce] font-bold text-base text-lg">David P.</h3>
+              <p class="text-sm text-gray-700 font-medium">Landlord</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -722,17 +912,19 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
-            "Professional, reliable and friendly team. My property portfolio is in safe hands with Quality Properties NW."
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "Professional, reliable and friendly team. My property portfolio is in safe hands with Quality Properties
+            NW."
           </p>
         </div>
 
         <!-- Card 4 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">Emma K.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Tenant</p>
+              <h3 class="text-[#06afce] font-bold text-lg">Emma K.</h3>
+              <p class="text-sm text-gray-700 font-medium">Tenant</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -743,17 +935,19 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
-            "So helpful and easy to deal with. From moving in to ongoing support, everything has been smooth and stress-free."
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "So helpful and easy to deal with. From moving in to ongoing support, everything has been smooth and
+            stress-free."
           </p>
         </div>
 
         <!-- Card 5 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">Mark T.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Landlord</p>
+              <h3 class="text-[#06afce] font-bold text-lg">Mark T.</h3>
+              <p class="text-sm text-gray-700 font-medium">Landlord</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -764,17 +958,19 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
-            "The tenant screening process was thorough and gave me real confidence. Couldn't be happier with the results."
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "The tenant screening process was thorough and gave me real confidence. Couldn't be happier with the
+            results."
           </p>
         </div>
 
         <!-- Card 6 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">Rachel M.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Tenant</p>
+              <h3 class="text-[#06afce] font-bold text-lg">Rachel M.</h3>
+              <p class="text-sm text-gray-700 font-medium">Tenant</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -785,17 +981,19 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
-            "From viewing to moving in, the whole process was smooth and stress-free. Excellent communication throughout."
+          <p class="text-gray-600 leading-relaxed text-sm">
+            "From viewing to moving in, the whole process was smooth and stress-free. Excellent communication
+            throughout."
           </p>
         </div>
 
         <!-- Card 7 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">Oliver H.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Landlord</p>
+              <h3 class="text-[#06afce] font-bold text-lg">Oliver H.</h3>
+              <p class="text-sm text-gray-700 font-medium">Landlord</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -806,17 +1004,18 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
+          <p class="text-gray-600 leading-relaxed text-sm">
             "Monthly statements are clear and transparent. I always know exactly how my properties are performing."
           </p>
         </div>
 
         <!-- Card 8 -->
-        <div class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
+        <div
+          class="bg-white/80 backdrop-blur-md border border-cyan-300 rounded-2xl p-4 md:p-6 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/70 hover:scale-[1.02] transition-all duration-300">
           <div class="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 class="text-[#06afce] font-bold text-base md:text-lg">Laura G.</h3>
-              <p class="text-xs md:text-sm text-gray-700 font-medium">Tenant</p>
+              <h3 class="text-[#06afce] font-bold text-lg">Laura G.</h3>
+              <p class="text-sm text-gray-700 font-medium">Tenant</p>
             </div>
             <img src="assets/images/googlelogo.webp" alt="Google Logo" class="w-6 h-6 md:w-8 md:h-8" />
           </div>
@@ -827,7 +1026,7 @@
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
             <i class="fas fa-star text-yellow-400 text-xs md:text-sm"></i>
           </div>
-          <p class="text-gray-600 leading-relaxed text-xs md:text-sm">
+          <p class="text-gray-600 leading-relaxed text-sm">
             "Absolutely recommend! They genuinely care about tenants and make renting an enjoyable experience."
           </p>
         </div>
@@ -835,63 +1034,74 @@
 
       <!-- Button -->
       <div class="flex gap-4 w-full justify-center mt-6 md:mt-8 lg:mt-10">
-        <a href="https://g.page/r/CWwF6qyH_EDyEAI/review" class="group relative w-full max-w-xs md:w-[260px] bg-[#06afce] text-white font-bold raleway py-3 px-4 md:px-6 rounded-full flex justify-center items-center gap-3 shadow-lg shadow-[#06AFCE]/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#06AFCE]/70 overflow-hidden">
+        <a href="https://g.page/r/CWwF6qyH_EDyEAI/review"
+          class="group relative w-full max-w-xs md:w-[260px] bg-[#06afce] text-white font-bold raleway py-3 px-4 md:px-6 rounded-full flex justify-center items-center gap-3 shadow-lg shadow-[#06AFCE]/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#06AFCE]/70 overflow-hidden">
           <i class="fa-solid fa-star text-lg md:text-xl transition-transform duration-300 group-hover:rotate-12"></i>
           <span class="text-base md:text-lg">Leave A Review</span>
-          <span class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition duration-300 blur-lg"></span>
-          <span class="absolute top-0 left-[-100%] w-[80px] h-full bg-white/30 transform skew-x-12 transition-all duration-700 group-hover:left-[120%]"></span>
+          <span
+            class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition duration-300 blur-lg"></span>
+          <span
+            class="absolute top-0 left-[-100%] w-[80px] h-full bg-white/30 transform skew-x-12 transition-all duration-700 group-hover:left-[120%]"></span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Call to Action -->
- <section class="py-12 sm:py-16 md:py-20 lg:py-24 gradient-bg relative overflow-hidden">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
+  <section class="py-12 sm:py-16 md:py-20 lg:py-24 gradient-bg relative overflow-hidden">
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="reveal">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-6 sm:mb-8 leading-tight tilt-neon">
-                    Ready to Experience the Best
-                    <span class="block text-white">
-                        Coworking Space Near Manchester And Lancashire for Startups?
-                    </span>
-                </h2>
-                <p class="text-base sm:text-lg lg:text-xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-raleway">
-                    Find a private office for rent in Heywood with 24/7 access and month office rental in Skelmersdale with parking.
-                </p>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="reveal">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-6 sm:mb-8 leading-tight tilt-neon">
+          Ready to Experience the Best
+          <span class="block text-white">
+            Coworking Space Near Manchester And Lancashire for Startups?
+          </span>
+        </h2>
+        <p
+          class="text-base sm:text-lg lg:text-xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-raleway">
+          Find a private office for rent in Heywood with 24/7 access and month office rental in Skelmersdale with
+          parking.
+        </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                    <a href="tel:+447989991150" class="group bg-white font-raleway text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl">
-                        Book An Appointment
-                        <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                    <a href="contact.html" class="group border-2 border-black text-black font-raleway px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm">
-                        Get A Free Quote
-                        <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:rotate-12 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+          <a href="tel:+447989991150"
+            class="group bg-white font-raleway text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-2xl">
+            Book An Appointment
+            <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-transform duration-300"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a href="contact.html"
+            class="group border-2 border-black text-black font-raleway px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm">
+            Get A Free Quote
+            <svg class="ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:rotate-12 transition-transform duration-300" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
   <footer class="bg-black text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 md:px-6 sm:px-8 lg:px-12 py-10 md:py-14">
       <!-- Top Section: Excellent Customer Support -->
       <div class="text-center mt-[-30px] md:mt-[-50px]">
         <div class="text-3xl md:text-5xl text-[#06AFCE] mb-3 md:mb-5 w-full flex justify-center items-start">
-          <img src="assets/images/footerlogo.png"  class="w-[140px] md:w-[180px] lg:w-[240px]" />
+          <img src="assets/images/footerlogo.png" class="w-[140px] md:w-[180px] lg:w-[240px]" />
         </div>
         <p class="raleway text-[14px] md:text-[16px] lg:text-[20px] text-gray-300 mt-[-30px] md:mt-[-50px] px-4">
-          From startups to established companies, our dynamic workspaces are designed to inspire collaboration, foster growth and drive success. Find a workspace that works for you.
+          From startups to established companies, our dynamic workspaces are designed to inspire collaboration, foster
+          growth and drive success. Find a workspace that works for you.
         </p>
       </div>
 
@@ -900,7 +1110,8 @@
         <h4 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5">
           OUR OFFICE LOCATIONS
         </h4>
-        <div class="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-10 lg:gap-20 text-gray-300 raleway text-base md:text-lg lg:text-2xl cursor-pointer">
+        <div
+          class="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-10 lg:gap-20 text-gray-300 raleway text-base md:text-lg lg:text-2xl cursor-pointer">
           <a href="independence-house-heywood.html">Independence House Heywood</a>
           <a href="skelmersdale.html">Certacs House Skelmersdale</a>
         </div>
@@ -911,7 +1122,8 @@
         <h4 class="font-semibold mb-3 text-[#06AFCE] text-lg md:text-xl lg:text-3xl tilt-neon">
           USEFUL LINKS
         </h4>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
           <a href="index.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Home
@@ -936,16 +1148,18 @@
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Privacy Policy
           </a>
-          <a href="terms-and-conditions.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+          <a href="terms-and-conditions.html"
+            class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Terms & Conditions
           </a>
 
-            <a href="virtual-office.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+          <a href="virtual-office.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Virtual Office
           </a>
-          <a href="storage-container.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+          <a href="storage-container.html"
+            class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Storage Container
           </a>
@@ -953,17 +1167,20 @@
       </div>
 
       <!-- Bottom Section -->
-      <div class="flex flex-col lg:flex-row items-center  justify-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-6 md:pt-8">
+      <div
+        class="flex flex-col lg:flex-row items-center  justify-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-6 md:pt-8">
         <!-- Google Reviews -->
         <div class="flex flex-col md:flex-row items-center justify-between w-full lg:w-[90vw] xl:w-[75vw] gap-4">
           <div class="flex items-center gap-3">
-            <img src="assets/images/google.webp" alt="Google" class="w-[100px] md:w-[120px] lg:w-[180px] h-[40px] md:h-[50px] lg:h-[80px]" />
+            <img src="assets/images/google.webp" alt="Google"
+              class="w-[100px] md:w-[120px] lg:w-[180px] h-[40px] md:h-[50px] lg:h-[80px]" />
           </div>
           <div class="text-center">
             <p class="raleway text-[12px] md:text-[14px] lg:text-[18px]">
               Our Customer Gave us Excellant Rating
             </p>
-            <img src="assets/images/reviw-removebg-preview.png" class="w-[160px] md:w-[200px] lg:w-[280px] h-[25px] md:h-[30px] lg:h-[50px] mx-auto" />
+            <img src="assets/images/reviw-removebg-preview.png"
+              class="w-[160px] md:w-[200px] lg:w-[280px] h-[25px] md:h-[30px] lg:h-[50px] mx-auto" />
           </div>
           <div class="flex gap-2 md:gap-3 lg:gap-5">
             <a href="#"
@@ -981,9 +1198,11 @@
           </div>
         </div>
       </div>
-      
-      <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 items-center border-b-[1px] border-gray-300 justify-center p-4 md:p-6 shadow-md">
-        <p class="text-lg md:text-xl lg:text-3xl raleway text-center">We <span class="text-[#06AFCE]">Accepts</span> </p>
+
+      <div
+        class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 items-center border-b-[1px] border-gray-300 justify-center p-4 md:p-6 shadow-md">
+        <p class="text-lg md:text-xl lg:text-3xl raleway text-center">We <span class="text-[#06AFCE]">Accepts</span>
+        </p>
         <img src="assets/images/credit_card_logos-removebg-preview.png" class="max-w-full h-auto" />
       </div>
 
@@ -1121,19 +1340,19 @@
     });
 
     // Office dropdown toggle functionality
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const officeToggle = document.querySelector('.office');
       const listToDisplay = document.querySelector('.listtodisplay');
-      
+
       if (officeToggle && listToDisplay) {
-        officeToggle.addEventListener('click', function(e) {
+        officeToggle.addEventListener('click', function (e) {
           e.preventDefault();
           listToDisplay.classList.toggle('hidden');
-          
+
           const chevron = this.querySelector('.fa-chevron-down');
           if (chevron) {
-            chevron.style.transform = listToDisplay.classList.contains('hidden') 
-              ? 'rotate(0deg)' 
+            chevron.style.transform = listToDisplay.classList.contains('hidden')
+              ? 'rotate(0deg)'
               : 'rotate(180deg)';
           }
         });
