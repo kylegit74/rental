@@ -35,159 +35,292 @@
       .tilt-neon {
         font-family: "Tilt Neon", sans-serif;
       }
+       .active {
+      color: white !important;
+      background: #000 !important;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+      .image-card {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+ 
+
     </style>
   </head>
   <body class="bg-white text-gray-900">
     <!-- Header / Navbar Section -->
     <section
-      class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[60vh] w-full"
-    >
-      <!-- Black Overlay -->
-      <div class="absolute inset-0 bg-black/80 bg-opacity-50"></div>
+    class="relative bg-[url('assets/images/bannerimage2.jpg')] bg-cover bg-center h-[50vh] lg:h-[70vh] w-full">
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black/70 bg-opacity-50"></div>
 
-      <!-- top bar -->
-      <div
-        class="w-full raleway flex justify-center relative z-10 border-b-[1px] border-gray-300 py-6"
-      >
-        <div class="flex justify-between w-[90%]">
-          <!-- Left Info Section -->
-          <div class="flex flex-wrap items-center gap-5">
-            <!-- Phone -->
-            <div class="flex items-center text-[18px] font-bold gap-2">
-              <i class="fa-solid fa-phone text-white"></i>
-              <span class="text-white">012 03456 7890</span>
+   
+
+    <!-- Top bar - Hidden on mobile and tablet -->
+    <div class="w-full raleway flex justify-center relative z-10 bg-black py-4 lg:py-6 hidden xl:flex">
+      <div class="flex justify-between w-[95%] lg:w-[90%]">
+        <!-- Left Info Section -->
+        <div class="flex flex-wrap items-center gap-3 lg:gap-5">
+          <!-- Phone -->
+          <div class="flex items-center tilt-neon text-[16px] lg:text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-phone text-white"></i>
+            <a class="text-white" href="tel:+447989991150">07989991150</a>
+          </div>
+          <!-- Email -->
+          <div class="flex tilt-neon items-center text-[16px] lg:text-[18px] font-bold gap-2">
+            <i class="fa-solid fa-envelope text-white"></i>
+            <a href="mailto:info@qualitypropertiesnw.co.uk"
+              class="hover:underline text-white">info@qualitypropertiesnw.co.uk</a>
+          </div>
+        </div>
+
+        <!-- Right Social Section -->
+        <div class="flex items-center gap-2 lg:gap-3">
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-7 lg:w-8 h-7 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-facebook-f text-white text-sm"></i>
+          </a>
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-7 lg:w-8 h-7 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-linkedin-in text-white text-sm"></i>
+          </a>
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-7 lg:w-8 h-7 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-instagram text-white text-sm"></i>
+          </a>
+          <a href="#"
+            class="border border-[#4BF4FF] rounded-full w-7 lg:w-8 h-7 lg:h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
+            <i class="fab fa-youtube text-white text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="w-full flex justify-center raleway font-bold relative bg-transparent z-50 py-4 md:py-6 xl:mt-[-50px]">
+      <div class="flex justify-between items-center w-[95%] md:w-[90%] relative">
+        <!-- Logo -->
+        <div class="text-cyan-400 font-bold text-3xl md:text-4xl lg:text-5xl">
+          <img src="assets/images/footerlogo.png"
+            class="w-[100px] sm:w-[120px] md:w-[140px] lg:w-[160px] xl:w-[190px]" />
+        </div>
+
+        <!-- Desktop Menu - Hidden on mobile and tablet -->
+        <ul class="hidden xl:flex space-x-6 lg:space-x-8 items-center">
+          <li>
+            <a href="index.html"
+              class="text-white hover:text-cyan-400 transition duration-300 text-sm lg:text-base">HOME</a>
+          </li>
+          <li>
+            <a href="about.html"
+              class="text-white hover:text-cyan-400 transition duration-300 text-sm lg:text-base">ABOUT US</a>
+          </li>
+
+          <!-- Services Menu with Hover -->
+          <li class="relative group">
+            <a href="services.html"
+              class="text-white hover:text-cyan-400 transition duration-300 text-sm lg:text-base">SERVICES</a>
+
+            <!-- Dropdown -->
+            <div
+              class="absolute left-[-30px] hidden group-hover:flex w-[300px] lg:w-[320px] bg-white shadow-xl rounded-xl p-6 z-50">
+              <div class="grid grid-cols-1 gap-2 text-left">
+                <!-- Column 1 -->
+                <div class="group">
+                  <h3
+                    class="font-bold office group text-cyan-500 mb-2 tilt-neon text-lg lg:text-xl flex items-center gap-2 cursor-pointer">
+                    Office Space
+                    <i class="fa-solid fa-chevron-down text-cyan-500 text-lg transition-transform duration-300"></i>
+                  </h3>
+
+                  <ul class="space-y-2 listtodisplay ml-[10px] text-gray-700 raleway hidden">
+                    <li>
+                      <a href="independence-house-heywood.html" class="hover:text-cyan-500 text-sm">&rsaquo;
+                        Independence House
+                        Heywood</a>
+                    </li>
+                    <li>
+                      <a href="skelmersdale.html" class="hover:text-cyan-500 text-sm">&rsaquo; Certacs House
+                        skelmersdale</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <a href="virtual-office.html"
+                  class="cursor-pointer font-bold text-cyan-500 text-lg lg:text-xl tilt-neon">
+                  Virtual Office
+                </a>
+
+                <a href="storage-container.html"
+                  class="cursor-pointer font-bold text-cyan-500 text-lg lg:text-xl tilt-neon">
+                  Storage Container
+                </a>
+              </div>
             </div>
-            <!-- Location -->
-            <div class="flex items-center text-[18px] font-bold gap-2">
-              <i class="fa-solid fa-location-dot text-white"></i>
-              <span class="text-white">Independence House, Heywood</span>
+          </li>
+
+          <li>
+            <a href="contact.html"
+              class="text-white hover:text-cyan-400 transition duration-300 text-sm lg:text-base">CONTACTS</a>
+          </li>
+          <li>
+            <a href="blog.html"
+              class="text-white hover:text-cyan-400 transition duration-300 text-sm lg:text-base">BLOG</a>
+          </li>
+        </ul>
+
+        <!-- Desktop CTA Button - Hidden on mobile and tablet -->
+        <a href="contact.html"
+          class="relative hidden xl:flex items-center text-[12px] lg:text-[14px] font-semibold text-white px-4 lg:px-6 py-2 lg:py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg">
+          <!-- Button Text -->
+          <span class="relative z-10">GET A FREE QUOTE</span>
+
+          <!-- Arrow Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-4 lg:h-5 w-4 lg:w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+
+          <!-- Glowing Background -->
+          <span
+            class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"></span>
+
+          <!-- Inner Animated Shine -->
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="xl:hidden text-white text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-full h-full bg-black/95 z-[9999] xl:hidden">
+      <div class="flex flex-col h-full">
+        <!-- Mobile Menu Header -->
+        <div class="flex justify-between items-center p-6 border-b border-gray-700">
+          <img src="assets/images/footerlogo.png" class="w-[120px]" />
+          <button id="mobile-menu-close" class="text-white text-2xl">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Content -->
+        <div class="flex-1 overflow-y-auto p-6">
+          <!-- Contact Info -->
+          <div class="mb-8 space-y-4 text-center">
+            <div class="flex items-center justify-center gap-3 text-white">
+              <i class="fa-solid fa-phone text-cyan-400"></i>
+              <a href="tel:+447989991150" class="text-lg">07989991150</a>
             </div>
-            <!-- Email -->
-            <div class="flex items-center text-[18px] font-bold gap-2">
-              <i class="fa-solid fa-envelope text-white"></i>
-              <a
-                href="mailto:info@qualitypropertiesnw.co.uk"
-                class="hover:underline text-white"
-                >info@qualitypropertiesnw.co.uk</a
-              >
+            <div class="flex items-center justify-center gap-3 text-white">
+              <i class="fa-solid fa-envelope text-cyan-400"></i>
+              <a href="mailto:info@qualitypropertiesnw.co.uk" class="text-sm">info@qualitypropertiesnw.co.uk</a>
             </div>
           </div>
 
-          <!-- Right Social Section -->
-          <div class="flex items-center gap-3">
-            <a
-              href="#"
-              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
-            >
+          <!-- Navigation Links -->
+          <nav class="space-y-6 text-center">
+            <a href="index.html"
+              class="block text-white text-1xl font-semibold hover:text-cyan-400 transition duration-300">HOME</a>
+            <a href="about.html"
+              class="block text-white text-1xl font-semibold hover:text-cyan-400 transition duration-300">ABOUT US</a>
+
+            <!-- Services Dropdown -->
+            <div class="space-y-3">
+              <a href="services.html"
+                class="flex justify-center items-center w-full text-white text-1xl font-semibold hover:text-cyan-400 transition duration-300">
+                SERVICES
+                <i class="fas fa-chevron-down transition-transform duration-300 ml-2" id="mobile-services-toggle"></i>
+              </a>
+              <div id="mobile-services-menu" class="hidden space-y-3">
+                <div class="space-y-2">
+                  <button id="mobile-office-toggle"
+                    class="flex justify-center items-center w-full text-cyan-400 text-xl font-semibold">
+                    Office Space
+                    <i class="fas fa-chevron-down transition-transform duration-300 ml-2"></i>
+                  </button>
+                  <div id="mobile-office-menu" class="hidden space-y-2">
+                    <a href="independence-house-heywood.html"
+                      class="block text-gray-300 hover:text-cyan-400">Independence House Heywood</a>
+                    <a href="skelmersdale.html" class="block text-gray-300 hover:text-cyan-400">Certacs House
+                      skelmersdale</a>
+                  </div>
+                </div>
+                <a href="virtual-office.html" class="block text-cyan-400 text-xl font-semibold">Virtual Office</a>
+                <a href="storage-container.html" class="block text-cyan-400 text-xl font-semibold">Storage Container</a>
+              </div>
+            </div>
+
+            <a href="contact.html"
+              class="block text-white text-xl font-semibold hover:text-cyan-400 transition duration-300">CONTACTS</a>
+            <a href="blog.html"
+              class="block text-white text-xl font-semibold hover:text-cyan-400 transition duration-300">BLOG</a>
+          </nav>
+
+          <!-- Mobile CTA Button -->
+          <div class="mt-8 text-center">
+            <a href="contact.html"
+              class="inline-block bg-cyan-400 text-black font-semibold py-3 px-6 rounded-full hover:bg-cyan-500 transition duration-300">
+              GET A FREE QUOTE
+            </a>
+          </div>
+
+          <!-- Social Media -->
+          <div class="flex justify-center gap-4 mt-8">
+            <a href="#"
+              class="border border-[#4BF4FF] rounded-full w-10 h-10 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
               <i class="fab fa-facebook-f text-white"></i>
             </a>
-            <a
-              href="#"
-              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
-            >
+            <a href="#"
+              class="border border-[#4BF4FF] rounded-full w-10 h-10 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
               <i class="fab fa-linkedin-in text-white"></i>
             </a>
-            <a
-              href="#"
-              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
-            >
+            <a href="#"
+              class="border border-[#4BF4FF] rounded-full w-10 h-10 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
               <i class="fab fa-instagram text-white"></i>
             </a>
-            <a
-              href="#"
-              class="border border-[#4BF4FF] rounded-full w-8 h-8 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300"
-            >
+            <a href="#"
+              class="border border-[#4BF4FF] rounded-full w-10 h-10 flex items-center justify-center hover:bg-teal-400 hover:text-black transition duration-300">
               <i class="fab fa-youtube text-white"></i>
             </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Navbar -->
-      <div
-        class="w-full flex justify-center raleway font-bold relative z-50 py-6 bg-transparent"
-      >
-        <div class="flex justify-between items-center w-[90%] relative">
-          <!-- Logo -->
-          <div class="text-cyan-400 font-bold text-5xl">LOGO</div>
-
-          <!-- Menu -->
-          <ul class="flex space-x-8 items-center">
-            <li>
-              <a
-                href="index.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >HOME</a
-              >
-            </li>
-            <li>
-              <a
-                href="about.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >ABOUT US</a
-              >
-            </li>
-            <li>
-              <a
-                href="services.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >SERVICES</a
-              >
-            </li>
-            <li>
-              <a
-                href="contact.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >CONTACTS</a
-              >
-            </li>
-            <li>
-              <a
-                href="privacy.html"
-                class="text-white hover:text-cyan-400 transition duration-300"
-                >PRIVACY POLICY</a
-              >
-            </li>
-          </ul>
-
-          <!-- CTA Button -->
-          <a
-            href="#"
-            class="relative flex items-center text-[14px] font-semibold text-white px-6 py-3 rounded-[50px] border-[2px] border-white transition-all duration-300 ease-in-out overflow-hidden group shadow-lg"
-          >
-            <span class="relative z-10">GET A FREE QUOTE</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 ml-2 relative text-white z-10 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-            <span
-              class="absolute inset-0 bg-[#06B6D4] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-full"
-            ></span>
-            <span
-              class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"
-            ></span>
-          </a>
-        </div>
-      </div>
-
-      <div class="w-full flex justify-center relative">
-        <div class="w-[90vw]">
-          <h2 class="text-5xl text-white tilt-neon mt-10">
+    <!-- Banner Content -->
+    <div class="w-full flex justify-center relative z-10 pt-8 md:pt-14">
+      <div class="flex justify-center w-[95%] md:w-[90%]">
+        <!-- Left Content -->
+        <div class="w-full text-center space-y-4 md:space-y-6">
+          <h2 class="text-2xl l md:text-3xl lg:text-4xl xl:text-5xl font-light tilt-neon text-white px-4">
             Privacy Policy
           </h2>
+
+      
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Privacy Policy Content -->
     <section class="py-16 bg-gray-50">
@@ -277,26 +410,32 @@
 
     <!-- Footer -->
     <!-- Keep the footer exactly same as Terms & Conditions page -->
-   <footer class="bg-black text-white relative overflow-hidden">
+    <footer class="bg-black text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 md:px-6 sm:px-8 lg:px-12 py-10 md:py-14">
       <!-- Top Section: Excellent Customer Support -->
       <div class="text-center mt-[-30px] md:mt-[-50px]">
         <div class="text-3xl md:text-5xl text-[#06AFCE] mb-3 md:mb-5 w-full flex justify-center items-start">
-          <img src="assets/images/footerlogo.png"  class="w-[140px] md:w-[180px] lg:w-[240px]" />
+          <img src="assets/images/footerlogo.png" class="w-[140px] md:w-[180px] lg:w-[240px]" />
         </div>
-        <p class="raleway text-[14px] md:text-[16px] lg:text-[20px] text-gray-300 mt-[-30px] md:mt-[-50px] px-4">
-          From startups to established companies, our dynamic workspaces are designed to inspire collaboration, foster growth and drive success. Find a workspace that works for you.
+        <p class="raleway text-[16px] lg:text-[20px] text-gray-300 mt-[-30px] md:mt-[-50px] px-4">
+          From startups to established companies, our dynamic workspaces are designed to inspire collaboration, foster
+          growth and drive success. Find a workspace that works for you.
         </p>
       </div>
 
       <!-- Office Locations -->
       <div class="text-center mb-8 md:mb-10">
-        <h4 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5">
+        <h4 class="text-xl lg:text-2xl xl:text-4xl font-semibold mb-3 text-[#06AFCE] tilt-neon mt-5">
           OUR OFFICE LOCATIONS
         </h4>
-        <div class="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-10 lg:gap-20 text-gray-300 raleway text-base md:text-lg lg:text-2xl cursor-pointer">
-          <a href="independence-house-heywood.html">Independence House Heywood</a>
-          <a href="skelmersdale.html">Certacs House Skelmersdale</a>
+        <div
+          class="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-10 lg:gap-20 text-gray-300 raleway text-base md:text-xl lg:text-2xl cursor-pointer">
+          <a href="independence-house-heywood.html"> <span
+              class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Independence House Heywood</a>
+          <a href="skelmersdale.html"> <span
+              class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Certacs House Skelmersdale</a>
         </div>
       </div>
 
@@ -305,7 +444,8 @@
         <h4 class="font-semibold mb-3 text-[#06AFCE] text-lg md:text-xl lg:text-3xl tilt-neon">
           USEFUL LINKS
         </h4>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
+        <div
+          class="grid  ml-[30px] lg:ml-[0px] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
           <a href="index.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Home
@@ -326,60 +466,88 @@
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Blog
           </a>
-          <a href="privacy-policy.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Privacy Policy
-          </a>
-          <a href="terms-and-conditions.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Terms & Conditions
-          </a>
+        
 
-            <a href="virtual-office.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+          <a href="virtual-office.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Virtual Office
           </a>
-          <a href="storage-container.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+          <a href="storage-container.html"
+            class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Storage Container
           </a>
         </div>
       </div>
 
+      <div class="text-center mb-8 md:mb-10 border-t-[1px] border-gray-300 pt-5">
+        <h4 class="font-semibold mb-3 text-[#06AFCE] text-lg md:text-xl lg:text-3xl tilt-neon">
+          Legal & Policies
+        </h4>
+        <div class="flex justify-center w-full">
+        <div
+          class="grid w-[90%] ml-[30px] lg:ml-[0px] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
+            <a href="privacy-policy.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Privacy Policy
+          </a>
+          <a href="cookie-policy.html"
+            class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Cookie Policy 
+          </a>
+          <a href="terms-and-conditions.html"
+            class="flex items-center gap-2  no-wrap hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+            Terms & Conditions
+          </a>
+          
+         
+        </div>
+        </div>
+      </div>
+
       <!-- Bottom Section -->
-      <div class="flex flex-col lg:flex-row items-center  justify-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-6 md:pt-8">
+      <div
+        class="flex flex-col lg:flex-row items-center  justify-center border-b-[1px] pb-6 gap-4 border-t border-gray-300 pt-6 md:pt-8">
         <!-- Google Reviews -->
         <div class="flex flex-col md:flex-row items-center justify-between w-full lg:w-[90vw] xl:w-[75vw] gap-4">
           <div class="flex items-center gap-3">
-            <img src="assets/images/google.webp" alt="Google" class="w-[100px] md:w-[120px] lg:w-[180px] h-[40px] md:h-[50px] lg:h-[80px]" />
+            <img src="assets/images/google.webp" alt="Google"
+              class="w-[100px] md:w-[120px] lg:w-[180px] h-[40px] md:h-[50px] lg:h-[80px]" />
           </div>
           <div class="text-center">
-            <p class="raleway text-[12px] md:text-[14px] lg:text-[18px]">
+            <p class="raleway text-[14px] lg:text-[18px]">
               Our Customer Gave us Excellant Rating
             </p>
-            <img src="assets/images/reviw-removebg-preview.png" class="w-[160px] md:w-[200px] lg:w-[280px] h-[25px] md:h-[30px] lg:h-[50px] mx-auto" />
+            <img src="assets/images/reviw-removebg-preview.png"
+              class="w-[160px] md:w-[200px] lg:w-[280px] h-[25px] md:h-[30px] lg:h-[50px] mx-auto" />
           </div>
           <div class="flex gap-2 md:gap-3 lg:gap-5">
             <a href="#"
               class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
-              <i class="fab fa-facebook-f text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
+              <i class="fab fa-facebook-f text-sm md:text-xl lg:text-2xl text-[#06AFCE]"></i>
             </a>
             <a href="#"
               class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
-              <i class="fab fa-instagram text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
+              <i class="fab fa-instagram text-sm md:text-xl lg:text-2xl text-[#06AFCE]"></i>
             </a>
             <a href="#"
               class="w-8 md:w-10 lg:w-14 h-8 md:h-10 lg:h-14 rounded-full flex items-center justify-center bg-white text-black hover:scale-110 transition">
-              <i class="fab fa-youtube text-sm md:text-lg lg:text-2xl text-[#06AFCE]"></i>
+              <i class="fab fa-youtube text-sm md:text-xl lg:text-2xl text-[#06AFCE]"></i>
             </a>
           </div>
         </div>
       </div>
-      
-      <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 items-center border-b-[1px] border-gray-300 justify-center p-4 md:p-6 shadow-md">
-        <p class="text-lg md:text-xl lg:text-3xl raleway text-center">We <span class="text-[#06AFCE]">Accepts</span> </p>
+
+      <div
+        class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 items-center border-b-[1px] border-gray-300 justify-center p-4 md:p-6 shadow-md">
+        <p class="text-lg md:text-xl lg:text-3xl raleway text-center">We <span class="text-[#06AFCE]">Accepts</span>
+        </p>
         <img src="assets/images/credit_card_logos-removebg-preview.png" class="max-w-full h-auto" />
       </div>
+
+    
 
       <div class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-6 bg-black text-white gap-4">
         <p class="text-xs md:text-sm lg:text-lg xl:text-[20px] font-raleway text-center md:text-left raleway">
@@ -391,8 +559,75 @@
           <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]">Kyle Infotech</a>
         </p>
       </div>
+        <div class="text-center">
+       The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.
+
+      </div>
     </div>
   </footer>
+
+   <script>
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+    const mobileServicesMenu = document.getElementById('mobile-services-menu');
+    const mobileOfficeToggle = document.getElementById('mobile-office-toggle');
+    const mobileOfficeMenu = document.getElementById('mobile-office-menu');
+
+    // Open mobile menu
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close mobile menu
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Mobile services toggle
+    mobileServicesToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      mobileServicesMenu.classList.toggle('hidden');
+      const icon = mobileServicesToggle.querySelector('i');
+      icon.classList.toggle('rotate-180');
+    });
+
+    // Mobile office toggle
+    mobileOfficeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      mobileOfficeMenu.classList.toggle('hidden');
+      const icon = mobileOfficeToggle.querySelector('i');
+      icon.classList.toggle('rotate-180');
+    });
+
+    // Desktop dropdown functionality
+    const office = document.getElementsByClassName("office")[0];
+    const listtodisplay = document.getElementsByClassName("listtodisplay")[0];
+
+    if (office && listtodisplay) {
+      office.addEventListener("click", (e) => {
+        e.preventDefault();
+        listtodisplay.classList.toggle("hidden");
+        const icon = office.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("rotate-180");
+        }
+      });
+    }
+
+  </script>
 
   </body>
 </html>
