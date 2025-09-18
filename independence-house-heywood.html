@@ -77,9 +77,6 @@
         transform: translateY(-100%);
       }
     }
-
-   
-   
   </style>
   <script>
     tailwind.config = {
@@ -153,7 +150,7 @@
 <body class="bg-gray-50 font-raleway">
   <!-- Header Section -->
   <section
-    class="relative bg-[url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg')] bg-cover bg-center h-[70vh] w-full">
+    class="relative bg-[url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg')] bg-cover bg-center h-[70vh] md:h-[50vh] xl:h-[70vh] w-full">
     <!-- Black Overlay -->
     <div class="absolute inset-0 bg-black/80"></div>
     <section class="w-full h-[40px] bg-white cursor-pointer flex items-center overflow-hidden relative">
@@ -481,7 +478,7 @@
                 </li>
                 <li class="flex items-center text-gray-700 hover:text-primary-600 transition-colors duration-300">
                   <i class="fas fa-check-circle text-primary-400 mr-3 text-lg"></i>
-                  <span class="text-sm md:text-base">Collaboration Hubs</span>
+                  <span class="text-lg md:text-base">Collaboration Hubs</span>
                 </li>
               </ul>
               <a href="contact.html"
@@ -672,7 +669,7 @@
                 </li>
                 <li class="flex items-center text-gray-700 hover:text-primary-600 transition-colors duration-300">
                   <i class="fas fa-check-circle text-primary-400 mr-3 text-lg"></i>
-                  <span class="text-sm md:text-base">Networking events</span>
+                  <span class="text-lg md:text-base">Networking events</span>
                 </li>
                 <li class="flex items-center text-gray-700 hover:text-primary-600 transition-colors duration-300">
                   <i class="fas fa-check-circle text-primary-400 mr-3 text-lg"></i>
@@ -774,14 +771,17 @@
           </div>
 
           <!-- Amenities Grid -->
-          <div id="featuresScroll"
-            class=" max-h-[40vh] md:max-h-[45vh] overflow-y-auto pr-2 scroll-smooth hover:pause-scroll">
-            <div class="grid grid-cols-1 gap-4 animate-slide-up  md:gap-6 auto-scroll sm:grid-cols-2">
-              <!-- FEATURE 2 -->
-              <div
-                class="flex  items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                <div
-                  class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
+          <!-- Amenities Grid -->
+          <div
+            class="min-h-[40vh] xl:featuresScroll md:max-h-[45vh] overflow-y-auto pr-2 xl:scroll-smooth xl:hover:pause-scroll">
+            <div id="featuresGrid"
+              class="grid grid-cols-1 gap-4 xl:animate-slide-up md:gap-6 xl:auto-scroll sm:grid-cols-2">
+
+              <!-- FEATURE 1 -->
+              <div class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg 
+                hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                <div class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl 
+                  group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-laptop-house text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
@@ -791,78 +791,74 @@
                 </div>
               </div>
 
-              <!-- FEATURE 3 -->
+              <!-- FEATURE 2 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-handshake text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Meeting Facilities</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Professional meeting rooms with tech and
-                    catering.</p>
+                  <p class="text-lg text-gray-600 font-raleway">Professional meeting rooms with tech and catering.</p>
                 </div>
               </div>
-             
 
-              <!-- FEATURE 4 -->
+              <!-- FEATURE 3 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-user-edit text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Private Workstations</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Dedicated desks with storage and constant
-                    access.</p>
+                  <p class="text-lg text-gray-600 font-raleway">Dedicated desks with storage and constant access.</p>
                 </div>
               </div>
 
-              
-              <!-- Continue with remaining features... -->
+              <!-- FEATURE 4 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-receipt text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Business Rates</h3>
-                  <p class="text-lg text-gray-600 font-raleway">All-inclusive pricing with no hidden fees.
-                  </p>
+                  <p class="text-lg text-gray-600 font-raleway">All-inclusive pricing with no hidden fees.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 5 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-lightbulb text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Lighting</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Energy-efficient lighting for a brighter
-                    workspace.</p>
+                  <p class="text-lg text-gray-600 font-raleway">Energy-efficient lighting for a brighter workspace.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 6 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-chair text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Office Furniture</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Premium ergonomic furniture for maximum
-                    comfort.</p>
+                  <p class="text-lg text-gray-600 font-raleway">Premium ergonomic furniture for maximum comfort.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 7 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-clock text-lg md:text-2xl text-white"></i>
@@ -873,86 +869,88 @@
                 </div>
               </div>
 
+              <!-- FEATURE 8 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-car text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Free Parking</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Complimentary secure parking for you and your
-                    guests.</p>
+                  <p class="text-lg text-gray-600 font-raleway">Complimentary secure parking for you and your guests.
+                  </p>
                 </div>
               </div>
 
+              <!-- FEATURE 9 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-tint text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Filtered Water</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Stay hydrated with free fresh water supply.
-                  </p>
+                  <p class="text-lg text-gray-600 font-raleway">Stay hydrated with free fresh water supply.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 10 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-broom text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Cleaning</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Daily professional cleaning for a spotless
-                    office.</p>
+                  <p class="text-lg text-gray-600 font-raleway">Daily professional cleaning for a spotless office.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 11 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-tools text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Maintenance</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Prompt maintenance support whenever needed.
-                  </p>
+                  <p class="text-lg text-gray-600 font-raleway">Prompt maintenance support whenever needed.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 12 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-envelope text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Postal Service</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Mail handling and courier facilities
-                    available.</p>
+                  <p class="text-lg text-gray-600 font-raleway">Mail handling and courier facilities available.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 13 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-user-shield text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">On-Site Caretaker</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Dedicated caretaker for assistance anytime.
-                  </p>
+                  <p class="text-lg text-gray-600 font-raleway">Dedicated caretaker for assistance anytime.</p>
                 </div>
               </div>
 
+              <!-- FEATURE 14 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-building text-lg md:text-2xl text-white"></i>
@@ -963,36 +961,44 @@
                 </div>
               </div>
 
+              <!-- FEATURE 15 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                class="feature-item flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <i class="fas fa-video text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">CCTV Security</h3>
-                  <p class="text-lg text-gray-600 font-raleway">24/7 monitoring with advanced security
-                    systems.</p>
+                  <p class="text-lg text-gray-600 font-raleway">24/7 monitoring with advanced security systems.</p>
                 </div>
               </div>
 
-               <!-- FEATURE 1 -->
+              <!-- FEATURE 16 -->
               <div
-                class="flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                <div
+                class="feature-item hidden  sm:flex items-center gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                 <div
                   class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center bg-black rounded-xl group-hover:scale-110 transition-transform duration-300">
-                  <i class="fas fa-globe text-lg md:text-2xl text-white"></i>
+                  <i class="fas fa-laptop-house text-lg md:text-2xl text-white"></i>
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-gray-800 font-tilt-neon">Virtual Services</h3>
-                  <p class="text-lg text-gray-600 font-raleway">Complete virtual office Heywood packages with
-                    business
+                  <p class="text-lg text-gray-600 font-raleway">Complete virtual office Heywood packages with business
                     addresses and admin solutions.</p>
                 </div>
               </div>
 
             </div>
+
+            <!-- See More Button (only on small screens) -->
+            <div class="flex justify-center mt-4 sm:hidden">
+              <button id="toggleFeaturesBtn"
+                class="bg-black text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
+                See More
+              </button>
+            </div>
           </div>
+
 
           <!-- Call to Action Button -->
           <div class="w-full flex justify-center md:justify-start">
@@ -1626,7 +1632,7 @@
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Blog
           </a>
-        
+
 
           <a href="virtual-office.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
@@ -1645,25 +1651,24 @@
           Legal & Policies
         </h4>
         <div class="flex justify-center w-full">
-        <div
-          class="grid w-[90%] ml-[30px] lg:ml-[0px] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
+          <div
+            class="grid w-[90%] ml-[30px] lg:ml-[0px] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 text-gray-300 text-[14px] md:text-[18px] lg:text-[24px] raleway">
             <a href="privacy-policy.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Privacy Policy
-          </a>
-          <a href="cookie-policy.html"
-            class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Cookie Policy 
-          </a>
-          <a href="terms-and-conditions.html"
-            class="flex items-center gap-2  no-wrap hover:text-[#06AFCE] transition text-gray-300">
-            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
-            Terms & Conditions
-          </a>
-          
-         
-        </div>
+              <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+              Privacy Policy
+            </a>
+            <a href="cookie-policy.html" class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+              <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+              Cookie Policy
+            </a>
+            <a href="terms-and-conditions.html"
+              class="flex items-center gap-2  no-wrap hover:text-[#06AFCE] transition text-gray-300">
+              <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+              Terms & Conditions
+            </a>
+
+
+          </div>
         </div>
       </div>
 
@@ -1707,7 +1712,7 @@
         <img src="assets/images/credit_card_logos-removebg-preview.png" class="max-w-full h-auto" />
       </div>
 
-    
+
 
       <div class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-6 bg-black text-white gap-4">
         <p class="text-xs md:text-sm lg:text-lg xl:text-[20px] font-raleway text-center md:text-left raleway">
@@ -1719,8 +1724,9 @@
           <a href="https://kyleinfotech.co.in/" class="text-[#06AFCE]">Kyle Infotech</a>
         </p>
       </div>
-        <div class="text-center">
-       The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.
+      <div class="text-center">
+        The content on this website is owned by us and our licensors. Do not copy any content (including images) without
+        our consent.
 
       </div>
     </div>
@@ -1785,7 +1791,7 @@
 
 
       document.addEventListener("DOMContentLoaded", function () {
-        const scroller = document.getElementById("featuresScroll");
+        const scroller = document.getElementsByClassName("featuresScroll");
         let scrollInterval;
 
         function startScroll() {
@@ -1811,6 +1817,39 @@
         scroller.addEventListener("mouseleave", startScroll);
       });
     });
+
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll("#featuresGrid .feature-item");
+  const toggleBtn = document.getElementById("toggleFeaturesBtn");
+
+  if (window.innerWidth < 640) {  // small screens
+    // hide all except first 4 initially
+    items.forEach((item, idx) => {
+      if (idx > 3) item.style.display = "none";
+    });
+
+    let expanded = false;
+
+    toggleBtn.addEventListener("click", () => {
+      expanded = !expanded;
+      if (expanded) {
+        items.forEach(item => item.style.display = "flex");
+        toggleBtn.textContent = "Show Less";
+      } else {
+        items.forEach((item, idx) => {
+          item.style.display = (idx > 3) ? "none" : "flex";
+        });
+        toggleBtn.textContent = "See More";
+      }
+    });
+
+  } else {
+    toggleBtn.style.display = "none"; // hide button on bigger screens
+  }
+});
 
 
   </script>
@@ -1905,25 +1944,25 @@
 
 
 
-  
-const container = document.getElementById('featuresScroll');
-let autoScroll = true;
 
-// Auto-scroll
-setInterval(() => {
-  if (autoScroll) {
-    container.scrollTop += 1; // speed
-    // loop back to top
-    if (container.scrollTop >= container.scrollHeight - container.clientHeight) {
-      container.scrollTop = 0;
-    }
-  }
-}, 30);
+    const container = document.getElementsByClassName('featuresScroll');
+    let autoScroll = true;
 
-// Pause auto-scroll when user interacts
-container.addEventListener('mouseenter', () => autoScroll = false);
-container.addEventListener('mouseleave', () => autoScroll = true);
-container.addEventListener('wheel', () => autoScroll = false); // stops if user scrolls
+    // Auto-scroll
+    setInterval(() => {
+      if (autoScroll) {
+        container.scrollTop += 1; // speed
+        // loop back to top
+        if (container.scrollTop >= container.scrollHeight - container.clientHeight) {
+          container.scrollTop = 0;
+        }
+      }
+    }, 30);
+
+    // Pause auto-scroll when user interacts
+    container.addEventListener('mouseenter', () => autoScroll = false);
+    container.addEventListener('mouseleave', () => autoScroll = true);
+    container.addEventListener('wheel', () => autoScroll = false); // stops if user scrolls
 
   </script>
 </body>
