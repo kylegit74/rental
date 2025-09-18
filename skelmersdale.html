@@ -21,7 +21,6 @@
     /* Swiper button styling - converted to Tailwind where possible */
     .swiper-button-next,
     .swiper-button-prev {
-      @apply text-indigo-600 bg-white rounded-full shadow-lg;
       padding: 1rem;
       top: 50%;
       transform: translateY(-50%);
@@ -31,8 +30,11 @@
 
     .swiper-button-next:hover,
     .swiper-button-prev:hover {
-      @apply bg-indigo-50;
     }
+
+     html ,body{
+      overflow-x: hidden;
+     }
   </style>
   <script>
     tailwind.config = {
