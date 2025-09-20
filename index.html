@@ -668,50 +668,57 @@
           Storage Container
         </button>
       </div>
-      <div id="formhidden" class=" hidden">
+      <div id="formhidden" class="hidden">
+  <!-- Radio Options -->
+  <div class="flex flex-col md:flex-row justify-center gap-4 lg:gap-6 mb-6">
+    <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-text">
+      <input type="text" class="w-full bg-transparent border-none outline-none placeholder-gray-400"
+        placeholder="Enter Full Name" />
+    </label>
 
-        <!-- Radio Options -->
-        <div class="flex flex-col md:flex-row justify-center gap-4 lg:gap-6 mb-6">
-          <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-text">
-            <input type="text" class="w-full bg-transparent border-none outline-none placeholder-gray-400"
-              placeholder="Enter Full Name" />
-          </label>
+    <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-text">
+      <input type="email" class="w-full bg-transparent border-none outline-none placeholder-gray-400"
+        placeholder="Enter Your Email" />
+    </label>
+  </div>
 
+  <div class="flex flex-col md:flex-row justify-center gap-4 lg:gap-6 mb-6">
+    <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-text">
+      <input type="number" class="w-full bg-transparent border-none outline-none placeholder-gray-400"
+        placeholder="Enter Phone Number" />
+    </label>
 
-          <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-text">
-            <input type="email" class="w-full bg-transparent border-none outline-none placeholder-gray-400"
-              placeholder="Enter Your  Email " />
-          </label>
-        </div>
+    <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-pointer">
+      <select class="w-full bg-transparent border-none outline-none text-gray-700">
+        <option selected disabled>Select Service</option>
+        <option>Private Offices</option>
+        <option>Meeting Rooms</option>
+        <option>Coworking Desks</option>
+        <option>Day Offices</option>
+        <option>Virtual Office</option>
+        <option>Storage Container</option>
+      </select>
+    </label>
+  </div>
 
-        <div class="flex flex-col md:flex-row justify-center gap-4 lg:gap-6 mb-6">
-          <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-text">
-            <input type="number" class="w-full bg-transparent border-none outline-none placeholder-gray-400"
-              placeholder="Enter Phone Number" />
-          </label>
+  <!-- Textarea for Content -->
+  <div class="mb-6">
+    <label class="flex items-start gap-2 border rounded-lg px-4 py-3 w-full cursor-text">
+      <textarea rows="4"
+        class="w-full bg-transparent border-none outline-none placeholder-gray-400 resize-none"
+        placeholder="Enter your message"></textarea>
+    </label>
+  </div>
 
+  <!-- Submit -->
+  <div class="text-center">
+    <button type="submit"
+      class="bg-black w-full max-w-[200px] text-white px-8 py-2 md:py-3 rounded-full hover:bg-gray-800">
+      SUBMIT
+    </button>
+  </div>
+</div>
 
-          <label class="flex items-center gap-2 border rounded-lg px-4 py-3 w-full cursor-pointer">
-            <select class="w-full bg-transparent border-none outline-none text-gray-700">
-              <option selected disabled>Select Service</option>
-              <option>Private Offices</option>
-              <option>Meeting Rooms</option>
-              <option>Coworking Desks</option>
-              <option>Day Offices</option>
-              <option>Virtual Office</option>
-              <option>Storage Container</option>
-            </select>
-          </label>
-
-        </div>
-        <!-- Submit -->
-        <div class="text-center">
-          <button type="submit"
-            class="bg-black w-full max-w-[200px] text-white px-8 py-2 md:py-3 rounded-full hover:bg-gray-800">
-            SUBMIT
-          </button>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1865,6 +1872,11 @@
             <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
             Storage Container
           </a>
+          <a href="independence-house-heywood.html"
+            class="flex items-center gap-2 hover:text-[#06AFCE] transition text-gray-300">
+            <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
+          Private Office
+          </a>
         </div>
       </div>
 
@@ -1884,7 +1896,7 @@
               Cookie Policy
             </a>
             <a href="terms-and-conditions.html"
-              class="flex items-center gap-2  no-wrap hover:text-[#06AFCE] transition text-gray-300">
+              class="flex items-center  justify-center w-[300px] sm:w-auto sm:ml-[0] gap-2  no-wrap hover:text-[#06AFCE] transition text-gray-300">
               <span class="w-2 md:w-3 h-2 md:h-3 bg-[#06AFCE] rounded-full inline-block"></span>
               Terms & Conditions
             </a>
